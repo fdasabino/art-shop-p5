@@ -43,6 +43,10 @@ body {
   z-index: -1;
 }
 
+nav {
+  border-bottom: 5px solid #000;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -64,5 +68,16 @@ body {
 
   .header-container {
     padding-top: 164px;
+  }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+  .header-container {
+    padding-top: 116px;
+  }
+
+  body {
+    height: calc(100vh - 116px);
   }
 }

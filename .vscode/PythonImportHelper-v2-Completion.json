@@ -193,6 +193,14 @@
         "documentation": {}
     },
     {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
         "label": "render",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
@@ -672,7 +680,7 @@
         "kind": 5,
         "importPath": "products.urls",
         "description": "products.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"\", views.all_products, name=\"products\"),\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"\", views.all_products, name=\"products\"),\n    path(\"<product_id>\", views.product_detail, name=\"product_detail\"),\n]",
         "detail": "products.urls",
         "documentation": {}
     },
@@ -681,7 +689,16 @@
         "kind": 2,
         "importPath": "products.views",
         "description": "products.views",
-        "peekOfCode": "def all_products(request):\n    \"\"\"\n    Render the Products view.\n    \"\"\"\n    products = Product.objects.all()\n    context = {\"products\": products}\n    return render(request, \"products/products.html\", context)",
+        "peekOfCode": "def all_products(request):\n    \"\"\"\n    Render the Products view.\n    \"\"\"\n    products = Product.objects.all()\n    context = {\"products\": products}\n    return render(request, \"products/products.html\", context)\ndef product_detail(request, product_id):\n    \"\"\"A view to show individual product details\"\"\"\n    product = get_object_or_404(Product, pk=product_id)",
+        "detail": "products.views",
+        "documentation": {}
+    },
+    {
+        "label": "product_detail",
+        "kind": 2,
+        "importPath": "products.views",
+        "description": "products.views",
+        "peekOfCode": "def product_detail(request, product_id):\n    \"\"\"A view to show individual product details\"\"\"\n    product = get_object_or_404(Product, pk=product_id)\n    context = {\n        \"product\": product,\n    }\n    return render(request, \"products/product_detail.html\", context)",
         "detail": "products.views",
         "documentation": {}
     },
