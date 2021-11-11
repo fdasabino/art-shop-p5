@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Open+Sans:wght@300&display=swap');
+
+html {
+  height: 100%;
+}
+
+body {
+  background: url(https://images.pexels.com/photos/1084406/pexels-photo-1084406.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) center fixed;
+  background-size: cover;
+  height: calc(100vh - 164px);
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.icon {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.logo-font {
+  text-transform: uppercase;
+  font-family: 'Caveat', cursive;
+}
+
+.main-logo-link {
+  width: fit-content;
+}
+
+.shop-now-button {
+  min-width: 260px;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+  .fixed-top-desktop-only {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
+
+  .header-container {
+    padding-top: 164px;
+  }
+}
