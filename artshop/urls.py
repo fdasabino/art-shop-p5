@@ -7,6 +7,7 @@ admin.site.index_title = "Welcome to Portal"
 
 
 urlpatterns = [
+    path("", include("home.urls")),
     path("admin/", admin.site.urls),
     path("accounts/", include("allauth.urls")),
 ]
