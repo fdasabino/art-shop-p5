@@ -71,7 +71,9 @@ nav {
   right: 10px;
 }
 
-.btt-link {
+.btt-link,
+.update-link,
+.delete-item {
   cursor: pointer;
 }
 
