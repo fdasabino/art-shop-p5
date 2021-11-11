@@ -75,32 +75,34 @@
                 src="{{MEDIA_URL}}noimage.png}}" alt="{{product.name}}"></a>
             {% endif %}
 
-            <div class="card-body pb-0">
+            <div class="card-body pb-0 text-center">
               <p class="mb-0">{{ product.name }}</p>
             </div>
-
-            <div class="card-footer bg-light pt-0 border-0 text-left">
+            <div class="card-footer bg-light pt-0 border-0 text-center">
               <div class="row">
                 <div class="col">
                   <p class="lead mb-0 text-left font-weight-bold">{{product.price|intcomma}}Kr</p>
-
                   {% if product.category %}
                   <p class="small mt-1 mb-0">
                     <a class="text-muted" href="{% url 'products' %}?category={{product.category.name}}">
-                      <i class="fas fa-tag mr-1"></i>{{product.category.friendly_name}}
+                      <i class="fas fa-tag mr-1"></i> {{product.category.friendly_name}}
                     </a>
                   </p>
                   {% endif %}
-
                   {% if product.rating %}
-                  <small class="text-muted"><i class="fas fa-star mr-1"></i>{{product.rating}}</small>
+                  <small class="text-muted"><i class="fas fa-star mr-1"></i> {{product.rating}}</small>
                   {% else %}
                   <small class="text-muted">No Rating</small>
                   {% endif %}
                 </div>
+                {% if product.unique %}
+                <small class="text-muted"><i class="fas fa-fingerprint"></i> Unique Product</small>
+                {% endif %}
+                {% if product.dimensions %}
+                <small class="text-muted"><i class="fas fa-ruler-combined"></i> {{product.dimensions}}</small>
+                {% endif %}
               </div>
             </div>
-
           </div>
         </div>
         {% if forloop.counter|divisibleby:1 %}
@@ -133,9 +135,9 @@
   </div>
 </div>
 <div class="btt-button rounded-0 border border-dark hidden">
-    <a class="btt-link d-flex h-100">
-      <i class="fas fa-arrow-up text-dark mx-auto my-auto"></i>
-    </a>
+  <a class="btt-link d-flex h-100">
+    <i class="fas fa-arrow-up text-dark mx-auto my-auto"></i>
+  </a>
 </div>
 {% endblock content %}
 
