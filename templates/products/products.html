@@ -132,5 +132,42 @@
     </div>
   </div>
 </div>
-
+<div class="btt-button rounded-0 border border-dark hidden">
+    <a class="btt-link d-flex h-100">
+      <i class="fas fa-arrow-up text-dark mx-auto my-auto"></i>
+    </a>
+</div>
 {% endblock content %}
+
+{% block post_load_js %}
+{{ block.super }}
+
+<script type="text/javascript">
+  $('.btt-link').click(function (e) {
+    window.scrollTo(0, 0)
+  })
+</script>
+<script type="text/javascript">
+  $('#sort-selector').change(function () {
+    let selector = $(this);
+    let currentUrl = new URL(window.location);
+
+    let selectedValue = selector.val()
+    if (selectedValue != 'reset') {
+      let sort = selectedValue.split("_")[0];
+      let direction = selectedValue.split("_")[1];
+
+      currentUrl.searchParams.set("sort", sort);
+      currentUrl.searchParams.set("direction", direction);
+
+      window.location.replace(currentUrl);
+    } else {
+      currentUrl.searchParams.delete("sort");
+      currentUrl.searchParams.delete("direction");
+
+      window.location.replace(currentUrl);
+    }
+  });
+</script>
+
+{% endblock post_load_js %}
