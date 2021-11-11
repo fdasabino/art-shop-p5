@@ -305,6 +305,22 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -847,6 +863,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "products.migrations.0004_product_quantity_available",
+        "description": "products.migrations.0004_product_quantity_available",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('products', '0003_auto_20211111_1653'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='product',\n            name='quantity_available',\n            field=models.PositiveBigIntegerField(default=1),\n        ),",
+        "detail": "products.migrations.0004_product_quantity_available",
+        "documentation": {}
+    },
+    {
         "label": "ProductAdmin",
         "kind": 6,
         "importPath": "products.admin",
@@ -887,7 +912,7 @@
         "kind": 6,
         "importPath": "products.models",
         "description": "products.models",
-        "peekOfCode": "class Product(models.Model):\n    category = models.ForeignKey(\"Category\", null=True, blank=True, on_delete=models.SET_NULL)\n    sku = models.CharField(max_length=254, null=True, blank=True)\n    name = models.CharField(max_length=254)\n    description = models.TextField()\n    price = models.DecimalField(max_digits=9, decimal_places=2)\n    unique = models.BooleanField(default=True, blank=\"False\")\n    dimensions = models.CharField(max_length=13, null=True, blank=True)\n    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)\n    image_url = models.URLField(max_length=1024, null=True, blank=True)",
+        "peekOfCode": "class Product(models.Model):\n    category = models.ForeignKey(\"Category\", null=True, blank=True, on_delete=models.SET_NULL)\n    sku = models.CharField(max_length=254, null=True, blank=True)\n    name = models.CharField(max_length=254)\n    description = models.TextField()\n    price = models.DecimalField(max_digits=9, decimal_places=2)\n    unique = models.BooleanField(default=True, blank=\"False\")\n    quantity_available = models.PositiveBigIntegerField(default=1, blank=False)\n    dimensions = models.CharField(max_length=13, null=True, blank=True)\n    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)",
         "detail": "products.models",
         "documentation": {}
     },

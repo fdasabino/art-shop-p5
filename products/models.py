@@ -24,6 +24,7 @@ class Product(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=9, decimal_places=2)
     unique = models.BooleanField(default=True, blank="False")
+    quantity_available = models.PositiveBigIntegerField(default=1, blank=False)
     dimensions = models.CharField(max_length=13, null=True, blank=True)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
