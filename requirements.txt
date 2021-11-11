@@ -10,6 +10,7 @@ cryptography==35.0.0
 defusedxml==0.7.1
 Django==3.2.9
 django-allauth==0.45.0
+humanize==3.12.0
 idna==3.3
 isort==5.10.1
 mypy-extensions==0.4.3
