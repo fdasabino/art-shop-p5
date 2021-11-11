@@ -65,6 +65,14 @@
         "documentation": {}
     },
     {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
         "label": "messages",
         "importPath": "django.contrib",
         "description": "django.contrib",
@@ -74,6 +82,14 @@
     },
     {
         "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
         "isExtraImport": true,
@@ -129,6 +145,22 @@
         "documentation": {}
     },
     {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -190,6 +222,22 @@
         "description": "django.test",
         "isExtraImport": true,
         "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
         "documentation": {}
     },
     {
@@ -585,7 +633,7 @@
         "kind": 5,
         "importPath": "artshop.urls",
         "description": "artshop.urls",
-        "peekOfCode": "admin.site.site_header = \"Daniela's Art Shop\"\nadmin.site.site_title = \"Admin Portal\"\nadmin.site.index_title = \"Welcome to Portal\"\nurlpatterns = [\n    path(\"\", include(\"home.urls\")),\n    path(\"admin/\", admin.site.urls),\n    path(\"accounts/\", include(\"allauth.urls\")),\n    path(\"products/\", include(\"products.urls\")),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "admin.site.site_header = \"Daniela's Art Shop\"\nadmin.site.site_title = \"Admin Portal\"\nadmin.site.index_title = \"Welcome to Portal\"\nurlpatterns = [\n    path(\"\", include(\"home.urls\")),\n    path(\"admin/\", admin.site.urls),\n    path(\"accounts/\", include(\"allauth.urls\")),\n    path(\"products/\", include(\"products.urls\")),\n    path(\"cart/\", include(\"cart.urls\")),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
         "detail": "artshop.urls",
         "documentation": {}
     },
@@ -594,7 +642,7 @@
         "kind": 5,
         "importPath": "artshop.urls",
         "description": "artshop.urls",
-        "peekOfCode": "admin.site.site_title = \"Admin Portal\"\nadmin.site.index_title = \"Welcome to Portal\"\nurlpatterns = [\n    path(\"\", include(\"home.urls\")),\n    path(\"admin/\", admin.site.urls),\n    path(\"accounts/\", include(\"allauth.urls\")),\n    path(\"products/\", include(\"products.urls\")),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "admin.site.site_title = \"Admin Portal\"\nadmin.site.index_title = \"Welcome to Portal\"\nurlpatterns = [\n    path(\"\", include(\"home.urls\")),\n    path(\"admin/\", admin.site.urls),\n    path(\"accounts/\", include(\"allauth.urls\")),\n    path(\"products/\", include(\"products.urls\")),\n    path(\"cart/\", include(\"cart.urls\")),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
         "detail": "artshop.urls",
         "documentation": {}
     },
@@ -603,7 +651,7 @@
         "kind": 5,
         "importPath": "artshop.urls",
         "description": "artshop.urls",
-        "peekOfCode": "admin.site.index_title = \"Welcome to Portal\"\nurlpatterns = [\n    path(\"\", include(\"home.urls\")),\n    path(\"admin/\", admin.site.urls),\n    path(\"accounts/\", include(\"allauth.urls\")),\n    path(\"products/\", include(\"products.urls\")),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "admin.site.index_title = \"Welcome to Portal\"\nurlpatterns = [\n    path(\"\", include(\"home.urls\")),\n    path(\"admin/\", admin.site.urls),\n    path(\"accounts/\", include(\"allauth.urls\")),\n    path(\"products/\", include(\"products.urls\")),\n    path(\"cart/\", include(\"cart.urls\")),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
         "detail": "artshop.urls",
         "documentation": {}
     },
@@ -612,7 +660,7 @@
         "kind": 5,
         "importPath": "artshop.urls",
         "description": "artshop.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"\", include(\"home.urls\")),\n    path(\"admin/\", admin.site.urls),\n    path(\"accounts/\", include(\"allauth.urls\")),\n    path(\"products/\", include(\"products.urls\")),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "urlpatterns = [\n    path(\"\", include(\"home.urls\")),\n    path(\"admin/\", admin.site.urls),\n    path(\"accounts/\", include(\"allauth.urls\")),\n    path(\"products/\", include(\"products.urls\")),\n    path(\"cart/\", include(\"cart.urls\")),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
         "detail": "artshop.urls",
         "documentation": {}
     },
@@ -623,6 +671,33 @@
         "description": "artshop.wsgi",
         "peekOfCode": "application = get_wsgi_application()",
         "detail": "artshop.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "CartConfig",
+        "kind": 6,
+        "importPath": "cart.apps",
+        "description": "cart.apps",
+        "peekOfCode": "class CartConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'cart'",
+        "detail": "cart.apps",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "cart.urls",
+        "description": "cart.urls",
+        "peekOfCode": "urlpatterns = [\n    path(\"\", views.view_cart, name=\"view_cart\"),\n]",
+        "detail": "cart.urls",
+        "documentation": {}
+    },
+    {
+        "label": "view_cart",
+        "kind": 2,
+        "importPath": "cart.views",
+        "description": "cart.views",
+        "peekOfCode": "def view_cart(request):\n    \"\"\"\n    Render the items users added to cart\n    \"\"\"\n    return render(request, \"cart/cart.html\")",
+        "detail": "cart.views",
         "documentation": {}
     },
     {
