@@ -721,7 +721,7 @@
         "kind": 2,
         "importPath": "products.views",
         "description": "products.views",
-        "peekOfCode": "def all_products(request):\n    \"\"\"\n    Render the Products view.\n    \"\"\"\n    products = Product.objects.all()\n    query = None\n    if request.GET:\n        if \"q\" in request.GET:\n            query = request.GET[\"q\"]\n            if not query:",
+        "peekOfCode": "def all_products(request):\n    \"\"\"\n    Render the Products view.\n    \"\"\"\n    products = Product.objects.all()\n    query = None\n    categories = None\n    sort = None\n    direction = None\n    if request.GET:",
         "detail": "products.views",
         "documentation": {}
     },
