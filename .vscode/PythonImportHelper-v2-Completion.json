@@ -605,7 +605,7 @@
         "kind": 6,
         "importPath": "products.models",
         "description": "products.models",
-        "peekOfCode": "class Category(models.Model):\n    name = models.CharField(max_length=254)\n    friendly_name = models.CharField(max_length=254, null=True, blank=True)\n    def __str__(self):\n        return self.name\n    def __str__(self):\n        return self.friendly_name\nclass Product(models.Model):\n    category = models.ForeignKey(\"Category\", null=True, blank=True, on_delete=models.SET_NULL)\n    sku = models.CharField(max_length=254, null=True, blank=True)",
+        "peekOfCode": "class Category(models.Model):\n    name = models.CharField(max_length=254)\n    friendly_name = models.CharField(max_length=254, null=True, blank=True)\n    class Meta:\n        verbose_name = \"Category\"\n        verbose_name_plural = \"Categories\"\n    def __str__(self):\n        return self.name\n    def __str__(self):\n        return self.friendly_name",
         "detail": "products.models",
         "documentation": {}
     },
