@@ -321,6 +321,22 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -795,7 +811,7 @@
         "kind": 2,
         "importPath": "cart.views",
         "description": "cart.views",
-        "peekOfCode": "def view_cart(request):\n    \"\"\"\n    Render the items users added to cart\n    \"\"\"\n    return render(request, \"cart/cart.html\")\ndef add_to_cart(request, item_id):\n    \"\"\"\n    Add a quantity of the specified item to the shopping cart\n    \"\"\"\n    quantity = int(request.POST.get(\"quantity\"))",
+        "peekOfCode": "def view_cart(request):\n    \"\"\"\n    Render the items users added to cart\n    \"\"\"\n    return render(request, \"cart/cart.html\")\ndef add_to_cart(request, item_id):\n    \"\"\"Add a quantity of the specified product to the shopping cart\"\"\"\n    quantity = int(request.POST.get(\"quantity\"))\n    redirect_url = request.POST.get(\"redirect_url\")\n    size = None",
         "detail": "cart.views",
         "documentation": {}
     },
@@ -804,7 +820,7 @@
         "kind": 2,
         "importPath": "cart.views",
         "description": "cart.views",
-        "peekOfCode": "def add_to_cart(request, item_id):\n    \"\"\"\n    Add a quantity of the specified item to the shopping cart\n    \"\"\"\n    quantity = int(request.POST.get(\"quantity\"))\n    redirect_url = request.POST.get(\"redirect_url\")\n    dimensions = None\n    if \"product_dimensions\" in request.POST:\n        dimensions = request.POST[\"product_dimensions\"]\n    cart = request.session.get(\"cart\", {})",
+        "peekOfCode": "def add_to_cart(request, item_id):\n    \"\"\"Add a quantity of the specified product to the shopping cart\"\"\"\n    quantity = int(request.POST.get(\"quantity\"))\n    redirect_url = request.POST.get(\"redirect_url\")\n    size = None\n    if \"product_size\" in request.POST:\n        size = request.POST[\"product_size\"]\n    cart = request.session.get(\"cart\", {})\n    if size:\n        if item_id in list(cart.keys()):",
         "detail": "cart.views",
         "documentation": {}
     },
@@ -872,6 +888,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "products.migrations.0005_product_has_sizes",
+        "description": "products.migrations.0005_product_has_sizes",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('products', '0004_product_quantity_available'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='product',\n            name='has_sizes',\n            field=models.BooleanField(blank=True, default=False, null=True),\n        ),",
+        "detail": "products.migrations.0005_product_has_sizes",
+        "documentation": {}
+    },
+    {
         "label": "ProductAdmin",
         "kind": 6,
         "importPath": "products.admin",
@@ -912,7 +937,7 @@
         "kind": 6,
         "importPath": "products.models",
         "description": "products.models",
-        "peekOfCode": "class Product(models.Model):\n    category = models.ForeignKey(\"Category\", null=True, blank=True, on_delete=models.SET_NULL)\n    sku = models.CharField(max_length=254, null=True, blank=True)\n    name = models.CharField(max_length=254)\n    description = models.TextField()\n    price = models.DecimalField(max_digits=9, decimal_places=2)\n    unique = models.BooleanField(default=True, blank=\"False\")\n    quantity_available = models.PositiveBigIntegerField(default=1, blank=False)\n    dimensions = models.CharField(max_length=13, null=True, blank=True)\n    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)",
+        "peekOfCode": "class Product(models.Model):\n    category = models.ForeignKey(\"Category\", null=True, blank=True, on_delete=models.SET_NULL)\n    sku = models.CharField(max_length=254, null=True, blank=True)\n    name = models.CharField(max_length=254)\n    description = models.TextField()\n    price = models.DecimalField(max_digits=9, decimal_places=2)\n    unique = models.BooleanField(default=True, blank=\"False\")\n    quantity_available = models.PositiveBigIntegerField(default=1, blank=False)\n    has_sizes = models.BooleanField(default=False, null=True, blank=True)\n    dimensions = models.CharField(max_length=13, null=True, blank=True)",
         "detail": "products.models",
         "documentation": {}
     },

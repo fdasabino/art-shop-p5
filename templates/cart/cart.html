@@ -31,7 +31,7 @@
               <th scope="col">Product Info</th>
               <th scope="col"></th>
               <th scope="col">Price</th>
-              <th scope="col">Quantity</th>
+              <th scope="col">Qty</th>
               <th scope="col">Subtotal</th>
             </tr>
           </thead>
@@ -43,63 +43,42 @@
             </td>
             <td class="py-3">
               <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-              <p class="my-0"><strong>Dimensions:
-                </strong>{% if item.product.dimensions %}{{ item.product.dimensions }}{% else %}N/A{% endif %}</p>
+              <p class="my-0"><strong>Size:
+                </strong>{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
               <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
-              {% if item.product.unique %}
-              <small class="text-muted"><i class="fas fa-fingerprint"></i> Unique Product</small> <br>
-              {% endif %}
             </td>
             <td class="py-3">
-              <p class="my-0">{{ item.product.price }}kr</p>
+              <p class="my-0">{{ item.product.price|intcomma }}kr</p>
             </td>
             <td class="py-3 w-25">
-              <form class="form update-form" action="" method="POST">
-                {% csrf_token %}
-                <div class="form-group">
-                  <div class="input-group">
-                    <input class="form-control form-control-sm qty_input" type="number" name="quantity"
-                      value="{{ item.quantity }}" min="1" max="{{item.product.quantity_available}}"
-                      data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
-                  </div>
-              </form>
-              <div class="mt-2">
-                {% if item.product.unique %}
-                <a class="btn remove-item btn-outline-dark" id="remove_{{ item.item_id }}"
-                  data-size="{{ item.size }}"><small>Remove</small></a>
-                {% else %}
-                <a class="btn update-link btn-dark"><small>Update</small></a>
-                <a class="btn remove-item btn-outline-dark" id="remove_{{ item.item_id }}"
-                  data-size="{{ item.size }}"><small>Remove</small></a>
-                {% endif %}
-              </div>
+              <p class="my-0">{{ item.quantity }}</p>
             </td>
             <td class="py-3">
-              <p class="my-0">{{ item.product.price }}kr</p>
+              <p class="my-0">{{ item.product.price|intcomma }}kr</p>
             </td>
           </tr>
           {% endfor %}
           <tr>
             <td colspan="5" class="pt-5 text-right">
-              <h6><strong>Cart Total: {{ total|intcomma }}kr</strong></h6>
-              <h6>Delivery: {{ delivery|intcomma }}kr</h6>
+              <h6><strong>cart Total: {{ total|intcomma }}kr</strong></h6>
+              <h6>Delivery: {{ delivery|intcomma}} kr</h6>
               <h4 class="mt-4"><strong>Grand Total: {{ grand_total|intcomma }}kr</strong></h4>
               {% if free_delivery_delta > 0 %}
               <p class="mb-1 text-danger">
-                You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
+                You could get free delivery by spending just <strong>{{ free_delivery_delta }}</strong> more!
               </p>
               {% endif %}
             </td>
           </tr>
           <tr>
             <td colspan="5" class="text-right">
-              <a href="{% url 'products' %}" class="btn btn-outline-dark btn-sm rounded-0 btn-lg">
+              <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-0 btn-lg">
                 <span class="icon">
                   <i class="fas fa-chevron-left"></i>
                 </span>
-                <span class="text-uppercase">Back to Products List</span>
+                <span class="text-uppercase">Keep Shopping</span>
               </a>
-              <a href="" class="btn btn-dark btn-sm rounded-0 btn-lg">
+              <a href="" class="btn btn-dark rounded-0 btn-lg">
                 <span class="text-uppercase">Secure Checkout</span>
                 <span class="icon">
                   <i class="fas fa-lock"></i>
@@ -115,36 +94,10 @@
         <span class="icon">
           <i class="fas fa-chevron-left"></i>
         </span>
-        <span class="text-uppercase">Back to Products List</span>
+        <span class="text-uppercase">Keep Shopping</span>
       </a>
       {% endif %}
     </div>
   </div>
 </div>
 {% endblock %}
-{% block post_load_js %}
-<script type="text/javascript">
-  // Update quantity on click
-  $('.update-link').click(function (e) {
-    var form = $(this).prev('.update-form');
-    form.submit();
-  })
-
-  // Remove item and reload on click
-  $('.remove-item').click(function (e) {
-    var csrfToken = "{{ csrf_token }}";
-    var itemId = $(this).attr('id').split('remove_')[1];
-    var size = $(this).data('size');
-    var url = `/cart/remove/${itemId}`;
-    var data = {
-      'csrfmiddlewaretoken': csrfToken,
-      'size': size
-    };
-
-    $.post(url, data)
-      .done(function () {
-        location.reload();
-      });
-  })
-</script>
-{% endblock post_load_js %}

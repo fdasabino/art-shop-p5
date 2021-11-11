@@ -25,6 +25,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=9, decimal_places=2)
     unique = models.BooleanField(default=True, blank="False")
     quantity_available = models.PositiveBigIntegerField(default=1, blank=False)
+    has_sizes = models.BooleanField(default=False, null=True, blank=True)
     dimensions = models.CharField(max_length=13, null=True, blank=True)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
