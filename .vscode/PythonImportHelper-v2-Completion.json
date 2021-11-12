@@ -490,6 +490,14 @@
         "documentation": {}
     },
     {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
         "label": "uuid",
         "kind": 6,
         "isExtraImport": true,
@@ -1038,6 +1046,15 @@
         "description": "checkout.apps",
         "peekOfCode": "class CheckoutConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"checkout\"\n    def ready(self):\n        import checkout.signals",
         "detail": "checkout.apps",
+        "documentation": {}
+    },
+    {
+        "label": "OrderForm",
+        "kind": 6,
+        "importPath": "checkout.forms",
+        "description": "checkout.forms",
+        "peekOfCode": "class OrderForm(forms.ModelForm):\n    class Meta:\n        model = Order\n        fields = (\n            \"full_name\",\n            \"email\",\n            \"phone_number\",\n            \"street_address1\",\n            \"street_address2\",\n            \"town_or_city\",",
+        "detail": "checkout.forms",
         "documentation": {}
     },
     {
