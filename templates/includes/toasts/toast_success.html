@@ -27,9 +27,16 @@
                 </div>
                 <div class="col-9">
                     <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                    <p class="my-0 small">Size:
-                        {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
+                    {% if item.product.unique %}
+                    <small class="text-muted"><i class="fas fa-fingerprint"></i> Unique Product</small> </br>
+                    {% endif %}
+                    {% if item.product.dimensions %}
+                    <p class="my-0 small"><small class="text-muted"><i class="fas fa-ruler-combined"></i> {{item.product.dimensions}}</small> </br></p>
+                    {% endif %}
                     <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                    {% if item.product.has_sizes %}
+                    <p class="my-0 small">Size:{{ item.size|upper }}
+                    {% endif %}</p>
                 </div>
             </div>
             {% endfor %}

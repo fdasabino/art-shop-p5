@@ -515,6 +515,30 @@
         "documentation": {}
     },
     {
+        "label": "post_delete",
+        "importPath": "django.db.models.signals",
+        "description": "django.db.models.signals",
+        "isExtraImport": true,
+        "detail": "django.db.models.signals",
+        "documentation": {}
+    },
+    {
+        "label": "post_save",
+        "importPath": "django.db.models.signals",
+        "description": "django.db.models.signals",
+        "isExtraImport": true,
+        "detail": "django.db.models.signals",
+        "documentation": {}
+    },
+    {
+        "label": "receiver",
+        "importPath": "django.dispatch",
+        "description": "django.dispatch",
+        "isExtraImport": true,
+        "detail": "django.dispatch",
+        "documentation": {}
+    },
+    {
         "label": "Lower",
         "importPath": "django.db.models.functions",
         "description": "django.db.models.functions",
@@ -990,11 +1014,29 @@
         "documentation": {}
     },
     {
+        "label": "OrderLineItemAdminInline",
+        "kind": 6,
+        "importPath": "checkout.admin",
+        "description": "checkout.admin",
+        "peekOfCode": "class OrderLineItemAdminInline(admin.TabularInline):\n    model = OrderLineItem\n    readonly_fields = (\"lineitem_total\",)\nclass OrderAdmin(admin.ModelAdmin):\n    inlines = (OrderLineItemAdminInline,)\n    readonly_fields = (\n        \"order_number\",\n        \"date\",\n        \"delivery_cost\",\n        \"order_total\",",
+        "detail": "checkout.admin",
+        "documentation": {}
+    },
+    {
+        "label": "OrderAdmin",
+        "kind": 6,
+        "importPath": "checkout.admin",
+        "description": "checkout.admin",
+        "peekOfCode": "class OrderAdmin(admin.ModelAdmin):\n    inlines = (OrderLineItemAdminInline,)\n    readonly_fields = (\n        \"order_number\",\n        \"date\",\n        \"delivery_cost\",\n        \"order_total\",\n        \"grand_total\",\n    )\n    fields = (",
+        "detail": "checkout.admin",
+        "documentation": {}
+    },
+    {
         "label": "CheckoutConfig",
         "kind": 6,
         "importPath": "checkout.apps",
         "description": "checkout.apps",
-        "peekOfCode": "class CheckoutConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'checkout'",
+        "peekOfCode": "class CheckoutConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"checkout\"\n    def ready(self):\n        import checkout.signals",
         "detail": "checkout.apps",
         "documentation": {}
     },
@@ -1014,6 +1056,24 @@
         "description": "checkout.models",
         "peekOfCode": "class OrderLineItem(models.Model):\n    order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name=\"lineitems\")\n    product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)\n    product_size = models.CharField(max_length=2, null=True, blank=True)  # XS, S, M, L, XL\n    quantity = models.IntegerField(null=False, blank=False, default=0)\n    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)\n    def save(self, *args, **kwargs):\n        \"\"\"\n        Override the original save method to set the lineitem total\n        and update the order total.",
         "detail": "checkout.models",
+        "documentation": {}
+    },
+    {
+        "label": "update_on_save",
+        "kind": 2,
+        "importPath": "checkout.signals",
+        "description": "checkout.signals",
+        "peekOfCode": "def update_on_save(sender, instance, created, **kwargs):\n    \"\"\"\n    Update order total on lineITem update/create\n    \"\"\"\n    instance.order.update_total()\n@receiver(post_delete, sender=OrderLineItem)\ndef update_on_delete(sender, instance, **kwargs):\n    \"\"\"\n    Update order total on lineITem Delete\n    \"\"\"",
+        "detail": "checkout.signals",
+        "documentation": {}
+    },
+    {
+        "label": "update_on_delete",
+        "kind": 2,
+        "importPath": "checkout.signals",
+        "description": "checkout.signals",
+        "peekOfCode": "def update_on_delete(sender, instance, **kwargs):\n    \"\"\"\n    Update order total on lineITem Delete\n    \"\"\"\n    instance.order.update_total()",
+        "detail": "checkout.signals",
         "documentation": {}
     },
     {
