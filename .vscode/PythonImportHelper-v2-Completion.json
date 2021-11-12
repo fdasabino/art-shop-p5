@@ -41,6 +41,14 @@
         "documentation": {}
     },
     {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
         "label": "static",
         "importPath": "django.conf.urls.static",
         "description": "django.conf.urls.static",
@@ -66,6 +74,14 @@
     },
     {
         "label": "messages",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
         "importPath": "django.contrib",
         "description": "django.contrib",
         "isExtraImport": true,
@@ -169,6 +185,14 @@
         "documentation": {}
     },
     {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
         "label": "Decimal",
         "importPath": "decimal",
         "description": "decimal",
@@ -233,6 +257,14 @@
         "documentation": {}
     },
     {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
         "label": "get_object_or_404",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
@@ -281,6 +313,38 @@
         "documentation": {}
     },
     {
+        "label": "Product",
+        "importPath": "products.models",
+        "description": "products.models",
+        "isExtraImport": true,
+        "detail": "products.models",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -382,6 +446,14 @@
         "description": "django.db",
         "isExtraImport": true,
         "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
         "documentation": {}
     },
     {
@@ -415,6 +487,23 @@
         "importPath": "django.db.models.deletion",
         "description": "django.db.models.deletion",
         "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "Sum",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
         "documentation": {}
     },
     {
@@ -889,6 +978,42 @@
         "description": "cart.views",
         "peekOfCode": "def remove_from_cart(request, item_id):\n    \"\"\"Remove the item from the shopping cart\"\"\"\n    try:\n        product = get_object_or_404(Product, pk=item_id)\n        size = None\n        if \"product_size\" in request.POST:\n            size = request.POST[\"product_size\"]\n        cart = request.session.get(\"cart\", {})\n        if size:\n            del cart[item_id][\"items_by_size\"][size]",
         "detail": "cart.views",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "checkout.migrations.0001_initial",
+        "description": "checkout.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('products', '0005_product_has_sizes'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Order',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "detail": "checkout.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "CheckoutConfig",
+        "kind": 6,
+        "importPath": "checkout.apps",
+        "description": "checkout.apps",
+        "peekOfCode": "class CheckoutConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'checkout'",
+        "detail": "checkout.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Order",
+        "kind": 6,
+        "importPath": "checkout.models",
+        "description": "checkout.models",
+        "peekOfCode": "class Order(models.Model):\n    order_number = models.CharField(max_length=32, null=False, editable=False)\n    full_name = models.CharField(max_length=50, null=False, blank=False)\n    email = models.EmailField(max_length=254, null=False, blank=False)\n    phone_number = models.CharField(max_length=20, null=False, blank=False)\n    country = models.CharField(max_length=40, null=False, blank=False)\n    postcode = models.CharField(max_length=20, null=True, blank=True)\n    town_or_city = models.CharField(max_length=40, null=False, blank=False)\n    street_address1 = models.CharField(max_length=80, null=False, blank=False)\n    street_address2 = models.CharField(max_length=80, null=True, blank=True)",
+        "detail": "checkout.models",
+        "documentation": {}
+    },
+    {
+        "label": "OrderLineItem",
+        "kind": 6,
+        "importPath": "checkout.models",
+        "description": "checkout.models",
+        "peekOfCode": "class OrderLineItem(models.Model):\n    order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name=\"lineitems\")\n    product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)\n    product_size = models.CharField(max_length=2, null=True, blank=True)  # XS, S, M, L, XL\n    quantity = models.IntegerField(null=False, blank=False, default=0)\n    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)\n    def save(self, *args, **kwargs):\n        \"\"\"\n        Override the original save method to set the lineitem total\n        and update the order total.",
+        "detail": "checkout.models",
         "documentation": {}
     },
     {
