@@ -65,6 +65,14 @@
         "documentation": {}
     },
     {
+        "label": "messages",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
         "label": "admin",
         "importPath": "django.contrib",
         "description": "django.contrib",
@@ -134,14 +142,6 @@
         "description": "django.core.wsgi",
         "isExtraImport": true,
         "detail": "django.core.wsgi",
-        "documentation": {}
-    },
-    {
-        "label": "template",
-        "importPath": "django",
-        "description": "django",
-        "isExtraImport": true,
-        "detail": "django",
         "documentation": {}
     },
     {
@@ -254,6 +254,14 @@
         "description": "django.shortcuts",
         "isExtraImport": true,
         "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "products.models",
+        "description": "products.models",
+        "isExtraImport": true,
+        "detail": "products.models",
         "documentation": {}
     },
     {
@@ -628,7 +636,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "WSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": BASE_DIR / \"db.sqlite3\",\n    }\n}\n# Password validation",
+        "peekOfCode": "WSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": BASE_DIR / \"db.sqlite3\",\n    }\n}\nMESSAGE_STORAGE = \"django.contrib.messages.storage.session.SessionStorage\"",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -637,7 +645,16 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "DATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": BASE_DIR / \"db.sqlite3\",\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "peekOfCode": "DATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": BASE_DIR / \"db.sqlite3\",\n    }\n}\nMESSAGE_STORAGE = \"django.contrib.messages.storage.session.SessionStorage\"\n# Password validation\n# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [",
+        "detail": "artshop.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MESSAGE_STORAGE",
+        "kind": 5,
+        "importPath": "artshop.settings",
+        "description": "artshop.settings",
+        "peekOfCode": "MESSAGE_STORAGE = \"django.contrib.messages.storage.session.SessionStorage\"\n# Password validation\n# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.UserAttributeSimilarityValidator\",\n    },\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.MinimumLengthValidator\",\n    },",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -804,24 +821,6 @@
         "documentation": {}
     },
     {
-        "label": "calc_subtotal",
-        "kind": 2,
-        "importPath": "cart.templatetags.cart_tools",
-        "description": "cart.templatetags.cart_tools",
-        "peekOfCode": "def calc_subtotal(price, quantity):\n    return price * quantity",
-        "detail": "cart.templatetags.cart_tools",
-        "documentation": {}
-    },
-    {
-        "label": "register",
-        "kind": 5,
-        "importPath": "cart.templatetags.cart_tools",
-        "description": "cart.templatetags.cart_tools",
-        "peekOfCode": "register = template.Library()\n@register.filter(name=\"calc_subtotal\")\ndef calc_subtotal(price, quantity):\n    return price * quantity",
-        "detail": "cart.templatetags.cart_tools",
-        "documentation": {}
-    },
-    {
         "label": "CartConfig",
         "kind": 6,
         "importPath": "cart.apps",
@@ -853,7 +852,7 @@
         "kind": 2,
         "importPath": "cart.views",
         "description": "cart.views",
-        "peekOfCode": "def view_cart(request):\n    \"\"\"A view that renders the cart contents page\"\"\"\n    return render(request, \"cart/cart.html\")\ndef add_to_cart(request, item_id):\n    \"\"\"Add a quantity of the specified product to the shopping cart\"\"\"\n    quantity = int(request.POST.get(\"quantity\"))\n    redirect_url = request.POST.get(\"redirect_url\")\n    size = None\n    if \"product_size\" in request.POST:\n        size = request.POST[\"product_size\"]",
+        "peekOfCode": "def view_cart(request):\n    \"\"\"A view that renders the cart contents page\"\"\"\n    return render(request, \"cart/cart.html\")\ndef add_to_cart(request, item_id):\n    \"\"\"Add a quantity of the specified product to the shopping cart\"\"\"\n    product = Product.objects.get(pk=item_id)\n    quantity = int(request.POST.get(\"quantity\"))\n    redirect_url = request.POST.get(\"redirect_url\")\n    size = None\n    if \"product_size\" in request.POST:",
         "detail": "cart.views",
         "documentation": {}
     },
@@ -862,7 +861,7 @@
         "kind": 2,
         "importPath": "cart.views",
         "description": "cart.views",
-        "peekOfCode": "def add_to_cart(request, item_id):\n    \"\"\"Add a quantity of the specified product to the shopping cart\"\"\"\n    quantity = int(request.POST.get(\"quantity\"))\n    redirect_url = request.POST.get(\"redirect_url\")\n    size = None\n    if \"product_size\" in request.POST:\n        size = request.POST[\"product_size\"]\n    cart = request.session.get(\"cart\", {})\n    if size:\n        if item_id in list(cart.keys()):",
+        "peekOfCode": "def add_to_cart(request, item_id):\n    \"\"\"Add a quantity of the specified product to the shopping cart\"\"\"\n    product = Product.objects.get(pk=item_id)\n    quantity = int(request.POST.get(\"quantity\"))\n    redirect_url = request.POST.get(\"redirect_url\")\n    size = None\n    if \"product_size\" in request.POST:\n        size = request.POST[\"product_size\"]\n    cart = request.session.get(\"cart\", {})\n    if size:",
         "detail": "cart.views",
         "documentation": {}
     },
