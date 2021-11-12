@@ -282,6 +282,14 @@
         "documentation": {}
     },
     {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
         "label": "redirect",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
@@ -343,6 +351,14 @@
         "description": "django.shortcuts",
         "isExtraImport": true,
         "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "products.models",
+        "description": "products.models",
+        "isExtraImport": true,
+        "detail": "products.models",
         "documentation": {}
     },
     {
@@ -1227,7 +1243,7 @@
         "kind": 5,
         "importPath": "checkout.urls",
         "description": "checkout.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"\", views.checkout, name=\"checkout\"),\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"\", views.checkout, name=\"checkout\"),\n    path(\"checkout_success/<order_number>\", views.checkout_success, name=\"checkout_success\"),\n]",
         "detail": "checkout.urls",
         "documentation": {}
     },
@@ -1236,7 +1252,16 @@
         "kind": 2,
         "importPath": "checkout.views",
         "description": "checkout.views",
-        "peekOfCode": "def checkout(request):\n    stripe_public_key = settings.STRIPE_PUBLIC_KEY\n    stripe_secret_key = settings.STRIPE_SECRET_KEY\n    cart = request.session.get(\"cart\", {})\n    if not cart:\n        messages.error(request, \"There's nothing in your cart at the moment\")\n        return redirect(reverse(\"products\"))\n    current_cart = cart_contents(request)\n    total = current_cart[\"grand_total\"]\n    stripe_total = round(total * 100)",
+        "peekOfCode": "def checkout(request):\n    stripe_public_key = settings.STRIPE_PUBLIC_KEY\n    stripe_secret_key = settings.STRIPE_SECRET_KEY\n    if request.method == \"POST\":\n        cart = request.session.get(\"cart\", {})\n        form_data = {\n            \"full_name\": request.POST[\"full_name\"],\n            \"email\": request.POST[\"email\"],\n            \"phone_number\": request.POST[\"phone_number\"],\n            \"country\": request.POST[\"country\"],",
+        "detail": "checkout.views",
+        "documentation": {}
+    },
+    {
+        "label": "checkout_success",
+        "kind": 2,
+        "importPath": "checkout.views",
+        "description": "checkout.views",
+        "peekOfCode": "def checkout_success(request, order_number):\n    \"\"\"\n    Handle successful checkouts\n    \"\"\"\n    save_info = request.session.get(\"save_info\")\n    order = get_object_or_404(Order, order_number=order_number)\n    messages.success(\n        request,\n        f\"Order successfully processed! \\\n        Your order number is {order_number}. A confirmation \\",
         "detail": "checkout.views",
         "documentation": {}
     },
