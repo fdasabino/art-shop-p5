@@ -137,6 +137,14 @@
         "documentation": {}
     },
     {
+        "label": "template",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
         "label": "AppConfig",
         "importPath": "django.apps",
         "description": "django.apps",
@@ -793,6 +801,24 @@
         "description": "artshop.wsgi",
         "peekOfCode": "application = get_wsgi_application()",
         "detail": "artshop.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "calc_subtotal",
+        "kind": 2,
+        "importPath": "cart.templatetags.cart_tools",
+        "description": "cart.templatetags.cart_tools",
+        "peekOfCode": "def calc_subtotal(price, quantity):\n    return price * quantity",
+        "detail": "cart.templatetags.cart_tools",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "kind": 5,
+        "importPath": "cart.templatetags.cart_tools",
+        "description": "cart.templatetags.cart_tools",
+        "peekOfCode": "register = template.Library()\n@register.filter(name=\"calc_subtotal\")\ndef calc_subtotal(price, quantity):\n    return price * quantity",
+        "detail": "cart.templatetags.cart_tools",
         "documentation": {}
     },
     {
