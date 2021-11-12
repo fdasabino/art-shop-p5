@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
+import builtins
 import os
 from pathlib import Path
 
@@ -34,6 +35,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "crispy_forms",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -63,6 +65,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "artshop.urls"
 
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
@@ -75,6 +79,10 @@ TEMPLATES = [
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
                 "cart.context_processor.cart_contents",
+            ],
+            "builtins": [
+                "crispy_forms.templatetags.cryspy_forms_tags",
+                "crispy_forms.templatetags.cryspy_forms_field",
             ],
         },
     },

@@ -17,6 +17,15 @@
         "documentation": {}
     },
     {
+        "label": "builtins",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "builtins",
+        "description": "builtins",
+        "detail": "builtins",
+        "documentation": {}
+    },
+    {
         "label": "Path",
         "importPath": "pathlib",
         "description": "pathlib",
@@ -89,6 +98,14 @@
         "documentation": {}
     },
     {
+        "label": "messages",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
         "label": "admin",
         "importPath": "django.contrib",
         "description": "django.contrib",
@@ -114,6 +131,14 @@
     },
     {
         "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
         "isExtraImport": true,
@@ -249,7 +274,23 @@
         "documentation": {}
     },
     {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
         "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
         "isExtraImport": true,
@@ -612,7 +653,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "SECRET_KEY = os.environ.get(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",",
+        "peekOfCode": "SECRET_KEY = os.environ.get(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"crispy_forms\",\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -621,7 +662,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.humanize\",",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"crispy_forms\",\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -630,7 +671,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.humanize\",\n    \"django.contrib.staticfiles\",",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"crispy_forms\",\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.humanize\",",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -639,7 +680,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.humanize\",\n    \"django.contrib.staticfiles\",\n    \"django.contrib.sites\",\n    \"allauth\",",
+        "peekOfCode": "INSTALLED_APPS = [\n    \"crispy_forms\",\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.humanize\",\n    \"django.contrib.staticfiles\",\n    \"django.contrib.sites\",",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -657,7 +698,16 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "ROOT_URLCONF = \"artshop.urls\"\nTEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [TEMPLATES_DIR],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",",
+        "peekOfCode": "ROOT_URLCONF = \"artshop.urls\"\nCRISPY_TEMPLATE_PACK = \"bootstrap4\"\nTEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [TEMPLATES_DIR],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",",
+        "detail": "artshop.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CRISPY_TEMPLATE_PACK",
+        "kind": 5,
+        "importPath": "artshop.settings",
+        "description": "artshop.settings",
+        "peekOfCode": "CRISPY_TEMPLATE_PACK = \"bootstrap4\"\nTEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [TEMPLATES_DIR],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -909,7 +959,7 @@
         "kind": 5,
         "importPath": "artshop.urls",
         "description": "artshop.urls",
-        "peekOfCode": "admin.site.site_header = \"Daniela's Art Shop\"\nadmin.site.site_title = \"Admin Portal\"\nadmin.site.index_title = \"Welcome to Portal\"\nurlpatterns = [\n    path(\"\", include(\"home.urls\")),\n    path(\"admin/\", admin.site.urls),\n    path(\"accounts/\", include(\"allauth.urls\")),\n    path(\"products/\", include(\"products.urls\")),\n    path(\"cart/\", include(\"cart.urls\")),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "admin.site.site_header = \"Daniela's Art Shop\"\nadmin.site.site_title = \"Admin Portal\"\nadmin.site.index_title = \"Welcome to Portal\"\nurlpatterns = [\n    path(\"\", include(\"home.urls\")),\n    path(\"admin/\", admin.site.urls),\n    path(\"accounts/\", include(\"allauth.urls\")),\n    path(\"products/\", include(\"products.urls\")),\n    path(\"cart/\", include(\"cart.urls\")),\n    path(\"checkout/\", include(\"checkout.urls\")),",
         "detail": "artshop.urls",
         "documentation": {}
     },
@@ -918,7 +968,7 @@
         "kind": 5,
         "importPath": "artshop.urls",
         "description": "artshop.urls",
-        "peekOfCode": "admin.site.site_title = \"Admin Portal\"\nadmin.site.index_title = \"Welcome to Portal\"\nurlpatterns = [\n    path(\"\", include(\"home.urls\")),\n    path(\"admin/\", admin.site.urls),\n    path(\"accounts/\", include(\"allauth.urls\")),\n    path(\"products/\", include(\"products.urls\")),\n    path(\"cart/\", include(\"cart.urls\")),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "admin.site.site_title = \"Admin Portal\"\nadmin.site.index_title = \"Welcome to Portal\"\nurlpatterns = [\n    path(\"\", include(\"home.urls\")),\n    path(\"admin/\", admin.site.urls),\n    path(\"accounts/\", include(\"allauth.urls\")),\n    path(\"products/\", include(\"products.urls\")),\n    path(\"cart/\", include(\"cart.urls\")),\n    path(\"checkout/\", include(\"checkout.urls\")),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
         "detail": "artshop.urls",
         "documentation": {}
     },
@@ -927,7 +977,7 @@
         "kind": 5,
         "importPath": "artshop.urls",
         "description": "artshop.urls",
-        "peekOfCode": "admin.site.index_title = \"Welcome to Portal\"\nurlpatterns = [\n    path(\"\", include(\"home.urls\")),\n    path(\"admin/\", admin.site.urls),\n    path(\"accounts/\", include(\"allauth.urls\")),\n    path(\"products/\", include(\"products.urls\")),\n    path(\"cart/\", include(\"cart.urls\")),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "admin.site.index_title = \"Welcome to Portal\"\nurlpatterns = [\n    path(\"\", include(\"home.urls\")),\n    path(\"admin/\", admin.site.urls),\n    path(\"accounts/\", include(\"allauth.urls\")),\n    path(\"products/\", include(\"products.urls\")),\n    path(\"cart/\", include(\"cart.urls\")),\n    path(\"checkout/\", include(\"checkout.urls\")),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
         "detail": "artshop.urls",
         "documentation": {}
     },
@@ -936,7 +986,7 @@
         "kind": 5,
         "importPath": "artshop.urls",
         "description": "artshop.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"\", include(\"home.urls\")),\n    path(\"admin/\", admin.site.urls),\n    path(\"accounts/\", include(\"allauth.urls\")),\n    path(\"products/\", include(\"products.urls\")),\n    path(\"cart/\", include(\"cart.urls\")),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "urlpatterns = [\n    path(\"\", include(\"home.urls\")),\n    path(\"admin/\", admin.site.urls),\n    path(\"accounts/\", include(\"allauth.urls\")),\n    path(\"products/\", include(\"products.urls\")),\n    path(\"cart/\", include(\"cart.urls\")),\n    path(\"checkout/\", include(\"checkout.urls\")),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
         "detail": "artshop.urls",
         "documentation": {}
     },
@@ -1091,6 +1141,24 @@
         "description": "checkout.signals",
         "peekOfCode": "def update_on_delete(sender, instance, **kwargs):\n    \"\"\"\n    Update order total on lineITem Delete\n    \"\"\"\n    instance.order.update_total()",
         "detail": "checkout.signals",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "checkout.urls",
+        "description": "checkout.urls",
+        "peekOfCode": "urlpatterns = [\n    path(\"\", views.checkout, name=\"checkout\"),\n]",
+        "detail": "checkout.urls",
+        "documentation": {}
+    },
+    {
+        "label": "checkout",
+        "kind": 2,
+        "importPath": "checkout.views",
+        "description": "checkout.views",
+        "peekOfCode": "def checkout(request):\n    cart = request.session.get(\"cart\", {})\n    if not cart:\n        messages.error(request, \"There are no item in your cart at the moment\")\n        return redirect(reverse(\"products\"))\n    order_form = OrderForm()\n    template = \"checkout/checkout.html\"\n    context = {\n        \"order_form\": order_form,\n    }",
+        "detail": "checkout.views",
         "documentation": {}
     },
     {
