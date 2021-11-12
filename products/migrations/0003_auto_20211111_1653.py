@@ -6,18 +6,18 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('products', '0002_auto_20211111_1012'),
+        ("products", "0002_auto_20211111_1012"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='product',
-            name='dimensions',
+            model_name="product",
+            name="dimensions",
             field=models.CharField(blank=True, max_length=13, null=True),
         ),
         migrations.AddField(
-            model_name='product',
-            name='unique',
-            field=models.BooleanField(blank='False', default=True),
+            model_name="product",
+            name="unique",
+            field=models.BooleanField(blank="False", default=True),
         ),
     ]
