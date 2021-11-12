@@ -16,18 +16,18 @@ body {
   height: calc(100vh - 164px);
   color: black;
   font-family: 'Open Sans', sans-serif;
+  margin-top: 20px;
 }
 
 .icon {
   align-items: center;
   display: inline-flex;
   justify-content: center;
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 1rem;
+  width: 1rem;
 }
 
 .logo-font {
-  text-transform: uppercase;
   font-family: 'Caveat', cursive;
 }
 

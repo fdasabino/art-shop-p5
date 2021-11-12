@@ -41,7 +41,7 @@
 
 <body>
 
-  <header class="container-fluid fixed-top">
+  <header class="container-fluid fixed-top ">
     <div id="topnav" class="row bg-light pt-lg-2 d-none d-lg-flex">
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
         <a href="/" class="nav-link main-logo-link">
@@ -109,6 +109,11 @@
     </div>
     <div class="row bg-light">
       <nav class="navbar navbar-expand-lg navbar-light w-100">
+        <div class="col-12 mx-auto mb-2 py-1 d-flex justify-content-center d-lg-none">
+          <a href="/" class="nav-link main-logo-link ">
+            <h3 class="logo-font text-dark my-0"><strong>Daniela's Art Shop</strong></h3>
+          </a>
+        </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
           aria-controls="main-nav" aria-expanded="false" aria-label="Toggle Navigation">
           <span class="navbar-toggler-icon"></span>
@@ -124,20 +129,20 @@
   <div class="message-container">
     {% for message in messages %}
     {% with message.level as level %}
-    
+
     {% if level == 40 %}
     {% include 'includes/toasts/toast_error.html' %}
 
     {% elif level == 30 %}
     {% include 'includes/toasts/toast_warning.html' %}
-    
+
     {% elif level == 25 %}
     {% include 'includes/toasts/toast_success.html' %}
-    
+
     {% else %}
     {% include 'includes/toasts/toast_info.html' %}
-    
-    
+
+
     {% endif %}
     {% endwith %}
     {% endfor %}
