@@ -7,13 +7,15 @@ from .models import Category, Product
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
-        "sku",
         "name",
-        "category",
         "price",
-        "rating",
+        "category",
+        "quantity_available",
+        "unique",
+        "sku",
+        "dimensions",
     )
-    ordering = ("sku",)
+    list_editable = ["price", "quantity_available"]
 
 
 class CategoryAdmin(admin.ModelAdmin):

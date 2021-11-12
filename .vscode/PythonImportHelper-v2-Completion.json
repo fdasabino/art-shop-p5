@@ -1030,7 +1030,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "LANGUAGE_CODE = \"en-us\"\nTIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"",
+        "peekOfCode": "LANGUAGE_CODE = \"en-us\"\nTIME_ZONE = \"Europe/Stockholm\"\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1039,7 +1039,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "TIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media\")",
+        "peekOfCode": "TIME_ZONE = \"Europe/Stockholm\"\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media\")",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1327,7 +1327,7 @@
         "kind": 6,
         "importPath": "checkout.admin",
         "description": "checkout.admin",
-        "peekOfCode": "class OrderLineItemAdminInline(admin.TabularInline):\n    model = OrderLineItem\n    readonly_fields = (\"lineitem_total\",)\nclass OrderAdmin(admin.ModelAdmin):\n    inlines = (OrderLineItemAdminInline,)\n    readonly_fields = (\n        \"order_number\",\n        \"date\",\n        \"delivery_cost\",\n        \"order_total\",",
+        "peekOfCode": "class OrderLineItemAdminInline(admin.TabularInline):\n    model = OrderLineItem\n    readonly_fields = (\"lineitem_total\",)\nclass OrderAdmin(admin.ModelAdmin):\n    inlines = (OrderLineItemAdminInline,)\n    readonly_fields = (\n        \"date\",\n        \"order_number\",\n        \"delivery_cost\",\n        \"order_total\",",
         "detail": "checkout.admin",
         "documentation": {}
     },
@@ -1336,7 +1336,7 @@
         "kind": 6,
         "importPath": "checkout.admin",
         "description": "checkout.admin",
-        "peekOfCode": "class OrderAdmin(admin.ModelAdmin):\n    inlines = (OrderLineItemAdminInline,)\n    readonly_fields = (\n        \"order_number\",\n        \"date\",\n        \"delivery_cost\",\n        \"order_total\",\n        \"grand_total\",\n        \"original_cart\",\n        \"stripe_pid\",",
+        "peekOfCode": "class OrderAdmin(admin.ModelAdmin):\n    inlines = (OrderLineItemAdminInline,)\n    readonly_fields = (\n        \"date\",\n        \"order_number\",\n        \"delivery_cost\",\n        \"order_total\",\n        \"grand_total\",\n        \"original_cart\",\n        \"stripe_pid\",",
         "detail": "checkout.admin",
         "documentation": {}
     },
@@ -1525,7 +1525,7 @@
         "kind": 6,
         "importPath": "products.admin",
         "description": "products.admin",
-        "peekOfCode": "class ProductAdmin(admin.ModelAdmin):\n    list_display = (\n        \"sku\",\n        \"name\",\n        \"category\",\n        \"price\",\n        \"rating\",\n    )\n    ordering = (\"sku\",)\nclass CategoryAdmin(admin.ModelAdmin):",
+        "peekOfCode": "class ProductAdmin(admin.ModelAdmin):\n    list_display = (\n        \"name\",\n        \"price\",\n        \"category\",\n        \"quantity_available\",\n        \"unique\",\n        \"sku\",\n        \"dimensions\",\n    )",
         "detail": "products.admin",
         "documentation": {}
     },
