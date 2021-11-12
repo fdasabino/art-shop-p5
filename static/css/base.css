@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Open+Sans:wght@300&display=swap');
 
+* {
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
 }
@@ -104,9 +110,14 @@ input[type=number] {
 }
 
 .toast-btn {
-
   font-size: 15px;
   margin-top: 5px;
+}
+
+.cart-notification-wrapper {
+  height: 100px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 

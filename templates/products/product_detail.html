@@ -106,15 +106,14 @@
                 </span>
                 <span class="text-uppercase">Keep Shopping</span>
               </a>
-              
-              {% if item.cart in session %} 
-              <input type="submit" class="btn btn-dark rounded-0 text-uppercase mt-5" value="Product Added to Basket" disabled>
-              {% else %}
+
               <input type="submit" class="btn btn-dark rounded-0 text-uppercase mt-5" value="Add to cart">
               </div>
               <input type="hidden" name="redirect_url" value="{{ request.path }}">
-              {% endif %}
-            {% endwith %}
+              {% endwith %}
+
+              
+              
           </div>
         </form>
       </div>
