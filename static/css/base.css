@@ -71,10 +71,19 @@ nav {
   right: 10px;
 }
 
-.btt-link,
-.update-link,
-.delete-item {
+.btt-link {
   cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 /* -------------------------------- Media Queries */
