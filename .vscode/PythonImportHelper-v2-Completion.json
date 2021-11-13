@@ -338,6 +338,14 @@
         "documentation": {}
     },
     {
+        "label": "HttpResponse",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
         "label": "get_object_or_404",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
@@ -677,6 +685,14 @@
         "documentation": {}
     },
     {
+        "label": "UserProfile",
+        "importPath": "profiles.models",
+        "description": "profiles.models",
+        "isExtraImport": true,
+        "detail": "profiles.models",
+        "documentation": {}
+    },
+    {
         "label": "post_delete",
         "importPath": "django.db.models.signals",
         "description": "django.db.models.signals",
@@ -735,51 +751,51 @@
         "documentation": {}
     },
     {
-        "label": "HttpResponse",
-        "importPath": "django.http",
-        "description": "django.http",
-        "isExtraImport": true,
-        "detail": "django.http",
-        "documentation": {}
-    },
-    {
-        "label": "HttpResponse",
-        "importPath": "django.http",
-        "description": "django.http",
-        "isExtraImport": true,
-        "detail": "django.http",
-        "documentation": {}
-    },
-    {
-        "label": "HttpResponse",
-        "importPath": "django.http",
-        "description": "django.http",
-        "isExtraImport": true,
-        "detail": "django.http",
-        "documentation": {}
-    },
-    {
-        "label": "require_POST",
-        "importPath": "django.views.decorators.http",
-        "description": "django.views.decorators.http",
-        "isExtraImport": true,
-        "detail": "django.views.decorators.http",
-        "documentation": {}
-    },
-    {
-        "label": "require_POST",
-        "importPath": "django.views.decorators.http",
-        "description": "django.views.decorators.http",
-        "isExtraImport": true,
-        "detail": "django.views.decorators.http",
-        "documentation": {}
-    },
-    {
         "label": "cart_contents",
         "importPath": "cart.context_processor",
         "description": "cart.context_processor",
         "isExtraImport": true,
         "detail": "cart.context_processor",
+        "documentation": {}
+    },
+    {
+        "label": "require_POST",
+        "importPath": "django.views.decorators.http",
+        "description": "django.views.decorators.http",
+        "isExtraImport": true,
+        "detail": "django.views.decorators.http",
+        "documentation": {}
+    },
+    {
+        "label": "require_POST",
+        "importPath": "django.views.decorators.http",
+        "description": "django.views.decorators.http",
+        "isExtraImport": true,
+        "detail": "django.views.decorators.http",
+        "documentation": {}
+    },
+    {
+        "label": "UserProfileForm",
+        "importPath": "profiles.forms",
+        "description": "profiles.forms",
+        "isExtraImport": true,
+        "detail": "profiles.forms",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
         "documentation": {}
     },
     {
@@ -1480,7 +1496,7 @@
         "kind": 2,
         "importPath": "checkout.views",
         "description": "checkout.views",
-        "peekOfCode": "def checkout(request):  # sourcery no-metrics\n    stripe_public_key = settings.STRIPE_PUBLIC_KEY\n    stripe_secret_key = settings.STRIPE_SECRET_KEY\n    if request.method == \"POST\":\n        cart = request.session.get(\"cart\", {})\n        form_data = {\n            \"full_name\": request.POST[\"full_name\"],\n            \"email\": request.POST[\"email\"],\n            \"phone_number\": request.POST[\"phone_number\"],\n            \"country\": request.POST[\"country\"],",
+        "peekOfCode": "def checkout(request):\n    stripe_public_key = settings.STRIPE_PUBLIC_KEY\n    stripe_secret_key = settings.STRIPE_SECRET_KEY\n    if request.method == \"POST\":\n        cart = request.session.get(\"cart\", {})\n        form_data = {\n            \"full_name\": request.POST[\"full_name\"],\n            \"email\": request.POST[\"email\"],\n            \"phone_number\": request.POST[\"phone_number\"],\n            \"country\": request.POST[\"country\"],",
         "detail": "checkout.views",
         "documentation": {}
     },
@@ -1489,7 +1505,7 @@
         "kind": 2,
         "importPath": "checkout.views",
         "description": "checkout.views",
-        "peekOfCode": "def checkout_success(request, order_number):\n    \"\"\"\n    Handle successful checkouts\n    \"\"\"\n    save_info = request.session.get(\"save_info\")\n    order = get_object_or_404(Order, order_number=order_number)\n    messages.success(\n        request,\n        f\"Order successfully processed! \\\n        Your order number is {order_number}. A confirmation \\",
+        "peekOfCode": "def checkout_success(request, order_number):\n    \"\"\"\n    Handle successful checkouts\n    \"\"\"\n    save_info = request.session.get(\"save_info\")\n    order = get_object_or_404(Order, order_number=order_number)\n    if request.user.is_authenticated:\n        profile = UserProfile.objects.get(user=request.user)\n        # Attach the user's profile to the order\n        order.user_profile = profile",
         "detail": "checkout.views",
         "documentation": {}
     },
@@ -1660,7 +1676,7 @@
         "kind": 2,
         "importPath": "profiles.models",
         "description": "profiles.models",
-        "peekOfCode": "def create_or_update_user_profile(sender, instance, created, **kwargs):\n    \"\"\"\n    Create or update the user profile\n    \"\"\"\n    if created:\n        UserProfile.objects.create(user=instance)\n        # Existing users: just save the profile\n    instance.userprofile.save()",
+        "peekOfCode": "def create_or_update_user_profile(sender, instance, created, **kwargs):\n    \"\"\"\n    Create or update the user profile\n    \"\"\"\n    if created:\n        UserProfile.objects.create(user=instance)\n    # Existing users: just save the profile\n    instance.userprofile.save()",
         "detail": "profiles.models",
         "documentation": {}
     },

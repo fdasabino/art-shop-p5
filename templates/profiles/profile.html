@@ -3,7 +3,7 @@
 {% load humanize %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+<link rel="stylesheet" href="{% static 'css/profiles.css' %}">
 {% endblock %}
 
 {% block page_header %}
@@ -60,7 +60,7 @@
                   <li class="small">
                     {% if item.product.has_sizes %}
                     Size {{ item.product.size|upper }}
-                    {% endif %}{{ item.product.name }} x{{ item.quantity }}
+                    {% endif %}{{ item.product.name }} x {{ item.quantity }}
                   </li>
                   {% endfor %}
                 </ul>
@@ -78,5 +78,5 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/countryfield.js' %}"></script>
 {% endblock %}
