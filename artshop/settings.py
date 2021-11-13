@@ -9,7 +9,6 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-import builtins
 import os
 from pathlib import Path
 
@@ -183,6 +182,7 @@ STRIPE_CURRENCY = "sek"
 STRIPE_PUBLIC_KEY = os.environ.get("STRIPE_PUBLIC_KEY", "")
 STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY", "")
 STRIPE_WH_SECRET = os.environ.get("STRIPE_WH_SECRET", "")
+DEFAULT_FROM_EMAIL = "danielasartshop@gmail.com"
 
 # if 'DEVELOPMENT' in os.environ:
 #     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

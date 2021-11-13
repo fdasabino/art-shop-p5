@@ -17,15 +17,6 @@
         "documentation": {}
     },
     {
-        "label": "builtins",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "builtins",
-        "description": "builtins",
-        "detail": "builtins",
-        "documentation": {}
-    },
-    {
         "label": "Path",
         "importPath": "pathlib",
         "description": "pathlib",
@@ -1234,7 +1225,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe\nFREE_DELIVERY_THRESHOLD = 50\nSTANDARD_DELIVERY_PERCENTAGE = 10\nSTRIPE_CURRENCY = \"sek\"\nSTRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\n# if 'DEVELOPMENT' in os.environ:\n#     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe\nFREE_DELIVERY_THRESHOLD = 50\nSTANDARD_DELIVERY_PERCENTAGE = 10\nSTRIPE_CURRENCY = \"sek\"\nSTRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\nDEFAULT_FROM_EMAIL = \"danielasartshop@gmail.com\"\n# if 'DEVELOPMENT' in os.environ:",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1243,7 +1234,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "FREE_DELIVERY_THRESHOLD = 50\nSTANDARD_DELIVERY_PERCENTAGE = 10\nSTRIPE_CURRENCY = \"sek\"\nSTRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\n# if 'DEVELOPMENT' in os.environ:\n#     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\n#     DEFAULT_FROM_EMAIL = 'boutiqueado@example.com'\n# else:",
+        "peekOfCode": "FREE_DELIVERY_THRESHOLD = 50\nSTANDARD_DELIVERY_PERCENTAGE = 10\nSTRIPE_CURRENCY = \"sek\"\nSTRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\nDEFAULT_FROM_EMAIL = \"danielasartshop@gmail.com\"\n# if 'DEVELOPMENT' in os.environ:\n#     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\n#     DEFAULT_FROM_EMAIL = 'boutiqueado@example.com'",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1252,7 +1243,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "STANDARD_DELIVERY_PERCENTAGE = 10\nSTRIPE_CURRENCY = \"sek\"\nSTRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\n# if 'DEVELOPMENT' in os.environ:\n#     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\n#     DEFAULT_FROM_EMAIL = 'boutiqueado@example.com'\n# else:\n#     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'",
+        "peekOfCode": "STANDARD_DELIVERY_PERCENTAGE = 10\nSTRIPE_CURRENCY = \"sek\"\nSTRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\nDEFAULT_FROM_EMAIL = \"danielasartshop@gmail.com\"\n# if 'DEVELOPMENT' in os.environ:\n#     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\n#     DEFAULT_FROM_EMAIL = 'boutiqueado@example.com'\n# else:",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1261,7 +1252,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "STRIPE_CURRENCY = \"sek\"\nSTRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\n# if 'DEVELOPMENT' in os.environ:\n#     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\n#     DEFAULT_FROM_EMAIL = 'boutiqueado@example.com'\n# else:\n#     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\n#     EMAIL_USE_TLS = True",
+        "peekOfCode": "STRIPE_CURRENCY = \"sek\"\nSTRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\nDEFAULT_FROM_EMAIL = \"danielasartshop@gmail.com\"\n# if 'DEVELOPMENT' in os.environ:\n#     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\n#     DEFAULT_FROM_EMAIL = 'boutiqueado@example.com'\n# else:\n#     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1270,7 +1261,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "STRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\n# if 'DEVELOPMENT' in os.environ:\n#     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\n#     DEFAULT_FROM_EMAIL = 'boutiqueado@example.com'\n# else:\n#     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\n#     EMAIL_USE_TLS = True\n#     EMAIL_PORT = 587",
+        "peekOfCode": "STRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\nDEFAULT_FROM_EMAIL = \"danielasartshop@gmail.com\"\n# if 'DEVELOPMENT' in os.environ:\n#     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\n#     DEFAULT_FROM_EMAIL = 'boutiqueado@example.com'\n# else:\n#     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\n#     EMAIL_USE_TLS = True",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1279,7 +1270,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "STRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\n# if 'DEVELOPMENT' in os.environ:\n#     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\n#     DEFAULT_FROM_EMAIL = 'boutiqueado@example.com'\n# else:\n#     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\n#     EMAIL_USE_TLS = True\n#     EMAIL_PORT = 587\n#     EMAIL_HOST = 'smtp.gmail.com'",
+        "peekOfCode": "STRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\nDEFAULT_FROM_EMAIL = \"danielasartshop@gmail.com\"\n# if 'DEVELOPMENT' in os.environ:\n#     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\n#     DEFAULT_FROM_EMAIL = 'boutiqueado@example.com'\n# else:\n#     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\n#     EMAIL_USE_TLS = True\n#     EMAIL_PORT = 587",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1288,7 +1279,16 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "STRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\n# if 'DEVELOPMENT' in os.environ:\n#     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\n#     DEFAULT_FROM_EMAIL = 'boutiqueado@example.com'\n# else:\n#     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\n#     EMAIL_USE_TLS = True\n#     EMAIL_PORT = 587\n#     EMAIL_HOST = 'smtp.gmail.com'\n#     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')",
+        "peekOfCode": "STRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\nDEFAULT_FROM_EMAIL = \"danielasartshop@gmail.com\"\n# if 'DEVELOPMENT' in os.environ:\n#     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\n#     DEFAULT_FROM_EMAIL = 'boutiqueado@example.com'\n# else:\n#     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\n#     EMAIL_USE_TLS = True\n#     EMAIL_PORT = 587\n#     EMAIL_HOST = 'smtp.gmail.com'",
+        "detail": "artshop.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_FROM_EMAIL",
+        "kind": 5,
+        "importPath": "artshop.settings",
+        "description": "artshop.settings",
+        "peekOfCode": "DEFAULT_FROM_EMAIL = \"danielasartshop@gmail.com\"\n# if 'DEVELOPMENT' in os.environ:\n#     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\n#     DEFAULT_FROM_EMAIL = 'boutiqueado@example.com'\n# else:\n#     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\n#     EMAIL_USE_TLS = True\n#     EMAIL_PORT = 587\n#     EMAIL_HOST = 'smtp.gmail.com'\n#     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1531,7 +1531,7 @@
         "kind": 6,
         "importPath": "checkout.webhook_handler",
         "description": "checkout.webhook_handler",
-        "peekOfCode": "class StripeWH_Handler:\n    \"\"\"Handle Stripe webhooks\"\"\"\n    def __init__(self, request):\n        self.request = request\n    def _send_confirmation_email(self, order):\n        \"\"\"Send the user a confirmation email\"\"\"\n        cust_email = order.email\n        subject = render_to_string(\n            \"checkout/confirmation_emails/confirmation_email_subject.txt\",\n            {\"order\": order},",
+        "peekOfCode": "class StripeWH_Handler:\n    \"\"\"Handle Stripe webhooks\"\"\"\n    def __init__(self, request):\n        self.request = request\n    def _send_confirmation_email(self, order):\n        \"\"\"Send the user a confirmation email\"\"\"\n        cust_email = order.email\n        subject = render_to_string(\n            \"templates\\confirmation_emails\\confirmation_email_subject.txt\",\n            {\"order\": order},",
         "detail": "checkout.webhook_handler",
         "documentation": {}
     },

@@ -22,6 +22,7 @@
     "**/requirements{/**,*}.{txt,in}": "pip-requirements"
   },
   "cSpell.words": [
+    "cust",
     "Daniela",
     "Ecommerce",
     "forloop",
