@@ -693,6 +693,14 @@
         "documentation": {}
     },
     {
+        "label": "UserProfile",
+        "importPath": "profiles.models",
+        "description": "profiles.models",
+        "isExtraImport": true,
+        "detail": "profiles.models",
+        "documentation": {}
+    },
+    {
         "label": "post_delete",
         "importPath": "django.db.models.signals",
         "description": "django.db.models.signals",
