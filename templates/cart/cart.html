@@ -74,7 +74,7 @@
                         </span>
                       </button>
                     </div>
-                    <input class="form-control form-control-sm qty_input" type="number" name="quantity"
+                    <input readonly class="form-control form-control-sm qty_input" type="number" name="quantity"
                       value="{{ item.quantity }}" min="1" max="{{item.product.quantity_available}}" data-item_id="{{ item.item_id }}"
                       id="id_qty_{{ item.item_id }}">
                     <div class="input-group-append">
