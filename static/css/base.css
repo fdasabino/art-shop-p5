@@ -152,7 +152,8 @@ input[type=number] {
 .allauth-form-inner-content input {
   border-color: #000;
   border-radius: 0;
-  max-width: 100%
+  max-width: 100%;
+  margin-top: 10px;
 }
 
 .allauth-form-inner-content label:not([for='id_remember']) {
@@ -161,6 +162,7 @@ input[type=number] {
 
 .allauth-form-inner-content input::placeholder {
   color: #aab7c4;
+
 }
 
 .allauth-form-inner-content button,
@@ -181,6 +183,7 @@ input[type=number] {
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 0;
+  margin-top: 10px;
 
   /* standard bootstrap btn transitions */
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
