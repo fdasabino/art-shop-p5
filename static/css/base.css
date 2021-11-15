@@ -6,7 +6,8 @@
   box-sizing: border-box;
 }
 
-a {
+a,
+.btn-link {
   text-decoration: none;
 }
 
@@ -25,7 +26,6 @@ body {
   color: black;
   font-family: 'Open Sans', sans-serif;
 }
-
 
 .icon {
   align-items: center;
