@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  background: url(../../media/project_images/P1000851-2.jpg) center top fixed;
+  background: url() center top fixed;
   background-size: cover;
   height: calc(100vh - 220px);
   color: black;
