@@ -14,13 +14,18 @@ html {
   height: 100%;
 }
 
-body {
+.hero-img {
   background: url(https://res.cloudinary.com/frank2021/image/upload/v1636935850/Danielas%20art%20shop/P1000851-2_cjfump.jpg) center top fixed;
   background-size: cover;
+  height: 100vh;
+}
+
+body {
   height: calc(100vh - 220px);
   color: black;
   font-family: 'Open Sans', sans-serif;
 }
+
 
 .icon {
   align-items: center;
