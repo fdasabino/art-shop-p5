@@ -15,10 +15,18 @@ html {
   height: 100%;
 }
 
+
 .hero-img {
-  background: url(https://res.cloudinary.com/frank2021/image/upload/v1636935850/Danielas%20art%20shop/P1000851-2_cjfump.jpg) center top fixed;
+  background: url(https://res.cloudinary.com/frank2021/image/upload/v1636935850/Danielas%20art%20shop/P1000851-2_cjfump.jpg) center top;
+  background-attachment: fixed;
   background-size: cover;
   height: 100vh;
+}
+
+@media(max-width:1000px) {
+  .hero-img {
+    background-attachment: initial;
+  }
 }
 
 body {
@@ -47,14 +55,8 @@ body {
   min-width: 260px;
 }
 
-.overlay {
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  position: fixed;
-  background: #fff;
-  z-index: -1;
+.navbar-toggler {
+  color: #000 !important;
 }
 
 a.category-badge>span.badge:hover {
@@ -63,10 +65,20 @@ a.category-badge>span.badge:hover {
 
 }
 
+/* navigation */
+.bg-light,
+nav {
+  background-color: lightgreen !important;
+}
 
 nav {
   border-bottom: 5px solid #000;
 }
+
+.bg-pink {
+  background-color: lightpink;
+}
+
 
 .btt-button {
   height: 42px;
