@@ -4,7 +4,7 @@
         aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-search fa-lg"></i></div>
-            <p class="my-0">Search</p>
+            <small class="my-0"><b>Search</b></small>
         </div>
     </a>
     <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
@@ -28,7 +28,7 @@
         aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-house-user fa-lg"></i></div>
-            <p class="my-0">My Account</p>
+            <small class="my-0"><b>My Account</b></small>
         </div>
     </a>
     <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -46,13 +46,14 @@
         class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none">
         <div class="text-center text-dark">
             <div><i class="fas fa-shopping-cart fa-lg"></i></div>
-            <p class="my-0">
-                {% if grand_total %}
-                {{ grand_total|intcomma }}kr
-                {% else %}
-                0.00kr
-                {% endif %}
-            </p>
+            <small class="my-0"><b>
+                    {% if grand_total %}
+                    {{ grand_total|intcomma }}kr
+                    {% else %}
+                    0.00kr
+                    {% endif %}
+                </b>
+            </small>
         </div>
     </a>
 </li>
