@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  background: url(https://res.cloudinary.com/frank2021/image/upload/v1636935850/Danielas%20art%20shop/P1000851-2_cjfump.jpg) center top;
+  background: url(https://res.cloudinary.com/frank2021/image/upload/v1636935850/Danielas%20art%20shop/P1000851-2_cjfump.jpg) center top fixed;
   background-size: cover;
   height: calc(100vh - 220px);
   color: black;
