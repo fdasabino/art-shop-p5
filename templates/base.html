@@ -42,8 +42,8 @@
 
 <body>
 
-  <header class="container-fluid fixed-top ">
-    <div id="topnav" class="row bg-light pt-lg-2 d-none d-lg-flex">
+  <header class="container-fluid sticky-header">
+    <div id="topnav" class="row bg-light d-none d-lg-flex">
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
         <a href="/" class="nav-link main-logo-link">
           <h3 class="logo-font text-dark my-0"><strong>Daniela's Art Shop</strong></h3>
@@ -146,6 +146,8 @@
     {% endfor %}
   </div>
   {% endif %}
+  
+  
 
   {% block page_header %}
   {% endblock page_header %}
@@ -158,7 +160,6 @@
     $('.toast').toast('show');
   </script>
   {% endblock post_load_js %}
-
+  {% include 'includes/footer.html' %}
 </body>
-
 </html>

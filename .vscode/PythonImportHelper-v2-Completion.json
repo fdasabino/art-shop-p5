@@ -1432,7 +1432,7 @@
         "kind": 2,
         "importPath": "cart.views",
         "description": "cart.views",
-        "peekOfCode": "def view_cart(request):\n    \"\"\"A view that renders the cart contents page\"\"\"\n    return render(request, \"cart/cart.html\")\ndef add_to_cart(request, item_id):\n    \"\"\"Add a quantity of the specified product to the shopping cart\"\"\"\n    product = Product.objects.get(pk=item_id)\n    quantity = int(request.POST.get(\"quantity\"))\n    redirect_url = request.POST.get(\"redirect_url\")\n    size = None\n    if \"product_size\" in request.POST:",
+        "peekOfCode": "def view_cart(request):\n    \"\"\"A view that renders the cart contents page\"\"\"\n    return render(request, \"cart/cart.html\")\ndef add_to_cart(request, item_id):\n    \"\"\"Add a quantity of the specified product to the shopping cart\"\"\"\n    product = Product.objects.get(pk=item_id)\n    quantity = int(request.POST.get(\"quantity\"))\n    redirect_url = request.POST.get(\"redirect_url\")\n    size = request.POST[\"product_size\"] if \"product_size\" in request.POST else None\n    cart = request.session.get(\"cart\", {})",
         "detail": "cart.views",
         "documentation": {}
     },
@@ -1441,7 +1441,7 @@
         "kind": 2,
         "importPath": "cart.views",
         "description": "cart.views",
-        "peekOfCode": "def add_to_cart(request, item_id):\n    \"\"\"Add a quantity of the specified product to the shopping cart\"\"\"\n    product = Product.objects.get(pk=item_id)\n    quantity = int(request.POST.get(\"quantity\"))\n    redirect_url = request.POST.get(\"redirect_url\")\n    size = None\n    if \"product_size\" in request.POST:\n        size = request.POST[\"product_size\"]\n    cart = request.session.get(\"cart\", {})\n    if size:",
+        "peekOfCode": "def add_to_cart(request, item_id):\n    \"\"\"Add a quantity of the specified product to the shopping cart\"\"\"\n    product = Product.objects.get(pk=item_id)\n    quantity = int(request.POST.get(\"quantity\"))\n    redirect_url = request.POST.get(\"redirect_url\")\n    size = request.POST[\"product_size\"] if \"product_size\" in request.POST else None\n    cart = request.session.get(\"cart\", {})\n    if size:\n        if item_id in list(cart.keys()):\n            if size in cart[item_id][\"items_by_size\"].keys():",
         "detail": "cart.views",
         "documentation": {}
     },
@@ -1450,7 +1450,7 @@
         "kind": 2,
         "importPath": "cart.views",
         "description": "cart.views",
-        "peekOfCode": "def update_cart(request, item_id):\n    \"\"\"Adjust the quantity of the specified product to the specified amount\"\"\"\n    product = get_object_or_404(Product, pk=item_id)\n    quantity = int(request.POST.get(\"quantity\"))\n    size = None\n    if \"product_size\" in request.POST:\n        size = request.POST[\"product_size\"]\n    cart = request.session.get(\"cart\", {})\n    if size:\n        if quantity > 0:",
+        "peekOfCode": "def update_cart(request, item_id):\n    \"\"\"Adjust the quantity of the specified product to the specified amount\"\"\"\n    product = get_object_or_404(Product, pk=item_id)\n    quantity = int(request.POST.get(\"quantity\"))\n    size = request.POST[\"product_size\"] if \"product_size\" in request.POST else None\n    cart = request.session.get(\"cart\", {})\n    if size:\n        if quantity > 0:\n            cart[item_id][\"items_by_size\"][size] = quantity\n            messages.success(",
         "detail": "cart.views",
         "documentation": {}
     },
@@ -1459,7 +1459,7 @@
         "kind": 2,
         "importPath": "cart.views",
         "description": "cart.views",
-        "peekOfCode": "def remove_from_cart(request, item_id):\n    \"\"\"Remove the item from the shopping cart\"\"\"\n    try:\n        product = get_object_or_404(Product, pk=item_id)\n        size = None\n        if \"product_size\" in request.POST:\n            size = request.POST[\"product_size\"]\n        cart = request.session.get(\"cart\", {})\n        if size:\n            del cart[item_id][\"items_by_size\"][size]",
+        "peekOfCode": "def remove_from_cart(request, item_id):\n    \"\"\"Remove the item from the shopping cart\"\"\"\n    try:\n        product = get_object_or_404(Product, pk=item_id)\n        size = request.POST[\"product_size\"] if \"product_size\" in request.POST else None\n        cart = request.session.get(\"cart\", {})\n        if size:\n            del cart[item_id][\"items_by_size\"][size]\n            if not cart[item_id][\"items_by_size\"]:\n                cart.pop(item_id)",
         "detail": "cart.views",
         "documentation": {}
     },

@@ -15,12 +15,11 @@ html {
 }
 
 body {
-  background: url(https://images.pexels.com/photos/1084406/pexels-photo-1084406.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) center fixed;
+  background: url(../../media/project_images/P1000851-2.jpg) center top fixed;
   background-size: cover;
-  height: calc(100vh - 164px);
+  height: calc(100vh - 220px);
   color: black;
   font-family: 'Open Sans', sans-serif;
-  margin-top: 20px;
 }
 
 .icon {
@@ -58,6 +57,7 @@ a.category-badge>span.badge:hover {
   color: #fff !important;
 
 }
+
 
 nav {
   border-bottom: 5px solid #000;
@@ -221,6 +221,10 @@ input[type=number] {
 @media (max-width: 991px) {
   .header-container {
     padding-top: 116px;
+  }
+
+  body {
+    height: calc(100vh - 164px);
   }
 
   body {
