@@ -31,9 +31,9 @@
         <div class="card">
           <div class="card-header" id="headingTwo">
             <h2 class="mb-0">
-              <button class="btn btn-link btn-block" type="button" data-toggle="collapse"
-                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                <h6 class="text-black font-weight-bold">Order History <i class="fas fa-chevron-down px-2"></i>
+              <button class="btn btn-link btn-block" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                aria-expanded="false" aria-controls="collapseTwo">
+                <h6 class="text-black font-weight-bold"><b>Order History</b> <i class="fas fa-chevron-down px-2"></i>
                 </h6>
               </button>
             </h2>
@@ -57,7 +57,7 @@
                         {{ order.order_number|truncatechars:6 }}
                       </a>
                     </td>
-                    <td>{{ order.date }}</td>
+                    <td>{{ order.date|naturaltime|upper }} - {{ order.date }}</td>
                     <td>
                       <ul class="list-unstyled">
                         {% for item in order.lineitems.all %}
@@ -83,7 +83,7 @@
             <h2 class="mb-0">
               <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
                 data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                <h6 class="text-black font-weight-bold">Default Delivery Information <i
+                <h6 class="text-black font-weight-bold"><b> Default Delivery Information </b><i
                     class="fas fa-chevron-down px-2"></i></h6>
               </button>
             </h2>
@@ -106,7 +106,8 @@
             <h2 class="mb-0">
               <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
                 data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                <h6 class="text-black font-weight-bold">Account Settings <i class="fas fa-chevron-down px-2"></i>
+                <h6 class="text-black font-weight-bold"><b> Account Management</b> <i
+                    class="fas fa-chevron-down px-2"></i>
                 </h6>
               </button>
             </h2>
@@ -114,7 +115,20 @@
           <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
             <div class="card-body">
               <div class="container">
-
+                <div class="row">
+                  <div class="col-lg-4 col-12 text-center py-2">
+                    <p>Change Password:</p>
+                    <a class="btn btn-dark" href="{% url 'account_change_password' %}">Change my password</a>
+                  </div>
+                  <!-- <div class="col-lg-4 col-12 text-center">
+                    <p>Change Password:</p>
+                    <a class="btn btn-dark" href="{% url 'account_change_password' %}">Change my password</a>
+                  </div> -->
+                  <!-- <div class="col-lg-4 col-12 text-center">
+                    <p>Change Password:</p>
+                    <a class="btn btn-dark" href="{% url 'account_change_password' %}">Change my password</a>
+                  </div> -->
+                </div>
               </div>
             </div>
           </div>
