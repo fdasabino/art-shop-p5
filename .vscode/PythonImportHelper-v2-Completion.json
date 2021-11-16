@@ -1612,7 +1612,7 @@
         "kind": 5,
         "importPath": "home.urls",
         "description": "home.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"\", views.index, name=\"home\"),\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"\", views.index, name=\"home\"),\n    path(\"about/\", views.about, name=\"about\"),\n    path(\"contact/\", views.contact, name=\"contact\"),\n]",
         "detail": "home.urls",
         "documentation": {}
     },
@@ -1621,7 +1621,25 @@
         "kind": 2,
         "importPath": "home.views",
         "description": "home.views",
-        "peekOfCode": "def index(request):\n    \"\"\"\n    Render the homepage view\n    \"\"\"\n    return render(request, \"home/index.html\")",
+        "peekOfCode": "def index(request):\n    \"\"\"\n    Render the homepage view\n    \"\"\"\n    return render(request, \"home/index.html\")\ndef about(request):\n    \"\"\"\n    Render the about view\n    \"\"\"\n    return render(request, \"home/about.html\")",
+        "detail": "home.views",
+        "documentation": {}
+    },
+    {
+        "label": "about",
+        "kind": 2,
+        "importPath": "home.views",
+        "description": "home.views",
+        "peekOfCode": "def about(request):\n    \"\"\"\n    Render the about view\n    \"\"\"\n    return render(request, \"home/about.html\")\ndef contact(request):\n    \"\"\"\n    Render the contact page view\n    \"\"\"\n    return render(request, \"home/contact.html\")",
+        "detail": "home.views",
+        "documentation": {}
+    },
+    {
+        "label": "contact",
+        "kind": 2,
+        "importPath": "home.views",
+        "description": "home.views",
+        "peekOfCode": "def contact(request):\n    \"\"\"\n    Render the contact page view\n    \"\"\"\n    return render(request, \"home/contact.html\")",
         "detail": "home.views",
         "documentation": {}
     },
