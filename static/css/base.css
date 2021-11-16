@@ -12,9 +12,8 @@ a,
 }
 
 html {
-  height: 100%;
+  scroll-behavior: smooth;
 }
-
 
 .hero-img {
   background: url(https://res.cloudinary.com/frank2021/image/upload/v1636935850/Danielas%20art%20shop/P1000851-2_cjfump.jpg) center top;
@@ -39,6 +38,10 @@ body {
 
 }
 
+.btn {
+  border-radius: 0;
+}
+
 .icon {
   align-items: center;
   display: inline-flex;
@@ -51,22 +54,14 @@ body {
   font-family: 'Caveat', cursive;
 }
 
-.main-logo-link {
-  width: fit-content;
-}
 
 .shop-now-button {
   min-width: 260px;
 }
 
-.navbar-toggler {
-  color: #000 !important;
-}
-
 a.category-badge>span.badge:hover {
   background: #000 !important;
   color: #fff !important;
-
 }
 
 /* about */
@@ -81,17 +76,24 @@ a.category-badge>span.badge:hover {
 /* navigation */
 .bg-light,
 nav {
-  background-color: lightgreen !important;
+  background-color: #C2E5D3 !important;
 }
 
 nav {
-  border-bottom: 5px solid #000;
+  border-bottom: 5px solid rgb(255, 194, 204);
 }
 
 .bg-pink {
   background-color: lightpink;
 }
 
+.main-logo-link {
+  width: fit-content;
+}
+
+.navbar-toggler {
+  color: #000 !important;
+}
 
 .btt-button {
   height: 42px;
@@ -241,26 +243,10 @@ input[type=number] {
     left: 0;
     z-index: 1030;
   }
-
-  .header-container {
-    padding-top: 164px;
-  }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
-  .header-container {
-    padding-top: 116px;
-  }
-
-  body {
-    height: calc(100vh - 164px);
-  }
-
-  body {
-    height: calc(100vh - 116px);
-  }
-
   .display-4.logo-font.text-black {
     font-size: 2rem;
   }

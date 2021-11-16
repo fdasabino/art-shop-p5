@@ -3,9 +3,11 @@
 {% load humanize %}
 {% block extra_title %}Products{% endblock extra_title %}
 {% block page_header %}
-<div class="container header-container">
+<div class="container mt-3">
   <div class="row">
-    <div class="col"></div>
+    <div class="col text-center">
+      <a href="{% url 'home' %}" class="btn btn-outline-dark"><i class="fa fa-chevron-left"></i> Back to Homepage</a>
+    </div>
   </div>
 </div>
 {% endblock page_header %}
@@ -85,17 +87,17 @@
                     </a>
                   </p>
                   {% endif %}
-                {% if product.unique %}
+                  {% if product.unique %}
                   <small class="text-muted"><i class="fas fa-fingerprint"></i> Unique Product</small>
-                {% endif %}
+                  {% endif %}
                 </div>
                 {% if product.dimensions %}
-                  <small class="text-muted"><i class="fas fa-ruler-combined"></i> {{product.dimensions}}</small>
+                <small class="text-muted"><i class="fas fa-ruler-combined"></i> {{product.dimensions}}</small>
                 {% endif %}
                 {% if product.rating %}
-                  <small class="text-muted"><i class="fas fa-star mr-1"></i> {{product.rating}}</small>
+                <small class="text-muted"><i class="fas fa-star mr-1"></i> {{product.rating}}</small>
                 {% else %}
-                  <small class="text-muted">No Rating</small>
+                <small class="text-muted">No Rating</small>
                 {% endif %}
               </div>
             </div>
