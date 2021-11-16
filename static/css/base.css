@@ -30,7 +30,7 @@ html {
 }
 
 body {
-  height: calc(100vh - 220px);
+  height: 100vh;
   color: black;
   font-family: 'Open Sans', sans-serif;
 }

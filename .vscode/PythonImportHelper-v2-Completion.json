@@ -1027,7 +1027,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "SITE_ID = 1\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\nACCOUNT_AUTHENTICATION_METHOD = \"username_email\"\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_EMAIL_VERIFICATION = \"mandatory\"\nACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True\nACCOUNT_USERNAME_MIN_LENGTH = 4\nLOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"/\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"",
+        "peekOfCode": "SITE_ID = 1\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\nACCOUNT_AUTHENTICATION_METHOD = \"username_email\"\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_EMAIL_VERIFICATION = \"mandatory\"\nACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True\nACCOUNT_USERNAME_MIN_LENGTH = 4\nLOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"profile\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1036,7 +1036,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\nACCOUNT_AUTHENTICATION_METHOD = \"username_email\"\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_EMAIL_VERIFICATION = \"mandatory\"\nACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True\nACCOUNT_USERNAME_MIN_LENGTH = 4\nLOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"/\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database",
+        "peekOfCode": "EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\nACCOUNT_AUTHENTICATION_METHOD = \"username_email\"\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_EMAIL_VERIFICATION = \"mandatory\"\nACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True\nACCOUNT_USERNAME_MIN_LENGTH = 4\nLOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"profile\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1045,7 +1045,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "ACCOUNT_AUTHENTICATION_METHOD = \"username_email\"\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_EMAIL_VERIFICATION = \"mandatory\"\nACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True\nACCOUNT_USERNAME_MIN_LENGTH = 4\nLOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"/\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases",
+        "peekOfCode": "ACCOUNT_AUTHENTICATION_METHOD = \"username_email\"\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_EMAIL_VERIFICATION = \"mandatory\"\nACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True\nACCOUNT_USERNAME_MIN_LENGTH = 4\nLOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"profile\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1054,7 +1054,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "ACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_EMAIL_VERIFICATION = \"mandatory\"\nACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True\nACCOUNT_USERNAME_MIN_LENGTH = 4\nLOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"/\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\"default\": dj_database_url.parse(os.environ.get(\"DATABASE_URL\"))}",
+        "peekOfCode": "ACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_EMAIL_VERIFICATION = \"mandatory\"\nACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True\nACCOUNT_USERNAME_MIN_LENGTH = 4\nLOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"profile\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\"default\": dj_database_url.parse(os.environ.get(\"DATABASE_URL\"))}",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1063,7 +1063,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "ACCOUNT_EMAIL_VERIFICATION = \"mandatory\"\nACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True\nACCOUNT_USERNAME_MIN_LENGTH = 4\nLOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"/\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\"default\": dj_database_url.parse(os.environ.get(\"DATABASE_URL\"))}\n# DATABASES = {",
+        "peekOfCode": "ACCOUNT_EMAIL_VERIFICATION = \"mandatory\"\nACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True\nACCOUNT_USERNAME_MIN_LENGTH = 4\nLOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"profile\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\"default\": dj_database_url.parse(os.environ.get(\"DATABASE_URL\"))}\n# DATABASES = {",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1072,7 +1072,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True\nACCOUNT_USERNAME_MIN_LENGTH = 4\nLOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"/\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\"default\": dj_database_url.parse(os.environ.get(\"DATABASE_URL\"))}\n# DATABASES = {\n#     \"default\": {",
+        "peekOfCode": "ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True\nACCOUNT_USERNAME_MIN_LENGTH = 4\nLOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"profile\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\"default\": dj_database_url.parse(os.environ.get(\"DATABASE_URL\"))}\n# DATABASES = {\n#     \"default\": {",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1081,7 +1081,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "ACCOUNT_USERNAME_MIN_LENGTH = 4\nLOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"/\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\"default\": dj_database_url.parse(os.environ.get(\"DATABASE_URL\"))}\n# DATABASES = {\n#     \"default\": {\n#         \"ENGINE\": \"django.db.backends.sqlite3\",",
+        "peekOfCode": "ACCOUNT_USERNAME_MIN_LENGTH = 4\nLOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"profile\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\"default\": dj_database_url.parse(os.environ.get(\"DATABASE_URL\"))}\n# DATABASES = {\n#     \"default\": {\n#         \"ENGINE\": \"django.db.backends.sqlite3\",",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1090,7 +1090,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "LOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"/\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\"default\": dj_database_url.parse(os.environ.get(\"DATABASE_URL\"))}\n# DATABASES = {\n#     \"default\": {\n#         \"ENGINE\": \"django.db.backends.sqlite3\",\n#         \"NAME\": BASE_DIR / \"db.sqlite3\",",
+        "peekOfCode": "LOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"profile\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\"default\": dj_database_url.parse(os.environ.get(\"DATABASE_URL\"))}\n# DATABASES = {\n#     \"default\": {\n#         \"ENGINE\": \"django.db.backends.sqlite3\",\n#         \"NAME\": BASE_DIR / \"db.sqlite3\",",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1099,7 +1099,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "LOGIN_REDIRECT_URL = \"/\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\"default\": dj_database_url.parse(os.environ.get(\"DATABASE_URL\"))}\n# DATABASES = {\n#     \"default\": {\n#         \"ENGINE\": \"django.db.backends.sqlite3\",\n#         \"NAME\": BASE_DIR / \"db.sqlite3\",\n#     }",
+        "peekOfCode": "LOGIN_REDIRECT_URL = \"profile\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\"default\": dj_database_url.parse(os.environ.get(\"DATABASE_URL\"))}\n# DATABASES = {\n#     \"default\": {\n#         \"ENGINE\": \"django.db.backends.sqlite3\",\n#         \"NAME\": BASE_DIR / \"db.sqlite3\",\n#     }",
         "detail": "artshop.settings",
         "documentation": {}
     },
