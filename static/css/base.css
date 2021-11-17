@@ -4,15 +4,12 @@
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 a,
 .btn-link {
   text-decoration: none;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 .hero-img {
@@ -34,8 +31,11 @@ body {
 }
 
 .content {
-  height: 100vh;
+  height: fit-content;
+}
 
+.container-fluid {
+  margin: 0 !important;
 }
 
 .btn {
@@ -156,13 +156,6 @@ input[type=number] {
   overflow-y: auto;
 }
 
-
-.bag-notification-wrapper {
-  height: 100px;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -173,6 +166,10 @@ input[type=number] {
 }
 
 /* Allauth form formatting */
+
+.allauth-content {
+  height: 100vh;
+}
 
 .allauth-form-inner-content p {
   margin-top: 1.5rem;
