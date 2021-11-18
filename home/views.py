@@ -33,8 +33,9 @@ def contact(request):
             }
             message = "\n".join(body.values())
 
+            contact_guest_email = form["email_address"].value()
             try:
-                send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, recipient_list=[""])
+                send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, [contact_guest_email])
                 messages.success(
                     request, "Your message has been successfully sent. We will be in touch as soon as possible"
                 )
