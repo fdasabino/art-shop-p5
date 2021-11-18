@@ -137,6 +137,21 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+/* contact page */
+
+#id_message,
+input[type=text],
+input[type=email] {
+  resize: none;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 0 !important;
+}
+
+label {
+  font-weight: 600;
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
