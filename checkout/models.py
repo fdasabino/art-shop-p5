@@ -29,6 +29,12 @@ class Order(models.Model):
     original_cart = models.TextField(null=False, blank=False, default="")
     stripe_pid = models.CharField(max_length=254, null=False, blank=False, default="")
 
+    class Meta:
+        ordering = ("-date",)
+
+    def __str__(self):
+        return str(self.date)
+
     def _generate_order_number(self):
         """
         Generate a random, unique order number using UUID
