@@ -1875,7 +1875,7 @@
         "kind": 5,
         "importPath": "env",
         "description": "env",
-        "peekOfCode": "] = \"pk_test_51Jv34dJP5UsSoT6EA5IGnqZwSc3VJkOpKhOXBXgerrbIbSJxTHRgWQkkCsXYI3MAk59sgKT7JcQqdxznmadXOFwY00KK4A4zIP\"\nos.environ[\"STRIPE_WH_SECRET\"] = \"whsec_i3dFKeGVGqt7r65lKeCieocWUduRcrVJ\"\n# database\nos.environ[\n    \"DATABASE_URL\"\n] = \"postgres://nnnnanbvdryrwv:77b0ca851b8f48ea691014c665c30dff6b23aa4c4c7cb4a526ceba6e177f5cf8@ec2-54-228-174-49.eu-west-1.compute.amazonaws.com:5432/d27futa7m1e8qd\"\n# static & media files\nos.environ[\"CLOUDINARY_URL\"] = \"cloudinary://458241221221697:9gnhcXbuQayWFOJduQi3aGXWivg@frank2021\"\n# email\nos.environ[\"EMAIL_HOST_USER\"] = \"fdasabino@gmail.com\"",
+        "peekOfCode": "] = \"pk_test_51Jv34dJP5UsSoT6EA5IGnqZwSc3VJkOpKhOXBXgerrbIbSJxTHRgWQkkCsXYI3MAk59sgKT7JcQqdxznmadXOFwY00KK4A4zIP\"\nos.environ[\"STRIPE_WH_SECRET\"] = \"whsec_i3dFKeGVGqt7r65lKeCieocWUduRcrVJ\"\n# database\nos.environ[\n    \"DATABASE_URL\"\n] = \"postgres://nnnnanbvdryrwv:77b0ca851b8f48ea691014c665c30dff6b23aa4c4c7cb4a526ceba6e177f5cf8@ec2-54-228-174-49.eu-west-1.compute.amazonaws.com:5432/d27futa7m1e8qd\"\n# static & media files\nos.environ[\"CLOUDINARY_URL\"] = \"cloudinary://458241221221697:9gnhcXbuQayWFOJduQi3aGXWivg@frank2021\"\n# email\nos.environ[\"EMAIL_HOST_USER\"] = \"danielasartshop@gmail.com\"",
         "detail": "env",
         "documentation": {}
     },
@@ -1884,7 +1884,7 @@
         "kind": 5,
         "importPath": "env",
         "description": "env",
-        "peekOfCode": "os.environ[\"STRIPE_WH_SECRET\"] = \"whsec_i3dFKeGVGqt7r65lKeCieocWUduRcrVJ\"\n# database\nos.environ[\n    \"DATABASE_URL\"\n] = \"postgres://nnnnanbvdryrwv:77b0ca851b8f48ea691014c665c30dff6b23aa4c4c7cb4a526ceba6e177f5cf8@ec2-54-228-174-49.eu-west-1.compute.amazonaws.com:5432/d27futa7m1e8qd\"\n# static & media files\nos.environ[\"CLOUDINARY_URL\"] = \"cloudinary://458241221221697:9gnhcXbuQayWFOJduQi3aGXWivg@frank2021\"\n# email\nos.environ[\"EMAIL_HOST_USER\"] = \"fdasabino@gmail.com\"\nos.environ[\"DEFAULT_FROM_EMAIL\"] = \"fdasabino@gmail.com\"",
+        "peekOfCode": "os.environ[\"STRIPE_WH_SECRET\"] = \"whsec_i3dFKeGVGqt7r65lKeCieocWUduRcrVJ\"\n# database\nos.environ[\n    \"DATABASE_URL\"\n] = \"postgres://nnnnanbvdryrwv:77b0ca851b8f48ea691014c665c30dff6b23aa4c4c7cb4a526ceba6e177f5cf8@ec2-54-228-174-49.eu-west-1.compute.amazonaws.com:5432/d27futa7m1e8qd\"\n# static & media files\nos.environ[\"CLOUDINARY_URL\"] = \"cloudinary://458241221221697:9gnhcXbuQayWFOJduQi3aGXWivg@frank2021\"\n# email\nos.environ[\"EMAIL_HOST_USER\"] = \"danielasartshop@gmail.com\"\nos.environ[\"DEFAULT_FROM_EMAIL\"] = \"danielasartshop@gmail.com\"",
         "detail": "env",
         "documentation": {}
     },
@@ -1893,7 +1893,7 @@
         "kind": 5,
         "importPath": "env",
         "description": "env",
-        "peekOfCode": "] = \"postgres://nnnnanbvdryrwv:77b0ca851b8f48ea691014c665c30dff6b23aa4c4c7cb4a526ceba6e177f5cf8@ec2-54-228-174-49.eu-west-1.compute.amazonaws.com:5432/d27futa7m1e8qd\"\n# static & media files\nos.environ[\"CLOUDINARY_URL\"] = \"cloudinary://458241221221697:9gnhcXbuQayWFOJduQi3aGXWivg@frank2021\"\n# email\nos.environ[\"EMAIL_HOST_USER\"] = \"fdasabino@gmail.com\"\nos.environ[\"DEFAULT_FROM_EMAIL\"] = \"fdasabino@gmail.com\"\nos.environ[\"EMAIL_HOST_PASS\"] = \"wwzfrhzmokysvwie\"",
+        "peekOfCode": "] = \"postgres://nnnnanbvdryrwv:77b0ca851b8f48ea691014c665c30dff6b23aa4c4c7cb4a526ceba6e177f5cf8@ec2-54-228-174-49.eu-west-1.compute.amazonaws.com:5432/d27futa7m1e8qd\"\n# static & media files\nos.environ[\"CLOUDINARY_URL\"] = \"cloudinary://458241221221697:9gnhcXbuQayWFOJduQi3aGXWivg@frank2021\"\n# email\nos.environ[\"EMAIL_HOST_USER\"] = \"danielasartshop@gmail.com\"\nos.environ[\"DEFAULT_FROM_EMAIL\"] = \"danielasartshop@gmail.com\"\nos.environ[\"EMAIL_HOST_PASSWORD\"] = \"ulocvjmvpoqrkike\"",
         "detail": "env",
         "documentation": {}
     },
@@ -1902,7 +1902,7 @@
         "kind": 5,
         "importPath": "env",
         "description": "env",
-        "peekOfCode": "os.environ[\"CLOUDINARY_URL\"] = \"cloudinary://458241221221697:9gnhcXbuQayWFOJduQi3aGXWivg@frank2021\"\n# email\nos.environ[\"EMAIL_HOST_USER\"] = \"fdasabino@gmail.com\"\nos.environ[\"DEFAULT_FROM_EMAIL\"] = \"fdasabino@gmail.com\"\nos.environ[\"EMAIL_HOST_PASS\"] = \"wwzfrhzmokysvwie\"",
+        "peekOfCode": "os.environ[\"CLOUDINARY_URL\"] = \"cloudinary://458241221221697:9gnhcXbuQayWFOJduQi3aGXWivg@frank2021\"\n# email\nos.environ[\"EMAIL_HOST_USER\"] = \"danielasartshop@gmail.com\"\nos.environ[\"DEFAULT_FROM_EMAIL\"] = \"danielasartshop@gmail.com\"\nos.environ[\"EMAIL_HOST_PASSWORD\"] = \"ulocvjmvpoqrkike\"",
         "detail": "env",
         "documentation": {}
     },
@@ -1911,7 +1911,7 @@
         "kind": 5,
         "importPath": "env",
         "description": "env",
-        "peekOfCode": "os.environ[\"EMAIL_HOST_USER\"] = \"fdasabino@gmail.com\"\nos.environ[\"DEFAULT_FROM_EMAIL\"] = \"fdasabino@gmail.com\"\nos.environ[\"EMAIL_HOST_PASS\"] = \"wwzfrhzmokysvwie\"",
+        "peekOfCode": "os.environ[\"EMAIL_HOST_USER\"] = \"danielasartshop@gmail.com\"\nos.environ[\"DEFAULT_FROM_EMAIL\"] = \"danielasartshop@gmail.com\"\nos.environ[\"EMAIL_HOST_PASSWORD\"] = \"ulocvjmvpoqrkike\"",
         "detail": "env",
         "documentation": {}
     },
@@ -1920,16 +1920,16 @@
         "kind": 5,
         "importPath": "env",
         "description": "env",
-        "peekOfCode": "os.environ[\"DEFAULT_FROM_EMAIL\"] = \"fdasabino@gmail.com\"\nos.environ[\"EMAIL_HOST_PASS\"] = \"wwzfrhzmokysvwie\"",
+        "peekOfCode": "os.environ[\"DEFAULT_FROM_EMAIL\"] = \"danielasartshop@gmail.com\"\nos.environ[\"EMAIL_HOST_PASSWORD\"] = \"ulocvjmvpoqrkike\"",
         "detail": "env",
         "documentation": {}
     },
     {
-        "label": "os.environ[\"EMAIL_HOST_PASS\"]",
+        "label": "os.environ[\"EMAIL_HOST_PASSWORD\"]",
         "kind": 5,
         "importPath": "env",
         "description": "env",
-        "peekOfCode": "os.environ[\"EMAIL_HOST_PASS\"] = \"wwzfrhzmokysvwie\"",
+        "peekOfCode": "os.environ[\"EMAIL_HOST_PASSWORD\"] = \"ulocvjmvpoqrkike\"",
         "detail": "env",
         "documentation": {}
     },

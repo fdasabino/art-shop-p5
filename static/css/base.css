@@ -1,3 +1,4 @@
+/* global styling */
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Open+Sans:wght@300&display=swap');
 
 * {
@@ -190,6 +191,10 @@ label {
 }
 
 /* Allauth form formatting */
+
+#id_remember {
+  margin-top: 5px;
+}
 
 .allauth-content {
   height: 100vh;

@@ -17,8 +17,8 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid content mb-2">
-  <div class="container">
+<div class="container-fluid content p-0 m-0">
+  <div class="container px-2">
     <div class="row">
       <div class="col">
         <hr>
@@ -73,7 +73,7 @@
           <div class="col-7 offset-2">
             <p class="my-0">Order Total:</p>
             <p class="my-0">Delivery:</p>
-            <p class="my-0">Grand Total:</p>
+            <p class="my-0">Total:</p>
           </div>
           <div class="col-3">
             <p class="my-0">{{ total |intcomma }}kr</p>
@@ -84,18 +84,24 @@
       </div>
 
       <div class="col-12 col-lg-6">
+      <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-0 mb-2">
+                <span class="icon">
+                  <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="font-weight-bold">Back to Products List</span>
+              </a>
         <p class="text-muted">Please enter you information to complete your purchase</p>
         <form action="{% url 'checkout'%}" method="POST" id="payment-form">
           {% csrf_token %}
           <form action="{% url 'checkout' %}" method="POST" id="payment-form">
             {% csrf_token %}
             <fieldset class="rounded px-3 mb-5">
-              <legend class="fieldset-label small text-dark px-2 w-auto">Details</legend>
+              <legend class="fieldset-label small text-dark px-2 w-auto">Customer Details</legend>
               {{ order_form.full_name | as_crispy_field }}
               {{ order_form.email | as_crispy_field }}
             </fieldset>
             <fieldset class="rounded px-3 mb-5">
-              <legend class="fieldset-label small text-dark px-2 w-auto">Delivery</legend>
+              <legend class="fieldset-label small text-dark px-2 w-auto">Delivery Address</legend>
               {{ order_form.phone_number | as_crispy_field }}
               {{ order_form.street_address1 | as_crispy_field }}
               {{ order_form.street_address2 | as_crispy_field }}
@@ -108,7 +114,7 @@
                 <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
                 <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
                 {% else %}
-                <label class="form-check-label" for="id-save-info">
+                <label class="form-check-label mt-1" for="id-save-info">
                   <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
                   <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
                 </label>
@@ -116,7 +122,13 @@
               </div>
             </fieldset>
             <fieldset class="px-3">
-              <legend class="fieldset-label small text-dark px-2 w-auto">Payment</legend>
+            <p class="small text-info text-center my-0 mb-2">
+              <span class="icon">
+                <i class="fas fa-exclamation-circle"></i>
+              </span>
+              <span>Your card will be charged <strong>{{ grand_total|intcomma }}kr</strong></span>
+            </p>
+              <legend class="fieldset-label small text-dark px-2 w-auto">Payment Details</legend>
               <!-- A Stripe card element will go here -->
               <div class="mb-3" id="card-element"></div>
               <!-- Used to display form errors -->
@@ -124,27 +136,14 @@
               <!-- Pass the client secret to the view so we can get the payment intent id -->
               <input type="hidden" value="{{ client_secret }}" name="client_secret">
             </fieldset>
-
-            <div class="submit-button text-right mt-5 mb-2">
-              <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-0">
-                <span class="icon">
-                  <i class="fas fa-chevron-left"></i>
-                </span>
-                <span class="font-weight-bold">Back to Products List</span>
-              </a>
-              <button id="submit-button" class="btn btn-dark rounded-0">
+            <div class="submit-button text-center d-sm mt-3 mb-2">
+              <button id="submit-button" class="btn btn-dark rounded-0 mb-2">
                 <span class="font-weight-bold">Complete Order</span>
                 <span class="icon">
                   <i class="fas fa-lock"></i>
                 </span>
               </button>
             </div>
-            <p class="small text-danger my-0 mb-2">
-              <span class="icon">
-                <i class="fas fa-exclamation-circle"></i>
-              </span>
-              <span>Your card will be charged <strong>{{ grand_total|intcomma }}kr</strong></span>
-            </p>
           </form>
         </form>
       </div>

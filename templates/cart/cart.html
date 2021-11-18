@@ -44,8 +44,8 @@
             </td>
             <td class="py-3">
               <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-              <p class="my-0"><strong>Dimensions:
-                </strong>{% if item.product.dimensions %}{{ item.product.dimensions }}{% else %}N/A{% endif %}</p>
+              <p class="my-0">
+                Dimensions: {% if item.product.dimensions %}{{ item.product.dimensions }}{% else %}N/A{% endif %}</p>
               <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
               {% if item.product.unique %}
               <small class="text-muted"><i class="fas fa-fingerprint"></i> Unique Product</small> </br>
@@ -93,8 +93,8 @@
                 </div>
               </form>
 
-              <a class="btn btn-outline-dark update-link mt-2"><small>Update</small></a>
-              <a class=" btn btn-dark remove-item float-right mt-2" id="remove_{{ item.item_id }}"
+              <a class="btn btn-outline-dark btn-sm update-link mt-2"><small>Update</small></a>
+              <a class=" btn btn-dark btn-sm remove-item float-right mt-2" id="remove_{{ item.item_id }}"
                 data-product_size="{{ item.size }}"><small>Remove</small></a>
             </td>
             <td class="py-3">
@@ -106,7 +106,7 @@
             <td colspan="5" class="pt-5 text-right">
               <h6><strong>Cart Total: {{ total|intcomma }}kr</strong></h6>
               <h6>Delivery: {{ delivery|intcomma}}kr</h6>
-              <h4 class="mt-4"><strong>Grand Total: {{ grand_total|intcomma }}kr</strong></h4>
+              <h4 class="mt-4"><strong>Total: {{ grand_total|intcomma }}kr</strong></h4>
               {% if free_delivery_delta > 0 %}
               <p class="mb-1 text-danger">
                 You could get free delivery by spending just <strong>{{ free_delivery_delta|intcomma }}kr</strong> more!
@@ -116,13 +116,13 @@
           </tr>
           <tr>
             <td colspan="5" class="text-right">
-              <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-0 btn-lg">
+              <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-0">
                 <span class="icon">
                   <i class="fas fa-chevron-left"></i>
                 </span>
                 <span class="text-uppercase">Keep Shopping</span>
               </a>
-              <a href="{% url 'checkout' %}" class="btn btn-dark rounded-0 btn-lg">
+              <a href="{% url 'checkout' %}" class="btn btn-dark rounded-0">
                 <span class="text-uppercase">Secure Checkout</span>
                 <span class="icon">
                   <i class="fas fa-lock"></i>
@@ -134,7 +134,7 @@
       </div>
       {% else %}
       <p class="lead mb-5">Your cart is empty.</p>
-      <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-0 btn-lg">
+      <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-0">
         <span class="icon">
           <i class="fas fa-chevron-left"></i>
         </span>
