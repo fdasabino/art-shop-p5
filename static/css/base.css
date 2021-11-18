@@ -74,6 +74,13 @@ a.category-badge>span.badge:hover {
   box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.58);
 }
 
+/* bootstrap overrides */
+
+.card-header,
+.dropdown-menu {
+  background-color: #C2E5D3;
+}
+
 
 /* navigation */
 .bg-light,
