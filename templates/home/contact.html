@@ -15,11 +15,10 @@
             <div class="row">
               <div class="col-12 col-lg-7 mx-auto">
                 <div class="text-center pt-2 pb-3">
+                  <form method="post">
                   {% csrf_token %}
-                  <form action="{% url 'contact' %}" method="post">{% csrf_token %}
-                    {{ form|crispy }}
-                    <button class="btn btn-black btn-block py-2 mb-4 mt-5 font-weight-bold" type="submit"
-                      value="Log-in">Submit</button>
+                  {{form|crispy }}
+                  <button type="submit">Submit</button>
                   </form>
                 </div>
               </div>
