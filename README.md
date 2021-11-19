@@ -6,7 +6,7 @@
 
 - Hi there! Welcome to Daniela's Art Shop.
   I have put together an ecommerce webpage that intends to satisfy the requirements of the project milestone 5 of the Code Institute.
-  In this page you will find a fully functional ecommerce website. The main goal with this project is to create a small size ecommerce store that sells original paintings and prints, signed by the artist.
+  In this page you will find a fully functional ecommerce website. The main goal with this project is to create a small size ecommerce store that sells original paintings and prints, created by the artist.
 
 [View the live project here](https://danielasartshop.herokuapp.com/)
 
@@ -14,7 +14,7 @@
 
 ### 2.1. User Stories
 
-- As an User I would like to be able to purchase a product directly from the website.
+- As an User I would like to be able to purchase a product directly from the artist website.
 - As an User I wish to find relevant information about a product, such as price, size, and description.
 - As and User my experience has to be seamless and simple. With easy access to my personal information dashboard.
 - As an User I want to be able communicate with the page owner without hassle in order to give feedback on a particular product or collaborations.
@@ -22,9 +22,9 @@
 ### 2.2. Visitors can
 
 - Explore the page information without having to create an account.
-- Delete their account if they decide to do so.
+- Create an account if they decide to do so.
 - Access their personal information dashboard once they have created an account.
-- Add, edit and delete alternative addresses, that will be available on our admin dashboard.
+- Add an address, that will be available on their profile page.
 - Find links to social media accounts related to the artist.
 
 ### 2.3. First Time Visitor Goals
