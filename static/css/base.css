@@ -15,7 +15,7 @@ a,
 
 .hero-img {
   background: url(https://res.cloudinary.com/frank2021/image/upload/v1636935850/Danielas%20art%20shop/P1000851-2_cjfump.jpg) center top;
-  background-attachment: local;
+  background-attachment: fixed;
   background-size: cover;
   height: 100vh;
 }
@@ -89,15 +89,15 @@ a.category-badge>span.badge:hover {
 /* navigation */
 .bg-light,
 nav {
-  background-color: #C2E5D3 !important;
+  background-color: #d7f5e5 !important;
 }
 
 nav {
-  border-bottom: 5px solid lightpink;
+  border-bottom: 5px solid rgb(255, 236, 239);
 }
 
 header {
-  border-top: 10px solid rgb(255, 236, 239);
+  border-top: 10px solid lightpink;
 }
 
 .bg-pink {
@@ -177,7 +177,7 @@ label {
 }
 
 .toast-capper {
-  height: 1px;
+  height: 10px;
 }
 
 .toast-btn {
@@ -296,7 +296,7 @@ label {
   }
 
   .navbar-toggler {
-    padding: .6rem .6rem;
+    padding: .375rem .375rem;
     font-size: 1rem;
   }
 
