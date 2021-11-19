@@ -38,10 +38,10 @@
         </p>
         {% endif %}
         {% if product.unique %}
-        <small class="text-muted"><i class="fas fa-fingerprint"></i> Unique Product</small> </br>
+        <small class="text-muted"><i class="fas fa-fingerprint"></i> Unique Product</small> <br>
         {% endif %}
         {% if product.dimensions %}
-        <small class="text-muted"><i class="fas fa-ruler-combined"></i> {{product.dimensions}}</small> </br>
+        <small class="text-muted"><i class="fas fa-ruler-combined"></i> {{product.dimensions}}</small> <br>
         {% endif %}
         {% if product.rating %}
         <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
@@ -75,8 +75,7 @@
               <div class="form-group w-50">
                 <div class="input-group input-group-{{ product.id }}">
                   <div class="input-group-prepend">
-                    <button class="decrement-qty m-2 decrement-qty_{{ product.id }}"
-                      data-item_id="{{ product.id }}">
+                    <button class="decrement-qty m-2 decrement-qty_{{ product.id }}" data-item_id="{{ product.id }}">
                       <span class="icon">
                         <i class="fas fa-minus"></i>
                       </span>
@@ -85,8 +84,7 @@
                   <input class="form-control qty_input id_qty_{{ product.id }}" type="number" name="quantity" value="0"
                     min="1" max="{{ product.quantity_available}}" data-item_id="{{ product.id }}">
                   <div class="input-group-append">
-                    <button class="increment-qty m-2 increment-qty_{{ product.id }}"
-                      data-item_id="{{ product.id }}">
+                    <button class="increment-qty m-2 increment-qty_{{ product.id }}" data-item_id="{{ product.id }}">
                       <span class="icon">
                         <i class="fas fa-plus"></i>
                       </span>

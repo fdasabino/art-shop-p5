@@ -1,35 +1,41 @@
 {% load humanize %}
-<li class="list-inline-item dropdown">
-    <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">
-        <div class="text-center">
-            <div><i class="fas fa-house-user fa-lg"></i></div>
-            <small class="my-0"><b>My Account</b></small>
+<ul>
+    <li class="list-inline-item dropdown">
+        <a class="text-black nav-link d-block d-lg-none" href="#" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <div class="text-center">
+                <div><i class="fas fa-house-user fa-lg"></i></div>
+                {% if request.user.is_authenticated %}
+                <small class="my-0"><b>Hi, {{user.first_name}}</b></small>
+                {% endif %}
+            </div>
+        </a>
+        <div class="dropdown-menu border-0">
+            {% if request.user.is_authenticated %}
+            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+            <a href="{% url 'account_logout' %}" class="dropdown-item">Sign Out</a>
+            {% else %}
+            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+            <a href="{% url 'account_login' %}" class="dropdown-item">Sign In</a>
+            {% endif %}
         </div>
-    </a>
-    <div class="dropdown-menu border-0" aria-labelledby="user-options">
-        {% if request.user.is_authenticated %}
-        <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-        <a href="{% url 'account_logout' %}" class="dropdown-item">Sign Out</a>
-        {% else %}
-        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-        <a href="{% url 'account_login' %}" class="dropdown-item">Sign In</a>
-        {% endif %}
-    </div>
-</li>
-<li class="list-inline-item">
-    <a href="{% url 'view_cart' %}"
-        class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none">
-        <div class="text-center text-dark">
-            <div><i class="fas fa-shopping-cart fa-lg"></i></div>
-            <small class="my-0"><b>
-                    {% if grand_total %}
-                    {{ grand_total|intcomma }}kr
-                    {% else %}
-                    0.00kr
-                    {% endif %}
-                </b>
-            </small>
-        </div>
-    </a>
-</li>
+    </li>
+</ul>
+<ul>
+    <li class="list-inline-item">
+        <a href="{% url 'view_cart' %}"
+            class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none">
+            <div class="text-center text-dark">
+                <div><i class="fas fa-shopping-cart fa-lg"></i></div>
+                <small class="my-0"><b>
+                        {% if grand_total %}
+                        {{ grand_total|intcomma }}kr
+                        {% else %}
+                        0.00kr
+                        {% endif %}
+                    </b>
+                </small>
+            </div>
+        </a>
+    </li>
+</ul>

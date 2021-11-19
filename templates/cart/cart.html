@@ -12,142 +12,132 @@
 {% endblock %}
 
 {% block content %}
-<div class="container content">
-  <div class="row">
-    <div class="col">
-      <hr>
-      <h2 class="mb-4 text-uppercase">Shopping cart</h2>
-      <hr>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      {% if cart_items %}
-      <div class="table-responsive rounded">
-        <table class="table table-sm table-borderless">
+<div class="container-fluid content">
+  <div class="container">
 
-          <thead class="text-dark">
-            <tr>
-
-              <th scope="col">Quantity</th>
-              <th scope="col">Product Info</th>
-              <th scope="col"></th>
-              <th scope="col"></th>
-
-            </tr>
-          </thead>
-
-          {% for item in cart_items %}
-          <tr>
-
-            <td class="py-3 w-25 text-center">
-              <form class="form update-form" method="POST" action="{% url 'update_cart' item.item_id %}">
-                {% csrf_token %}
-                <div class="form-group">
-                  <div class="input-group input-group-{{ item.item_id }}">
-                    <div class="input-group-prepend">
-                      <button class="decrement-qty m-1 decrement-qty_{{ item.item_id }}"
-                        data-item_id="{{ item.item_id }}">
-                        <span>
-                          <i class="fas fa-minus fa-sm"></i>
-                        </span>
-                      </button>
-                    </div>
-                    <input class="form-control form-control-sm qty_input id_qty_{{ item.item_id }}" type="number"
-                      name="quantity" value="{{ item.quantity }}" min="1" max="{{ item.product.quantity_available}}"
-                      data-item_id="{{ item.item_id }}">
-                    <div class="input-group-append">
-                      <button class="increment-qty m-1 increment-qty_{{ item.item_id }}"
-                        data-item_id="{{ item.item_id }}">
-                        <span>
-                          <i class="fas fa-plus fa-sm"></i>
-                        </span>
-                      </button>
-                    </div>
-                    {% if item.product.has_sizes %}
-                    <input type="hidden" name="product_size" value="{{ item.size }}">
-                    {% endif %}
-                  </div>
-                </div>
-              </form>
-
-              <a class="btn btn-outline-dark btn-sm update-link mt-2"><small>Update</small></a>
-              <a class=" btn btn-dark btn-sm remove-item float-right mt-2" id="remove_{{ item.item_id }}"
-                data-product_size="{{ item.size }}"><small>Remove</small></a>
-            </td>
-
-            <td class="py-3 w-25">
-              <img class="img-fluid rounded" src="{{ item.product.image.url }}">
-            </td>
-            <td class="py-3">
-              <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-              <p class="my-0">
-                Dimensions: {% if item.product.dimensions %}{{ item.product.dimensions }}{% else %}N/A{% endif %}</p>
-              <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
-              {% if item.product.unique %}
-              <small class="text-muted"><i class="fas fa-fingerprint"></i> Unique Product</small> </br>
-              {% endif %}
-              {% if item.product.dimensions %}
-              <small class="text-muted"><i class="fas fa-ruler-combined"></i> {{item.product.dimensions}}</small> </br>
-              {% endif %}
-              {% if item.product.rating %}
-              <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ item.product.rating }} / 5</small>
-              {% else %}
-              <small class="text-muted">No Rating</small>
-              {% endif %}
-            </td>
-
-
-          </tr>
-          {% endfor %}
-          <tr>
-            <td colspan="5" class="pt-5 text-end">
-              <h6><strong>Cart Total: {{ total|intcomma }}kr</strong></h6>
-              <h6>Delivery: {{ delivery|intcomma}}kr</h6>
-              <h4 class="mt-4"><strong>Total: {{ grand_total|intcomma }}kr</strong></h4>
-              {% if free_delivery_delta > 0 %}
-              <p class="mb-1 text-danger">
-                You could get free delivery by spending just <strong>{{ free_delivery_delta|intcomma }}kr</strong> more!
-              </p>
-              {% endif %}
-            </td>
-          </tr>
-          <tr>
-            <td colspan="5" class="text-end">
-              <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-0">
-                <span class="icon">
-                  <i class="fas fa-chevron-left"></i>
-                </span>
-                <span class="text-uppercase">Keep Shopping</span>
-              </a>
-              <a href="{% url 'checkout' %}" class="btn btn-dark rounded-0">
-                <span class="text-uppercase">Secure Checkout</span>
-                <span class="icon">
-                  <i class="fas fa-lock"></i>
-                </span>
-              </a>
-            </td>
-          </tr>
-        </table>
+    <div class="row">
+      <div class="col">
+        <hr>
+        <h2 class="mb-4 text-uppercase">Shopping cart</h2>
+        <hr>
       </div>
-      {% else %}
-      <p class="lead mb-5">Your cart is empty.</p>
-      <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-0">
-        <span class="icon">
-          <i class="fas fa-chevron-left"></i>
-        </span>
-        <span class="text-uppercase">Keep Shopping</span>
-      </a>
-      {% endif %}
     </div>
+
+    {% if not cart_items %}
+    <div class="container-fluid content">
+      <div class="row bg-light justify-content-center text-center py-3">
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-10">
+          <h4>There are no items in your cart</h4>
+          <a class="btn btn-dark" href="{% url 'products' %}"> To products list</a>
+        </div>
+      </div>
+    </div>
+
+    {% else %}
+    <div class="row bg-light justify-content-center text-center py-3">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-10">
+        <div class="d-grid gap-2">
+          <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-0 mt-2">
+            <span class="icon">
+              <i class="fas fa-chevron-left"></i>
+            </span>
+            <span class="text-uppercase">Keep Shopping</span>
+          </a>
+          <a href="{% url 'checkout' %}" class="btn btn-dark rounded-0 mb-2">
+            <span class="text-uppercase">Secure Checkout</span>
+            <span class="icon">
+              <i class="fas fa-lock"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 py-2">
+        <h6 id="subtotal">Cart Total: {{ total|intcomma }}kr </h6>
+        <h6>Delivery: {{ delivery|intcomma}}kr</h6>
+        <h6 class="mt-2"><strong>Total: {{ grand_total|intcomma }}kr</strong></h6>
+      </div>
+    </div>
+
+    {% for item in cart_items %}
+    <div class="row justify-content-center my-3">
+      <div class="col-lg-4 col-md-4 col-sm-12 ">
+        <div class="card mb-3 border-0 product-item">
+          <img class="img-fluid rounded mt-3" src="{{ item.product.image.url }}" alt="{{ item.product.name}}">
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="card-body p-1 text-center">
+          <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+          <form class="form update-form" method="POST" action="{% url 'update_cart' item.item_id %}">
+            {% csrf_token %}
+            <div class="form-group">
+              <div class="input-group input-group-{{ item.item_id }}">
+                <div class="input-group-prepend">
+                  <button class="decrement-qty m-1 decrement-qty_{{ item.item_id }}" data-item_id="{{ item.item_id }}">
+                    <span>
+                      <i class="fas fa-minus fa-sm"></i>
+                    </span>
+                  </button>
+                </div>
+                <input class="form-control form-control-sm qty_input id_qty_{{ item.item_id }}" type="number"
+                  name="quantity" value="{{ item.quantity }}" min="1" max="{{ item.product.quantity_available}}"
+                  data-item_id="{{ item.item_id }}">
+                <div class="input-group-append">
+                  <button class="increment-qty m-1 increment-qty_{{ item.item_id }}" data-item_id="{{ item.item_id }}">
+                    <span>
+                      <i class="fas fa-plus fa-sm"></i>
+                    </span>
+                  </button>
+                </div>
+                {% if item.product.has_sizes %}
+                <input type="hidden" name="product_size" value="{{ item.size }}">
+                {% endif %}
+              </div>
+            </div>
+          </form>
+          <div class="mb-2">
+            <a class="btn btn-outline-dark btn-sm update-link mt-2"><small>Update</small></a>
+            <a class=" btn btn-dark btn-sm remove-item float-right mt-2" id="remove_{{ item.item_id }}"
+              data-product_size="{{ item.size }}"><small>Remove</small></a>
+          </div>
+
+          <p class="my-0">
+            Dimensions: {% if item.product.dimensions %}{{ item.product.dimensions }}{% else %}N/A{% endif %}</p>
+          <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+          {% if item.product.unique %}
+          <small class="text-muted"><i class="fas fa-fingerprint"></i> Unique Product</small> <br>
+          {% endif %}
+          {% if item.product.dimensions %}
+          <small class="text-muted"><i class="fas fa-ruler-combined"></i> {{item.product.dimensions}}</small> <br>
+          {% endif %}
+          {% if item.product.rating %}
+          <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ item.product.rating }} / 5</small>
+          {% else %}
+          <small class="text-muted">No Rating</small>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
   </div>
 </div>
-{% endblock %}
+{% endif %}
+<div class="btt-button rounded-0 border border-dark hidden d-md-none">
+  <a class="btt-link d-flex h-100">
+    <i class="fas fa-arrow-up text-dark mx-auto my-auto"></i>
+  </a>
+</div>
+{% endblock content %}
 
 {% block post_load_js %}
 {{block.super}}
 <script src="{% static 'js/quantity_input_script.js' %}"></script>
-<script type="text/javascript">
+<script>
+  $('.btt-link').click(function (e) {
+    window.scrollTo(0, 0)
+  })
+
+
   // Update quantity on click
   $('.update-link').click(function (e) {
     var form = $(this).prev('.update-form');

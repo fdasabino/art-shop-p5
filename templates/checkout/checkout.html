@@ -52,10 +52,10 @@
           <div class="col-7">
             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
             {% if item.product.unique %}
-            <small class="text-muted"><i class="fas fa-fingerprint"></i> Unique Product</small> </br>
+            <small class="text-muted"><i class="fas fa-fingerprint"></i> Unique Product</small> <br>
             {% endif %}
             {% if item.product.dimensions %}
-            <small class="text-muted"><i class="fas fa-ruler-combined"></i> {{item.product.dimensions}}</small> </br>
+            <small class="text-muted"><i class="fas fa-ruler-combined"></i> {{item.product.dimensions}}</small> <br>
             {% endif %}
             {% if item.product.rating %}
             <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ item.product.rating }} / 5</small>
@@ -84,84 +84,82 @@
       </div>
 
       <div class="col-12 col-lg-6">
-      <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-0 mb-2">
-                <span class="icon">
-                  <i class="fas fa-chevron-left"></i>
-                </span>
-                <span class="font-weight-bold">Back to Products List</span>
-              </a>
+        <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-0 mb-2">
+          <span class="icon">
+            <i class="fas fa-chevron-left"></i>
+          </span>
+          <span class="font-weight-bold">Back to Products List</span>
+        </a>
         <p class="text-muted">Please enter you information to complete your purchase</p>
-        <form action="{% url 'checkout'%}" method="POST" id="payment-form">
+        <form action="{% url 'checkout' %}" method="POST" id="payment-form">
           {% csrf_token %}
-          <form action="{% url 'checkout' %}" method="POST" id="payment-form">
-            {% csrf_token %}
-            <fieldset class="rounded px-3 mb-5">
-              <legend class="fieldset-label small text-dark px-2 mt-3 w-auto">Customer Details</legend>
-              {{ order_form.full_name | as_crispy_field }}
-              {{ order_form.email | as_crispy_field }}
-            </fieldset>
-            <fieldset class="rounded px-3 mb-5">
-              <legend class="fieldset-label small text-dark px-2 w-auto">Delivery Address</legend>
-              {{ order_form.phone_number | as_crispy_field }}
-              {{ order_form.street_address1 | as_crispy_field }}
-              {{ order_form.street_address2 | as_crispy_field }}
-              {{ order_form.town_or_city | as_crispy_field }}
-              {{ order_form.county | as_crispy_field }}
-              {{ order_form.postcode | as_crispy_field }}
-              {{ order_form.country | as_crispy_field }}
-              <div class="form-check form-check-inline float-right mr-0">
-                {% if user.is_authenticated %}
-                <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
-                <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
-                {% else %}
-                <label class="form-check-label mt-1" for="id-save-info">
-                  <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
-                  <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
-                </label>
-                {% endif %}
-              </div>
-            </fieldset>
-            <fieldset class="px-3">
+          <fieldset class="rounded px-3 mb-5">
+            <legend class="fieldset-label small text-dark px-2 mt-3 w-auto">Customer Details</legend>
+            {{ order_form.full_name | as_crispy_field }}
+            {{ order_form.email | as_crispy_field }}
+          </fieldset>
+          <fieldset class="rounded px-3 mb-5">
+            <legend class="fieldset-label small text-dark px-2 w-auto">Delivery Address</legend>
+            {{ order_form.phone_number | as_crispy_field }}
+            {{ order_form.street_address1 | as_crispy_field }}
+            {{ order_form.street_address2 | as_crispy_field }}
+            {{ order_form.town_or_city | as_crispy_field }}
+            {{ order_form.county | as_crispy_field }}
+            {{ order_form.postcode | as_crispy_field }}
+            {{ order_form.country | as_crispy_field }}
+            <div class="form-check form-check-inline float-right mr-0">
+              {% if user.is_authenticated %}
+              <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
+              <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
+              {% else %}
+              <label class="form-check-label mt-1" for="id-save-info">
+                <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
+                <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+              </label>
+              {% endif %}
+            </div>
+          </fieldset>
+          <fieldset class="px-3">
+            <legend class="fieldset-label small text-dark px-2 w-auto">Payment Details</legend>
             <p class="small text-info text-center my-0 mb-2">
               <span class="icon">
                 <i class="fas fa-exclamation-circle"></i>
               </span>
               <span>Your card will be charged <strong>{{ grand_total|intcomma }}kr</strong></span>
             </p>
-              <legend class="fieldset-label small text-dark px-2 w-auto">Payment Details</legend>
-              <!-- A Stripe card element will go here -->
-              <div class="mb-3" id="card-element"></div>
-              <!-- Used to display form errors -->
-              <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
-              <!-- Pass the client secret to the view so we can get the payment intent id -->
-              <input type="hidden" value="{{ client_secret }}" name="client_secret">
-            </fieldset>
-            <div class="submit-button text-center d-sm mt-3 mb-2">
-              <button id="submit-button" class="btn btn-dark rounded-0 mb-2">
-                <span class="font-weight-bold">Complete Order</span>
-                <span class="icon">
-                  <i class="fas fa-lock"></i>
-                </span>
-              </button>
-            </div>
-          </form>
+            <!-- A Stripe card element will go here -->
+            <div class="mb-3" id="card-element"></div>
+            <!-- Used to display form errors -->
+            <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+            <!-- Pass the client secret to the view so we can get the payment intent id -->
+            <input type="hidden" value="{{ client_secret }}" name="client_secret">
+          </fieldset>
+          <div class="submit-button text-center d-sm mt-3 mb-2">
+            <button id="submit-button" class="btn btn-dark rounded-0 mb-2">
+              <span class="font-weight-bold">Complete Order</span>
+              <span class="icon">
+                <i class="fas fa-lock"></i>
+              </span>
+            </button>
+          </div>
         </form>
       </div>
     </div>
   </div>
-  <div id="loading-overlay">
-    <h1 class="text-light logo-font loading-spinner">
-      <span class="icon">
-        <i class="fas fa-3x fa-sync-alt fa-spin"></i>
-      </span>
-    </h1>
+</div>
+<div id="loading-overlay">
+  <div class="text-light logo-font loading-spinner">
+    <span class="icon">
+      <i class="fas fa-3x fa-sync-alt fa-spin"></i>
+    </span>
   </div>
-  {% endblock %}
-  {% block post_load_js %}
-  {{block.super}}
+</div>
+{% endblock %}
+{% block post_load_js %}
+{{block.super}}
 
-  {{ stripe_public_key|json_script:"id_stripe_public_key" }}
-  {{ client_secret|json_script:"id_client_secret" }}
-  <script src="{% static 'js/stripe_elements.js' %}"></script>
+{{ stripe_public_key|json_script:"id_stripe_public_key" }}
+{{ client_secret|json_script:"id_client_secret" }}
+<script src="{% static 'js/stripe_elements.js' %}"></script>
 
-  {% endblock post_load_js %}
+{% endblock post_load_js %}

@@ -8,6 +8,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Abstract Art in Stockholm. By Daniela Kronvall, colors and dreams coming true.">
+  <meta name="keywords" content="Abstract Art Stockholm">
   {% endblock core_meta %}
 
   {% block extra_meta %}{% endblock extra_meta %}
@@ -113,6 +115,7 @@
             <h3 class="logo-font text-dark my-0"><strong>Daniela's Art Shop</strong></h3>
           </a>
         </div>
+
         <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#main-nav"
           aria-controls="main-nav" aria-expanded="false" aria-label="Toggle Navigation">
           <i class="fas fa-bars navbar-toggler"></i>
@@ -122,50 +125,45 @@
       </nav>
     </div>
   </header>
+  <main>
+    {% if messages %}
+    <div class="message-container">
+      {% for message in messages %}
+      {% with message.level as level %}
 
+      {% if level == 40 %}
+      {% include 'includes/toasts/toast_error.html' %}
 
-  {% if messages %}
-  <div class="message-container">
-    {% for message in messages %}
-    {% with message.level as level %}
+      {% elif level == 30 %}
+      {% include 'includes/toasts/toast_warning.html' %}
 
-    {% if level == 40 %}
-    {% include 'includes/toasts/toast_error.html' %}
+      {% elif level == 25 %}
+      {% include 'includes/toasts/toast_success.html' %}
 
-    {% elif level == 30 %}
-    {% include 'includes/toasts/toast_warning.html' %}
+      {% else %}
+      {% include 'includes/toasts/toast_info.html' %}
+      {% endif %}
+      {% endwith %}
+      {% endfor %}
 
-    {% elif level == 25 %}
-    {% include 'includes/toasts/toast_success.html' %}
-
-    {% else %}
-    {% include 'includes/toasts/toast_info.html' %}
+    </div>
     {% endif %}
-    {% endwith %}
-    {% endfor %}
-
-  </div>
-  {% endif %}
-
+  </main>
   {% block page_header %}
   {% endblock page_header %}
   {% block content %}
   {% endblock content %}
+  <footer>
+    {% include 'includes/footer.html' %}
+  </footer>
 
   {% block post_load_js %}
-
-  <script type="text/javascript">
+  <script>
     $('.toast').toast('show')
 
     $('.collapse').collapse('hide')
-
-    $('.btt-link').click(function (e) {
-      window.scrollTo(0, 0)
-    })
   </script>
-
   {% endblock post_load_js %}
-  {% include 'includes/footer.html' %}
 </body>
 
 </html>
