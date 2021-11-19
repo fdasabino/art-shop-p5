@@ -92,6 +92,10 @@ nav {
   background-color: #C2E5D3 !important;
 }
 
+nav {
+  border-bottom: 5px solid lightpink;
+}
+
 header {
   border-top: 10px solid rgb(255, 236, 239);
 }
@@ -162,12 +166,14 @@ label {
 .message-container {
   position: fixed;
   top: 72px;
-  right: 15px;
+  right: 10px;
   z-index: 99999999999;
 }
 
-.custom-toast {
-  overflow: visible;
+.toast {
+  position: fixed;
+  top: 0;
+  right: 0;
 }
 
 .toast-capper {
