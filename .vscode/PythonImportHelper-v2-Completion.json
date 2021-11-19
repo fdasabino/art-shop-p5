@@ -983,7 +983,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nTEMPLATES_DIR = os.path.join(BASE_DIR, \"templates\")\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.environ.get(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\"danielasartshop.herokuapp.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nTEMPLATES_DIR = os.path.join(BASE_DIR, \"templates\")\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.environ.get(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False\nALLOWED_HOSTS = [\"danielasartshop.herokuapp.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -992,7 +992,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "TEMPLATES_DIR = os.path.join(BASE_DIR, \"templates\")\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.environ.get(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\"danielasartshop.herokuapp.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [",
+        "peekOfCode": "TEMPLATES_DIR = os.path.join(BASE_DIR, \"templates\")\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.environ.get(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False\nALLOWED_HOSTS = [\"danielasartshop.herokuapp.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1001,7 +1001,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "SECRET_KEY = os.environ.get(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\"danielasartshop.herokuapp.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [\n    \"allauth\",\n    \"allauth.account\",\n    \"allauth.socialaccount\",\n    \"crispy_forms\",",
+        "peekOfCode": "SECRET_KEY = os.environ.get(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False\nALLOWED_HOSTS = [\"danielasartshop.herokuapp.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [\n    \"allauth\",\n    \"allauth.account\",\n    \"allauth.socialaccount\",\n    \"crispy_forms\",",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1010,7 +1010,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [\"danielasartshop.herokuapp.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [\n    \"allauth\",\n    \"allauth.account\",\n    \"allauth.socialaccount\",\n    \"crispy_forms\",\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",",
+        "peekOfCode": "DEBUG = False\nALLOWED_HOSTS = [\"danielasartshop.herokuapp.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [\n    \"allauth\",\n    \"allauth.account\",\n    \"allauth.socialaccount\",\n    \"crispy_forms\",\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1289,7 +1289,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe\nFREE_DELIVERY_THRESHOLD = 0\nSTANDARD_DELIVERY_PERCENTAGE = 0\nSTRIPE_CURRENCY = \"sek\"\nSTRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"  # console\nDEFAULT_FROM_EMAIL = \"fdasabino@gmail.com\"",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe\nFREE_DELIVERY_THRESHOLD = 0\nSTANDARD_DELIVERY_PERCENTAGE = 0\nSTRIPE_CURRENCY = \"sek\"\nSTRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\n# EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"  # console\nDEFAULT_FROM_EMAIL = \"fdasabino@gmail.com\"",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1298,7 +1298,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "FREE_DELIVERY_THRESHOLD = 0\nSTANDARD_DELIVERY_PERCENTAGE = 0\nSTRIPE_CURRENCY = \"sek\"\nSTRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"  # console\nDEFAULT_FROM_EMAIL = \"fdasabino@gmail.com\"\n# EMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # smtp\n# EMAIL_USE_TLS = True",
+        "peekOfCode": "FREE_DELIVERY_THRESHOLD = 0\nSTANDARD_DELIVERY_PERCENTAGE = 0\nSTRIPE_CURRENCY = \"sek\"\nSTRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\n# EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"  # console\nDEFAULT_FROM_EMAIL = \"fdasabino@gmail.com\"\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # smtp\nEMAIL_USE_TLS = True",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1307,7 +1307,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "STANDARD_DELIVERY_PERCENTAGE = 0\nSTRIPE_CURRENCY = \"sek\"\nSTRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"  # console\nDEFAULT_FROM_EMAIL = \"fdasabino@gmail.com\"\n# EMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # smtp\n# EMAIL_USE_TLS = True\n# EMAIL_PORT = 587",
+        "peekOfCode": "STANDARD_DELIVERY_PERCENTAGE = 0\nSTRIPE_CURRENCY = \"sek\"\nSTRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\n# EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"  # console\nDEFAULT_FROM_EMAIL = \"fdasabino@gmail.com\"\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # smtp\nEMAIL_USE_TLS = True\nEMAIL_PORT = 587",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1316,7 +1316,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "STRIPE_CURRENCY = \"sek\"\nSTRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"  # console\nDEFAULT_FROM_EMAIL = \"fdasabino@gmail.com\"\n# EMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # smtp\n# EMAIL_USE_TLS = True\n# EMAIL_PORT = 587\n# EMAIL_HOST = \"smtp.gmail.com\"",
+        "peekOfCode": "STRIPE_CURRENCY = \"sek\"\nSTRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\n# EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"  # console\nDEFAULT_FROM_EMAIL = \"fdasabino@gmail.com\"\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # smtp\nEMAIL_USE_TLS = True\nEMAIL_PORT = 587\nEMAIL_HOST = \"smtp.gmail.com\"",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1325,7 +1325,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "STRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"  # console\nDEFAULT_FROM_EMAIL = \"fdasabino@gmail.com\"\n# EMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # smtp\n# EMAIL_USE_TLS = True\n# EMAIL_PORT = 587\n# EMAIL_HOST = \"smtp.gmail.com\"\n# EMAIL_HOST_USER = os.environ.get(\"EMAIL_HOST_USER\")",
+        "peekOfCode": "STRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\n# EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"  # console\nDEFAULT_FROM_EMAIL = \"fdasabino@gmail.com\"\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # smtp\nEMAIL_USE_TLS = True\nEMAIL_PORT = 587\nEMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_HOST_USER = os.environ.get(\"EMAIL_HOST_USER\")",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1334,7 +1334,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "STRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"  # console\nDEFAULT_FROM_EMAIL = \"fdasabino@gmail.com\"\n# EMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # smtp\n# EMAIL_USE_TLS = True\n# EMAIL_PORT = 587\n# EMAIL_HOST = \"smtp.gmail.com\"\n# EMAIL_HOST_USER = os.environ.get(\"EMAIL_HOST_USER\")\n# EMAIL_HOST_PASS = os.environ.get(\"EMAIL_HOST_PASS\")",
+        "peekOfCode": "STRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\n# EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"  # console\nDEFAULT_FROM_EMAIL = \"fdasabino@gmail.com\"\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # smtp\nEMAIL_USE_TLS = True\nEMAIL_PORT = 587\nEMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_HOST_USER = os.environ.get(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASS = os.environ.get(\"EMAIL_HOST_PASS\")",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1343,16 +1343,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "STRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"  # console\nDEFAULT_FROM_EMAIL = \"fdasabino@gmail.com\"\n# EMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # smtp\n# EMAIL_USE_TLS = True\n# EMAIL_PORT = 587\n# EMAIL_HOST = \"smtp.gmail.com\"\n# EMAIL_HOST_USER = os.environ.get(\"EMAIL_HOST_USER\")\n# EMAIL_HOST_PASS = os.environ.get(\"EMAIL_HOST_PASS\")",
-        "detail": "artshop.settings",
-        "documentation": {}
-    },
-    {
-        "label": "EMAIL_BACKEND",
-        "kind": 5,
-        "importPath": "artshop.settings",
-        "description": "artshop.settings",
-        "peekOfCode": "EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"  # console\nDEFAULT_FROM_EMAIL = \"fdasabino@gmail.com\"\n# EMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # smtp\n# EMAIL_USE_TLS = True\n# EMAIL_PORT = 587\n# EMAIL_HOST = \"smtp.gmail.com\"\n# EMAIL_HOST_USER = os.environ.get(\"EMAIL_HOST_USER\")\n# EMAIL_HOST_PASS = os.environ.get(\"EMAIL_HOST_PASS\")",
+        "peekOfCode": "STRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\n# EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"  # console\nDEFAULT_FROM_EMAIL = \"fdasabino@gmail.com\"\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # smtp\nEMAIL_USE_TLS = True\nEMAIL_PORT = 587\nEMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_HOST_USER = os.environ.get(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASS = os.environ.get(\"EMAIL_HOST_PASS\")",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1361,7 +1352,61 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "DEFAULT_FROM_EMAIL = \"fdasabino@gmail.com\"\n# EMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # smtp\n# EMAIL_USE_TLS = True\n# EMAIL_PORT = 587\n# EMAIL_HOST = \"smtp.gmail.com\"\n# EMAIL_HOST_USER = os.environ.get(\"EMAIL_HOST_USER\")\n# EMAIL_HOST_PASS = os.environ.get(\"EMAIL_HOST_PASS\")",
+        "peekOfCode": "DEFAULT_FROM_EMAIL = \"fdasabino@gmail.com\"\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # smtp\nEMAIL_USE_TLS = True\nEMAIL_PORT = 587\nEMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_HOST_USER = os.environ.get(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASS = os.environ.get(\"EMAIL_HOST_PASS\")",
+        "detail": "artshop.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_BACKEND",
+        "kind": 5,
+        "importPath": "artshop.settings",
+        "description": "artshop.settings",
+        "peekOfCode": "EMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # smtp\nEMAIL_USE_TLS = True\nEMAIL_PORT = 587\nEMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_HOST_USER = os.environ.get(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASS = os.environ.get(\"EMAIL_HOST_PASS\")",
+        "detail": "artshop.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_USE_TLS",
+        "kind": 5,
+        "importPath": "artshop.settings",
+        "description": "artshop.settings",
+        "peekOfCode": "EMAIL_USE_TLS = True\nEMAIL_PORT = 587\nEMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_HOST_USER = os.environ.get(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASS = os.environ.get(\"EMAIL_HOST_PASS\")",
+        "detail": "artshop.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_PORT",
+        "kind": 5,
+        "importPath": "artshop.settings",
+        "description": "artshop.settings",
+        "peekOfCode": "EMAIL_PORT = 587\nEMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_HOST_USER = os.environ.get(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASS = os.environ.get(\"EMAIL_HOST_PASS\")",
+        "detail": "artshop.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST",
+        "kind": 5,
+        "importPath": "artshop.settings",
+        "description": "artshop.settings",
+        "peekOfCode": "EMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_HOST_USER = os.environ.get(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASS = os.environ.get(\"EMAIL_HOST_PASS\")",
+        "detail": "artshop.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_USER",
+        "kind": 5,
+        "importPath": "artshop.settings",
+        "description": "artshop.settings",
+        "peekOfCode": "EMAIL_HOST_USER = os.environ.get(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASS = os.environ.get(\"EMAIL_HOST_PASS\")",
+        "detail": "artshop.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_PASS",
+        "kind": 5,
+        "importPath": "artshop.settings",
+        "description": "artshop.settings",
+        "peekOfCode": "EMAIL_HOST_PASS = os.environ.get(\"EMAIL_HOST_PASS\")",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1847,7 +1892,7 @@
         "kind": 5,
         "importPath": "env",
         "description": "env",
-        "peekOfCode": "] = \"pk_test_51Jv34dJP5UsSoT6EA5IGnqZwSc3VJkOpKhOXBXgerrbIbSJxTHRgWQkkCsXYI3MAk59sgKT7JcQqdxznmadXOFwY00KK4A4zIP\"\nos.environ[\"STRIPE_WH_SECRET\"] = \"whsec_i3dFKeGVGqt7r65lKeCieocWUduRcrVJ\"\n# database\nos.environ[\n    \"DATABASE_URL\"\n] = \"postgres://nnnnanbvdryrwv:77b0ca851b8f48ea691014c665c30dff6b23aa4c4c7cb4a526ceba6e177f5cf8@ec2-54-228-174-49.eu-west-1.compute.amazonaws.com:5432/d27futa7m1e8qd\"\n# static & media files\nos.environ[\"CLOUDINARY_URL\"] = \"cloudinary://458241221221697:9gnhcXbuQayWFOJduQi3aGXWivg@frank2021\"\n# email\nos.environ[\"EMAIL_HOST_USER\"] = \"danielasartshop@gmail.com\"",
+        "peekOfCode": "] = \"pk_test_51Jv34dJP5UsSoT6EA5IGnqZwSc3VJkOpKhOXBXgerrbIbSJxTHRgWQkkCsXYI3MAk59sgKT7JcQqdxznmadXOFwY00KK4A4zIP\"\nos.environ[\"STRIPE_WH_SECRET\"] = \"whsec_i3dFKeGVGqt7r65lKeCieocWUduRcrVJ\"\n# database\nos.environ[\n    \"DATABASE_URL\"\n] = \"postgres://nnnnanbvdryrwv:77b0ca851b8f48ea691014c665c30dff6b23aa4c4c7cb4a526ceba6e177f5cf8@ec2-54-228-174-49.eu-west-1.compute.amazonaws.com:5432/d27futa7m1e8qd\"\n# static & media files\nos.environ[\"CLOUDINARY_URL\"] = \"cloudinary://458241221221697:9gnhcXbuQayWFOJduQi3aGXWivg@frank2021\"\n# email\nos.environ[\"EMAIL_HOST_USER\"] = \"fdasabino@gmail.com\"",
         "detail": "env",
         "documentation": {}
     },
@@ -1856,7 +1901,7 @@
         "kind": 5,
         "importPath": "env",
         "description": "env",
-        "peekOfCode": "os.environ[\"STRIPE_WH_SECRET\"] = \"whsec_i3dFKeGVGqt7r65lKeCieocWUduRcrVJ\"\n# database\nos.environ[\n    \"DATABASE_URL\"\n] = \"postgres://nnnnanbvdryrwv:77b0ca851b8f48ea691014c665c30dff6b23aa4c4c7cb4a526ceba6e177f5cf8@ec2-54-228-174-49.eu-west-1.compute.amazonaws.com:5432/d27futa7m1e8qd\"\n# static & media files\nos.environ[\"CLOUDINARY_URL\"] = \"cloudinary://458241221221697:9gnhcXbuQayWFOJduQi3aGXWivg@frank2021\"\n# email\nos.environ[\"EMAIL_HOST_USER\"] = \"danielasartshop@gmail.com\"\nos.environ[\"DEFAULT_FROM_EMAIL\"] = \"danielasartshop@gmail.com\"",
+        "peekOfCode": "os.environ[\"STRIPE_WH_SECRET\"] = \"whsec_i3dFKeGVGqt7r65lKeCieocWUduRcrVJ\"\n# database\nos.environ[\n    \"DATABASE_URL\"\n] = \"postgres://nnnnanbvdryrwv:77b0ca851b8f48ea691014c665c30dff6b23aa4c4c7cb4a526ceba6e177f5cf8@ec2-54-228-174-49.eu-west-1.compute.amazonaws.com:5432/d27futa7m1e8qd\"\n# static & media files\nos.environ[\"CLOUDINARY_URL\"] = \"cloudinary://458241221221697:9gnhcXbuQayWFOJduQi3aGXWivg@frank2021\"\n# email\nos.environ[\"EMAIL_HOST_USER\"] = \"fdasabino@gmail.com\"\nos.environ[\"DEFAULT_FROM_EMAIL\"] = \"fdasabino@gmail.com\"",
         "detail": "env",
         "documentation": {}
     },
@@ -1865,7 +1910,7 @@
         "kind": 5,
         "importPath": "env",
         "description": "env",
-        "peekOfCode": "] = \"postgres://nnnnanbvdryrwv:77b0ca851b8f48ea691014c665c30dff6b23aa4c4c7cb4a526ceba6e177f5cf8@ec2-54-228-174-49.eu-west-1.compute.amazonaws.com:5432/d27futa7m1e8qd\"\n# static & media files\nos.environ[\"CLOUDINARY_URL\"] = \"cloudinary://458241221221697:9gnhcXbuQayWFOJduQi3aGXWivg@frank2021\"\n# email\nos.environ[\"EMAIL_HOST_USER\"] = \"danielasartshop@gmail.com\"\nos.environ[\"DEFAULT_FROM_EMAIL\"] = \"danielasartshop@gmail.com\"\nos.environ[\"EMAIL_HOST_PASSWORD\"] = \"ulocvjmvpoqrkike\"",
+        "peekOfCode": "] = \"postgres://nnnnanbvdryrwv:77b0ca851b8f48ea691014c665c30dff6b23aa4c4c7cb4a526ceba6e177f5cf8@ec2-54-228-174-49.eu-west-1.compute.amazonaws.com:5432/d27futa7m1e8qd\"\n# static & media files\nos.environ[\"CLOUDINARY_URL\"] = \"cloudinary://458241221221697:9gnhcXbuQayWFOJduQi3aGXWivg@frank2021\"\n# email\nos.environ[\"EMAIL_HOST_USER\"] = \"fdasabino@gmail.com\"\nos.environ[\"DEFAULT_FROM_EMAIL\"] = \"fdasabino@gmail.com\"\nos.environ[\"EMAIL_HOST_PASSWORD\"] = \"wwzfrhzmokysvwie\"",
         "detail": "env",
         "documentation": {}
     },
@@ -1874,7 +1919,7 @@
         "kind": 5,
         "importPath": "env",
         "description": "env",
-        "peekOfCode": "os.environ[\"CLOUDINARY_URL\"] = \"cloudinary://458241221221697:9gnhcXbuQayWFOJduQi3aGXWivg@frank2021\"\n# email\nos.environ[\"EMAIL_HOST_USER\"] = \"danielasartshop@gmail.com\"\nos.environ[\"DEFAULT_FROM_EMAIL\"] = \"danielasartshop@gmail.com\"\nos.environ[\"EMAIL_HOST_PASSWORD\"] = \"ulocvjmvpoqrkike\"",
+        "peekOfCode": "os.environ[\"CLOUDINARY_URL\"] = \"cloudinary://458241221221697:9gnhcXbuQayWFOJduQi3aGXWivg@frank2021\"\n# email\nos.environ[\"EMAIL_HOST_USER\"] = \"fdasabino@gmail.com\"\nos.environ[\"DEFAULT_FROM_EMAIL\"] = \"fdasabino@gmail.com\"\nos.environ[\"EMAIL_HOST_PASSWORD\"] = \"wwzfrhzmokysvwie\"",
         "detail": "env",
         "documentation": {}
     },
@@ -1883,7 +1928,7 @@
         "kind": 5,
         "importPath": "env",
         "description": "env",
-        "peekOfCode": "os.environ[\"EMAIL_HOST_USER\"] = \"danielasartshop@gmail.com\"\nos.environ[\"DEFAULT_FROM_EMAIL\"] = \"danielasartshop@gmail.com\"\nos.environ[\"EMAIL_HOST_PASSWORD\"] = \"ulocvjmvpoqrkike\"",
+        "peekOfCode": "os.environ[\"EMAIL_HOST_USER\"] = \"fdasabino@gmail.com\"\nos.environ[\"DEFAULT_FROM_EMAIL\"] = \"fdasabino@gmail.com\"\nos.environ[\"EMAIL_HOST_PASSWORD\"] = \"wwzfrhzmokysvwie\"",
         "detail": "env",
         "documentation": {}
     },
@@ -1892,7 +1937,7 @@
         "kind": 5,
         "importPath": "env",
         "description": "env",
-        "peekOfCode": "os.environ[\"DEFAULT_FROM_EMAIL\"] = \"danielasartshop@gmail.com\"\nos.environ[\"EMAIL_HOST_PASSWORD\"] = \"ulocvjmvpoqrkike\"",
+        "peekOfCode": "os.environ[\"DEFAULT_FROM_EMAIL\"] = \"fdasabino@gmail.com\"\nos.environ[\"EMAIL_HOST_PASSWORD\"] = \"wwzfrhzmokysvwie\"",
         "detail": "env",
         "documentation": {}
     },
@@ -1901,7 +1946,7 @@
         "kind": 5,
         "importPath": "env",
         "description": "env",
-        "peekOfCode": "os.environ[\"EMAIL_HOST_PASSWORD\"] = \"ulocvjmvpoqrkike\"",
+        "peekOfCode": "os.environ[\"EMAIL_HOST_PASSWORD\"] = \"wwzfrhzmokysvwie\"",
         "detail": "env",
         "documentation": {}
     },
