@@ -15,7 +15,7 @@ a,
 
 .hero-img {
   background: url(https://res.cloudinary.com/frank2021/image/upload/v1636935850/Danielas%20art%20shop/P1000851-2_cjfump.jpg) center top;
-  background-attachment: fixed;
+  background-attachment: local;
   background-size: cover;
   height: 100vh;
 }
@@ -34,15 +34,18 @@ body {
 }
 
 .content {
-  height: fit-content;
+  min-height: 100vh;
 }
 
 .container-fluid {
   margin: 0 !important;
 }
 
-.btn {
+.btn-dark,
+.btn-outline-dark {
   border-radius: 0;
+  text-transform: uppercase;
+  max-height: fit-content;
 }
 
 .icon {
@@ -105,26 +108,27 @@ nav {
   color: #000 !important;
 }
 
-.btt-button {
-  height: 42px;
-  width: 42px;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-}
+@media(max-width:768px) {
+  .btt-button {
+    height: 30px;
+    width: 30px;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 1000;
+  }
 
-.btt-button:hover {
-  background: #000;
-  color: #fff;
-  height: 42px;
-  width: 42px;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-}
+  .btt-button:hover {
+    background: #000;
+    color: #fff;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+  }
 
-.btt-link {
-  cursor: pointer;
+  .btt-link {
+    cursor: pointer;
+  }
 }
 
 input::-webkit-outer-spin-button,
@@ -303,10 +307,5 @@ label {
   .btn.btn-black.rounded-0.btn-lg {
     padding: .375rem .375rem;
     font-size: .75rem;
-  }
-
-  .increment-qty,
-  .decrement-qty {
-    padding: .25rem .5rem !important;
   }
 }

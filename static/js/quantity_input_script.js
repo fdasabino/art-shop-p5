@@ -2,7 +2,7 @@
  function handleEnableDisable(itemId) {
    const currentValue = parseInt($(`.id_qty_${itemId}`).val());
    const minusDisabled = currentValue <= 0;
-   const plusDisabled = currentValue >= 1;
+   const plusDisabled = currentValue >= parseInt($(`.id_qty_${itemId}`).attr('max'));
    $(`.decrement-qty_${itemId}`).prop('disabled', minusDisabled);
    $(`.increment-qty_${itemId}`).prop('disabled', plusDisabled);
  }
@@ -40,4 +40,9 @@
    const currentValue = parseInt($(closestInput).val());
    $(allInputs).val(currentValue - 1);
    handleEnableDisable(itemId);
+ });
+ // disable keyboard input
+
+ $("[type='number']").keypress((evt) => {
+   evt.preventDefault();
  });

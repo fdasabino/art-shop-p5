@@ -1,8 +1,5 @@
-from decimal import Decimal
-
 from django.conf import settings
 from django.shortcuts import get_object_or_404
-
 from products.models import Product
 
 
@@ -48,7 +45,7 @@ def cart_contents(request):
 
     grand_total = delivery + total
 
-    context = {
+    return {
         "cart_items": cart_items,
         "total": total,
         "product_count": product_count,
@@ -57,5 +54,3 @@ def cart_contents(request):
         "free_delivery_threshold": settings.FREE_DELIVERY_THRESHOLD,
         "grand_total": grand_total,
     }
-
-    return context
