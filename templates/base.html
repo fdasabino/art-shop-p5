@@ -72,7 +72,7 @@
               <div class="text-center">
                 <div><i class="fas fa-house-user fa-lg"></i></div>
                 {% if request.user.is_authenticated %}
-                <p class="my-0">Hi, {{request.user.first_name}} <i class="fas fa-chevron-down"></i></p>
+                <p class="my-0">Hi, {{request.user}} <i class="fas fa-chevron-down"></i></p>
                 {% else %}
                 <p class="my-0">Sign In <i class="fas fa-chevron-down"></i></p>
                 {% endif %}
