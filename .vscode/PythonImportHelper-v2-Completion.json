@@ -1649,7 +1649,7 @@
         "kind": 6,
         "importPath": "checkout.webhook_handler",
         "description": "checkout.webhook_handler",
-        "peekOfCode": "class StripeWH_Handler:\n    \"\"\"Handle Stripe webhooks\"\"\"\n    def __init__(self, request):\n        self.request = request\n    def _send_confirmation_email(self, order):\n        \"\"\"Send the user a confirmation email\"\"\"\n        cust_email = order.email\n        subject = render_to_string(\n            \"templates\\confirmation_emails\\confirmation_email_subject.txt\",\n            {\"order\": order},",
+        "peekOfCode": "class StripeWH_Handler:\n    \"\"\"Handle Stripe webhooks\"\"\"\n    def __init__(self, request):\n        self.request = request\n    def send_confirmation_email(self, order):\n        \"\"\"Send the user a confirmation email\"\"\"\n        cust_email = order.email\n        subject = render_to_string(\n            \"templates\\confirmation_emails\\confirmation_email_subject.txt\",\n            {\"order\": order},",
         "detail": "checkout.webhook_handler",
         "documentation": {}
     },
@@ -1694,7 +1694,7 @@
         "kind": 2,
         "importPath": "home.views",
         "description": "home.views",
-        "peekOfCode": "def about(request):\n    \"\"\"\n    Render the about view\n    \"\"\"\n    return render(request, \"home/about.html\")\ndef contact(request):\n    if request.method == \"POST\":\n        form = ContactForm(request.POST)\n        if form.is_valid():\n            subject = \"Website Inquiry\"",
+        "peekOfCode": "def about(request):\n    \"\"\"\n    Render the about view\n    \"\"\"\n    return render(request, \"home/about.html\")\ndef contact(request):\n    if request.method == \"POST\":\n        form = ContactForm(request.POST)\n        if form.is_valid():\n            subject = \"Daniela's Art Shop - Contact Request\"",
         "detail": "home.views",
         "documentation": {}
     },
@@ -1703,7 +1703,7 @@
         "kind": 2,
         "importPath": "home.views",
         "description": "home.views",
-        "peekOfCode": "def contact(request):\n    if request.method == \"POST\":\n        form = ContactForm(request.POST)\n        if form.is_valid():\n            subject = \"Website Inquiry\"\n            body = {\n                \"full_name\": form.cleaned_data[\"full_name\"],\n                \"email\": form.cleaned_data[\"email_address\"],\n                \"message\": form.cleaned_data[\"message\"],\n            }",
+        "peekOfCode": "def contact(request):\n    if request.method == \"POST\":\n        form = ContactForm(request.POST)\n        if form.is_valid():\n            subject = \"Daniela's Art Shop - Contact Request\"\n            body = {\n                \"full_name\": form.cleaned_data[\"full_name\"],\n                \"email\": form.cleaned_data[\"email_address\"],\n                \"message\": form.cleaned_data[\"message\"],\n            }",
         "detail": "home.views",
         "documentation": {}
     },

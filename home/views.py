@@ -25,7 +25,7 @@ def contact(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
-            subject = "Website Inquiry"
+            subject = "Daniela's Art Shop - Contact Request"
             body = {
                 "full_name": form.cleaned_data["full_name"],
                 "email": form.cleaned_data["email_address"],
@@ -35,7 +35,7 @@ def contact(request):
 
             contact_guest_email = form["email_address"].value()
             try:
-                send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, [contact_guest_email])
+                send_mail(subject, message, contact_guest_email, [settings.EMAIL_HOST_USER])
                 messages.success(
                     request, "Your message has been successfully sent. We will be in touch as soon as possible"
                 )
