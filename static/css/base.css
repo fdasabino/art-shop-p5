@@ -82,7 +82,7 @@ a.category-badge>span.badge:hover {
 
 .card-header,
 .dropdown-menu {
-  background-color: #C2E5D3;
+  background-color: rgb(255, 236, 239);
 }
 
 
@@ -92,8 +92,8 @@ nav {
   background-color: #C2E5D3 !important;
 }
 
-nav {
-  border-bottom: 5px solid rgb(255, 194, 204);
+header {
+  border-top: 10px solid rgb(255, 236, 239);
 }
 
 .bg-pink {
