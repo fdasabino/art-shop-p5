@@ -7,6 +7,8 @@
                 <div><i class="fas fa-house-user fa-lg"></i></div>
                 {% if request.user.is_authenticated %}
                 <small class="my-0"><b>Hi, {{user.first_name}}</b></small>
+                {% else %}
+                <small class="my-0"><b>Account</b></small>
                 {% endif %}
             </div>
         </a>
