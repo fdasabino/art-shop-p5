@@ -2,24 +2,53 @@
 
 <img src="#">
 
-## 1. Project Goals
+## Project Goals
 
 - Hi there! Welcome to Daniela's Art Shop.
-  I have put together an ecommerce webpage that intends to satisfy the requirements of the project milestone 5 of the Code Institute.
-  In this page you will find a fully functional ecommerce website. The main goal with this project is to create a small size ecommerce store that sells original paintings and prints, created by the artist.
+  I have put together an ecommerce webpage that intends to satisfy the requirements of the project milestone 5 of the Code
+  Institute.
+  In this page you will find a fully functional ecommerce website. The main goal with this project is to create a small
+  size ecommerce store that sells original paintings and prints, created by the artist.
+
+- Generally speaking I believe the project to bring the feeling of a small art store, with personal touch, going away
+  from the usual conventions in some cases. there are few implementations that i would like to do in the future, but due
+  to time constraints they will have to be implemented in a near future.
+
+## Deployed Application
+
+- The Application is accessible by clicking on the link below. If you wish to create a test account click on the sign in
+  dropdown menu and click register, to be transferred to the allauth default account creation links.
 
 [View the live project here](https://danielasartshop.herokuapp.com/)
 
-## 2. User Experience (UX)
+## Test Payments with Stripe
 
-### 2.1. User Stories
+- As a simple example of the functionality of the application, users can add products to their shopping cart, and make
+  test purchases.
+- The card numbers below are provided by a third party software called Stripe to allow testing while implementing the
+  payment functionality:
+
+|       Event Type:        |   Card Number:   |
+| :----------------------: | :--------------: |
+|   Successful payment:    | 4242424242424242 |
+| Requires authentication: | 4000002500003155 |
+|     Failed payment:      | 4000000000009995 |
+
+## UX
+
+- Given this application is for an art ecommerce website, the design is very product centered. It has been
+  designed to enable a customer to add items to their basket, and checkout and pay as seamlessly as possible. All
+  pertinent product information is highlighted upfront, for example, price, size and product uniqueness to keep customers informed.
+
+### User Stories
 
 - As an User I would like to be able to purchase a product directly from the artist website.
 - As an User I wish to find relevant information about a product, such as price, size, and description.
 - As and User my experience has to be seamless and simple. With easy access to my personal information dashboard.
-- As an User I want to be able communicate with the page owner without hassle in order to give feedback on a particular product or collaborations.
+- As an User I want to be able communicate with the page owner without hassle in order to give feedback on a particular
+  product or collaborations.
 
-### 2.2. Visitors can
+### Visitors can
 
 - Explore the page information without having to create an account.
 - Create an account if they decide to do so.
@@ -27,49 +56,53 @@
 - Add an address, that will be available on their profile page.
 - Find links to social media accounts related to the artist.
 
-### 2.3. First Time Visitor Goals
+### First Time Visitor Goals
 
 - As a first time visitor, I want to see information about the artist, in order to consider making a purchase.
 - As a first time visitor, I wish to see the product list before having to create an account.
 - As a first time visitor, I would like to have access to account creation links.
 
-### 2.4. Returning Visitor Goals
+### Returning Visitor Goals
+
+- As a returning visitor, I want to use my sign-in credentials to access my profile page.
+- As a returning visitor, I would like to see updated products list.
+- As a returning customer, I would like to easily find links to social media and contact.
+
+### Store Owner Goals
 
 ## Features
 
-## 3. Design
+### Existing Features
 
-### 3.1. Colour Scheme and Imagery
+## Design
 
-### 3.2. Typography
+### Colour Scheme and Imagery
 
-'Zen Kaku Gothic Antique', sans-serif; body
-'Caveat', cursive, sans-serif; hero text
+### Typography
 
-### 3.3. Imagery
+- 'Caveat', cursive, sans-serif; hero text
+- 'Lato', sans-serif; body
 
-## 4. Technologies Used
+### Imagery
 
-### 4.1. Languages Used
+## Technologies Used
+
+### Languages Used
 
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
 - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 - [JavaScript](https://en.wikipedia.org/wiki/javascript)
 - [Python](https://en.wikipedia.org/wiki/javascript)
 
-### 4.2. Frameworks, Libraries & Programs Used
+### Frameworks, Libraries & Programs Used
 
-[Django - 3.9.7](https://www.djangoproject.com/)
+[Django - 3.2.9](https://www.djangoproject.com/)
 
 - Django was used as the main framework for this project
 
 [Bootstrap 5 :](https://getbootstrap.com/)
 
 - Bootstrap was used to assist with the responsiveness and styling of the website.
-
-[Material Design Bootstrap:](https://mdbootstrap.com/)
-
-- Material Design Bootstrap was added to assist with effects on the pages.
 
 [Hover.css:](https://ianlunn.github.io/Hover/)
 
@@ -87,48 +120,44 @@
 
 - Stripe is implemented as the default payment tool in this project.
 
-[Celery-Project:](https://docs.celeryproject.org/en/stable/)
-
-- Celery Project was implemented as the default email, delivery tool alongside rabbitMQ.
-
 [GitHub:](https://github.com/)
 
-- GitHub is used to store the projects code after being pushed from VScode.
+- GitHub is used for version control and to store the project's code after being pushed to the repository.
 
-## 5. Testing
+## Testing
 
-### 5.1. Validating
+### Validating
 
-### 5.2. Different Browsers
+### Different Browsers
 
-### 5.3. Further Testing
+### Further Testing
 
-## 6. Future changes to the Website
+## Future changes to the Website
 
-## 7. Deployment
+## Deployment
 
-### 7.1. Heroku
+### Heroku
 
-### 7.2. Forking the GitHub Repository
+### Forking the GitHub Repository
 
-By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make
-changes without affecting the original repository by using the following steps...
+- By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make
+  changes without affecting the original repository by using the following steps...
 
 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork"
    Button.
 3. You should now have a copy of the original repository in your GitHub account.
 
-Click
-[Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop)
-to retrieve pictures for some of the buttons and more detailed explanations of the above process.
+- Click
+  [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop)
+  to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
-## 8. Credits
+## Credits
 
-### 8.1. Special Thanks
+### Special Thanks
 
-### 8.2. Code
+### Code
 
-### 8.3. Media
+### Media
 
-## 9. Latest Updates
+## Latest Updates
