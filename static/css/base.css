@@ -23,6 +23,7 @@ a,
 @media(max-width:1000px) {
   .hero-img {
     background-attachment: initial;
+    /* background-position: top center; */
   }
 }
 

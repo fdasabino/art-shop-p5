@@ -133,6 +133,13 @@
             <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
             <!-- Pass the client secret to the view so we can get the payment intent id -->
             <input type="hidden" value="{{ client_secret }}" name="client_secret">
+            <div class="inline-block">
+              <i class="fab fa-cc-mastercard fa-lg"></i>
+              <i class="fab fa-cc-visa fa-lg"></i>
+              <i class="fab fa-cc-amex fa-lg"></i>
+              <i class="fab fa-cc-diners-club fa-lg"></i>
+              Powered by:<span> <i class="fab fa-cc-stripe fa-lg"></i></span>
+            </div>
           </fieldset>
           <div class="submit-button text-center d-sm mt-3 mb-2">
             <button id="submit-button" class="btn btn-dark rounded-0 mb-2">
