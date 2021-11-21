@@ -516,6 +516,14 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -903,7 +911,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nTEMPLATES_DIR = os.path.join(BASE_DIR, \"templates\")\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.environ.get(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\"danielasartshop.herokuapp.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nTEMPLATES_DIR = os.path.join(BASE_DIR, \"templates\")\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.environ.get(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False\nALLOWED_HOSTS = [\"danielasartshop.herokuapp.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -912,7 +920,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "TEMPLATES_DIR = os.path.join(BASE_DIR, \"templates\")\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.environ.get(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\"danielasartshop.herokuapp.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [",
+        "peekOfCode": "TEMPLATES_DIR = os.path.join(BASE_DIR, \"templates\")\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.environ.get(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False\nALLOWED_HOSTS = [\"danielasartshop.herokuapp.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -921,7 +929,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "SECRET_KEY = os.environ.get(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\"danielasartshop.herokuapp.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [\n    \"allauth\",\n    \"allauth.account\",\n    \"allauth.socialaccount\",\n    \"crispy_forms\",",
+        "peekOfCode": "SECRET_KEY = os.environ.get(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False\nALLOWED_HOSTS = [\"danielasartshop.herokuapp.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [\n    \"allauth\",\n    \"allauth.account\",\n    \"allauth.socialaccount\",\n    \"crispy_forms\",",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -930,7 +938,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [\"danielasartshop.herokuapp.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [\n    \"allauth\",\n    \"allauth.account\",\n    \"allauth.socialaccount\",\n    \"crispy_forms\",\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",",
+        "peekOfCode": "DEBUG = False\nALLOWED_HOSTS = [\"danielasartshop.herokuapp.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [\n    \"allauth\",\n    \"allauth.account\",\n    \"allauth.socialaccount\",\n    \"crispy_forms\",\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1445,6 +1453,15 @@
         "description": "checkout.migrations.0001_initial",
         "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        (\"products\", \"0001_initial\"),\n        (\"profiles\", \"0001_initial\"),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name=\"Order\",\n            fields=[",
         "detail": "checkout.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "checkout.migrations.0002_auto_20211121_2111",
+        "description": "checkout.migrations.0002_auto_20211121_2111",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('checkout', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterModelOptions(\n            name='order',\n            options={'ordering': ('-date',)},\n        ),\n        migrations.RemoveField(",
+        "detail": "checkout.migrations.0002_auto_20211121_2111",
         "documentation": {}
     },
     {

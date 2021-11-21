@@ -13,6 +13,10 @@ a,
   text-decoration: none;
 }
 
+.card {
+  border-radius: 0;
+}
+
 .hero-img {
   background: url(https://res.cloudinary.com/frank2021/image/upload/v1636935850/Danielas%20art%20shop/P1000851-2_cjfump.jpg) center top;
   background-attachment: fixed;
@@ -70,6 +74,10 @@ a.category-badge>span.badge:hover {
   color: #fff !important;
 }
 
+.checkout-img {
+  max-width: 150px;
+}
+
 
 /* about */
 .about-img {
@@ -80,7 +88,6 @@ a.category-badge>span.badge:hover {
 }
 
 /* bootstrap overrides */
-.card-header,
 .dropdown-menu {
   background-color: rgb(255, 236, 239);
 }

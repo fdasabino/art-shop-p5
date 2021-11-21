@@ -95,11 +95,9 @@
               </div>
             </div>
           </form>
-          <div class="mb-2">
-            <a class="btn btn-outline-dark btn-sm update-link mt-2"><small>Update</small></a>
-            <a class=" btn btn-dark btn-sm remove-item float-right mt-2" id="remove_{{ item.item_id }}"
+            <a class="btn btn-outline-dark btn-sm update-link my-2"><small>Update</small></a>
+            <a class=" btn btn-dark btn-sm remove-item float-right my-2" id="remove_{{ item.item_id }}"
               data-product_size="{{ item.size }}"><small>Remove</small></a>
-          </div>
 
           <p class="my-0">
             Dimensions: {% if item.product.dimensions %}{{ item.product.dimensions }}{% else %}N/A{% endif %}</p>
