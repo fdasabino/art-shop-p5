@@ -1,6 +1,6 @@
 # Daniela's Art Shop - by Daniela Kronvall
 
-<img src="#">
+<img src="https://res.cloudinary.com/frank2021/image/upload/v1637611038/Danielas%20art%20shop/Art-shop_srlic1.jpg">
 
 ## Project Goals
 
@@ -197,11 +197,7 @@
 
 ## Testing
 
-### Validating
-
-- No errors were found on this page, according to the [HTML - Checker](https://validator.w3.org/nu/) validator.
-
-<img src="https://res.cloudinary.com/frank2021/image/upload/v1637589191/Danielas%20art%20shop/Screenshot_2021-11-22_145256_niuias.jpg">
+- The application has been tested on most popular browsers, including mobile versions. Also the html code has been validated.
 
 ### Different Browsers
 
@@ -216,6 +212,12 @@
 |    Firefox    | No Problems Found |
 |     Edge      | No Problems Found |
 |     Opera     | No Problems Found |
+
+### Validating
+
+- No errors were found on this page, according to the [HTML - Checker](https://validator.w3.org/nu/) validator.
+
+<img src="https://res.cloudinary.com/frank2021/image/upload/v1637589191/Danielas%20art%20shop/Screenshot_2021-11-22_145256_niuias.jpg">
 
 ### Further Testing
 
@@ -242,9 +244,3 @@
 ## Credits
 
 ### Special Thanks
-
-### Code
-
-### Media
-
-## Latest Updates
