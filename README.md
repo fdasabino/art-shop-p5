@@ -9,8 +9,7 @@
   Institute.
   In this page you will find a fully functional ecommerce website. The main goal with this project is to create a small
   size ecommerce store that sells original paintings and prints, created by the artist.
-
-- Generally speaking I believe the project to bring the feeling of a small art store, with personal touch, going away
+  Generally speaking I believe the project to bring the feeling of a small art store, with personal touch, going away
   from the usual conventions in some cases. There are few implementations that I would like to do in the future, but due
   to time constraints they will have to be implemented later on.
 
@@ -23,14 +22,14 @@
 
 ## UX
 
-- Given this application is for an art ecommerce website, the design is very product centered. It has been
+- Given this application is for an art ecommerce website, the design is product centered. It has been
   designed to enable a customer to add items to their basket, and checkout and pay as seamlessly as possible. All
   pertinent product information is highlighted upfront, for example, price, size and product uniqueness to keep customers
   informed.
 
 ### User Stories
 
-- As an User I would like to be able to purchase a product directly from the artist website.
+- As an User I would like to purchase a product directly from the artist website.
 - As an User I wish to find relevant information about a product, such as price, size, and description.
 - As and User my experience has to be seamless and simple. With easy access to my personal information dashboard.
 - As an User I want to be able communicate with the page owner without hassle in order to give feedback on a particular
@@ -66,7 +65,7 @@
 
 ## Existing Features
 
-- This application has been designed to be used used as an e-commerce page, allowing users to interact with application
+- This application has been designed to be used used as an ecommerce page, allowing users to interact with application
   in numerous ways:
 
 #### PROFILES
@@ -93,6 +92,8 @@
 
 - Cart functionality has been added, allowing users to create a new cart using the session data, stored in the browsers
   session.
+  This application has been made available through out the entire website, using a context processor file that allows cart access
+  from anywhere on the website.
   The Cart app also provide the user with two views: one for when the cart is empty and another for there are cart items present,
   allowing users to update and remove items from their cart.
 
@@ -118,9 +119,13 @@
 
 ### Features Left to Implement
 
+1. Automatic Stock Update
+
 - In a near future before the application becomes available for actual commercial use. I´d like to implement an inventory
   management that automatically deducts sold items out of the available stock. Considering the goal of the page is to sell
   unique items in most cases.
+
+2. Self Account Deletion by User
 
 - When it comes to user management I would like to implement a custom model that allows users to delete their account if they
   wish to do so.
@@ -129,8 +134,6 @@
 
 - The page design was inspired by the Boutique Ado, template provided by the Code Institute. The design is simplistic and minimalist.
   The focus of the design is to direct the user to the product page, and provide a simple but effective solution for the user all the way through out completing the purchase.
-
-### Colour Scheme, Imagery and Typography
 
 #### Colour Scheme
 
@@ -179,6 +182,10 @@
 
 - Hover.css was used on the Social Media icons in the footer to add the float transition while being hovered over.
 
+[JQuery](https://jqueryui.com/)
+
+- This is a JavaScript framework which enables easy manipulation of the Document Object Model (DOM) using JQuery syntax.
+
 [Google Fonts:](https://fonts.google.com/)
 
 - Google fonts was used to import the fonts into the main.css file which is used on the project.
@@ -187,9 +194,13 @@
 
 - Font Awesome was used as the icon provider for this project.
 
-[Stripe:](https://stripe.com/en-se)
+[Cloudinary:](https://cloudinary.com/)
 
-- Stripe is implemented as the default payment tool in this project.
+- Cloudinary was used to store all media and static files for the project.
+
+[Stripe](https://stripe.com/)
+
+- This is used to securely process customer payment details. No payment data is handled or stored by the application, it is all handled by Stripe. This makes for easy and secure integration and verification of payments.
 
 [GitHub:](https://github.com/)
 
@@ -213,33 +224,118 @@
 |     Edge      | No Problems Found |
 |     Opera     | No Problems Found |
 
+### Further Testing
+
+- Tests were also performed on samsung mobiles and tablets, no significant issues were found.
+
 ### Validating
 
 - No errors were found on this page, according to the [HTML - Checker](https://validator.w3.org/nu/) validator.
 
 <img src="https://res.cloudinary.com/frank2021/image/upload/v1637589191/Danielas%20art%20shop/Screenshot_2021-11-22_145256_niuias.jpg">
 
-### Further Testing
+## Deployment to Heroku
 
-- Tests were also performed on samsung mobiles and tablets, no significant issues were found.
+- This application has been deployed to Heroku, from a github repository. I have stored some important information
+  (config vars) such as Stripe keys, email information, django secret key, database secret key on the heroku admin panel
+  under config vars.
 
-## Deployment
+* (IMPORTANT - Don't forget to set DEBUG to False in settings.py)
 
-### Heroku
+1. Create the Heroku app
 
-### Forking the GitHub Repository
+| #   | Step                  | Action                                                                          |
+| --- | --------------------- | ------------------------------------------------------------------------------- |
+| 1.1 | Create new Heroku App | APP_NAME, Location = Europe                                                     |
+| 1.2 | Add Database to App   | Located in the Resources Tab, Add-ons, search and<br>add e.g. ‘Heroku Postgres’ |
+| 1.3 | Copy DATABASE_URL     | Located in the Settings Tab, in Config Vars, Copy<br>Text                       |
 
-- By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make
-  changes without affecting the original repository by using the following steps...
+2. Attach the Database (In your editor)
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork"
-   Button.
-3. You should now have a copy of the original repository in your GitHub account.
+| #   | Step                                             | Action      |
+| --- | ------------------------------------------------ | ----------- |
+| 2.1 | Create new env.py file on top<br>level directory | E.g. env.py |
 
-- Click
-  [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop)
-  to retrieve pictures for some of the buttons and more detailed explanations of the above process.
+3. In env.py
+
+| #   | Step                      | Action                                                              |
+| --- | ------------------------- | ------------------------------------------------------------------- |
+| 3.1 | Import os library         | import os                                                           |
+| 3.2 | Set environment variables | os.environ["DATABASE_URL"] = "Paste in Heroku<br>DATABASE_URL Link" |
+| 3.3 | Add in secret key         | os.environ["SECRET_KEY"] = "Make up a<br>randomSecretKey"           |
+
+4. In heroku
+
+| #   | Step                          | Action                        |
+| --- | ----------------------------- | ----------------------------- |
+| 4.1 | Add Secret Key to Config Vars | SECRET_KEY, “randomSecretKey” |
+
+5. In settings.py
+
+| #   | Step                                                                                                                          | Action                                                                                                        |
+| --- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| 5.1 | Reference env.py                                                                                                              | from pathlib import Path<br>import os<br>import dj_database_url<br>if os.path.isfile("env.py"):<br>import env |
+| 5.2 | Remove the insecure secret<br>key and replace - links to the<br>secret key variable on Heroku                                 | SECRET_KEY = os.environ.get('SECRET_KEY')                                                                     |
+| 5.3 | Replace DATABASES Section<br>(Comment out the old<br>DataBases Section)<br>- links to the DATATBASE_URL<br>variable on Heroku | DATABASES = {<br>'default':<br>dj*database_url.parse(os.environ.get("DATABASE*<br>URL"))<br>}                 |
+
+6. In the terminal
+
+| #   | Step            | Code                            |
+| --- | --------------- | ------------------------------- |
+| 6.1 | Make Migrations | python manage.py makemigrations |
+
+7. In Cloudinary.com
+
+| #   | Step                                                      | Code                      |
+| --- | --------------------------------------------------------- | ------------------------- |
+| 7.1 | Copy your CLOUDINARY_URL<br>e.g. API Environment Variable | From Cloudinary Dashboard |
+
+8. In env.py
+
+| #   | Step                                                                                     | Code                                                                 |
+| --- | ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| 8.1 | Add Cloudinary URL to env.py -<br>be sure to paste in the correct<br>section of the link | os.environ["CLOUDINARY_URL"] =<br>"cloudinary://9444:SUZi@dbhyuj5mc" |
+
+9. In Heroku
+
+| #   | Step                                                                                                 | Code                                                                                          |
+| --- | ---------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| 9.1 | Add Cloudinary URL to Heroku<br>Config Vars - be sure to paste<br>in the correct section of the link | Add to Settings tab in Config Vars e.g.<br>COUDINARY_URL,<br>cloudinary://9444:SUZi@dbhyuj5mc |
+
+10. In settings.py
+
+| #    | Step                                                                                                     | Action                                                                                                                                                                                                                                                                                                                                          |
+| ---- | -------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10.1 | Add Cloudinary Libraries to<br>installed apps                                                            | ...<br>'cloudinary_storage',<br>'django.contrib.staticfiles',<br>'cloudinary',<br>...<br>(note: order is important)                                                                                                                                                                                                                             |
+| 10.2 | Tell Django to use Cloudinary<br>to store media and static files<br>Place under the Static files<br>Note | STATIC_URL = '/static/'<br>STATICFILES_STORAGE =<br>'cloudinary_storage.storage.StaticHashedCloudinaryS<br>torage'<br>STATICFILES_DIRS = [os.path.join(BASE_DIR,<br>'static')]<br>STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')<br>MEDIA_URL = '/media/'<br>DEFAULT_FILE_STORAGE =<br>'cloudinary_storage.storage.MediaCloudinaryStorage' |
+| 10.3 | Link file to the templates<br>directory in Heroku<br>Place under the BASE_DIR<br>line                    | TEMPLATES_DIR = os.path.join(BASE_DIR,<br>'templates')                                                                                                                                                                                                                                                                                          |
+| 10.3 | Change the templates<br>directory to TEMPLATES_DIR<br>Place within the TEMPLATES<br>array                | 'DIRS': [TEMPLATES_DIR]                                                                                                                                                                                                                                                                                                                         |
+| 10.4 | Add Heroku Hostname to<br>ALLOWED_HOSTS                                                                  | ALLOWED_HOSTS =<br>["PROJ_NAME.herokuapp.com", "localhost"]                                                                                                                                                                                                                                                                                     |
+
+11. In your editor
+
+| #    | Step                                                  | Action                   |
+| ---- | ----------------------------------------------------- | ------------------------ |
+| 11.1 | Make sure to have 3 folders on top<br>level directory | media, static, templates |
+| 11.2 | Create procfile on the top level<br>directory         | Procfile                 |
+
+12. In Procfile
+
+| #    | Step     | Action                       |
+| ---- | -------- | ---------------------------- |
+| 12.1 | Add code | web: gunicorn PROJ_NAME.wsgi |
+
+13. In the terminal
+
+| #    | Step                 | Action                                                     |
+| ---- | -------------------- | ---------------------------------------------------------- |
+| 13.1 | Add, commit and push | git add .<br>git commit -m “Deployment Commit”<br>git push |
+
+14. In Heroku
+
+| #    | Step                                       | Action                                          |
+| ---- | ------------------------------------------ | ----------------------------------------------- |
+| 14.1 | Deploy Content manually<br>through heroku/ | E.g Github as deployment method, on main branch |
 
 ## Credits
 
