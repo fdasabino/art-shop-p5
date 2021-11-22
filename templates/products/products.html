@@ -2,10 +2,11 @@
 {% load static %}
 {% load humanize %}
 {% block extra_title %}Products{% endblock extra_title %}
+
 {% block page_header %}
 <div class="container mt-3">
   <div class="row">
-    <div class="col text-center">
+    <div class="col">
       <a href="{% url 'home' %}" class="btn btn-outline-dark"><i class="fa fa-chevron-left"></i> Back to Homepage</a>
     </div>
   </div>
@@ -15,9 +16,17 @@
 
 {% block content %}
 <div class="container content">
+
+<div class="row">
+      <div class="col">
+        <hr>
+        <h2 class="mb-4 text-uppercase">Products</h2>
+        <hr>
+      </div>
+    </div>
+
   <div class="row justify-content-center">
     <div class="col text-center mt-3">
-      <h2 class="mb-4 text-uppercase">Products</h2>
       {% for c in current_categories %}
       <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{c.name}}">
         <span class="p-2 mt-2 badge badge-dark text-dark rounded-0 border">{{ c.friendly_name }}</span>

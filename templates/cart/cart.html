@@ -95,9 +95,9 @@
               </div>
             </div>
           </form>
-            <a class="btn btn-outline-dark btn-sm update-link my-2"><small>Update</small></a>
-            <a class=" btn btn-dark btn-sm remove-item float-right my-2" id="remove_{{ item.item_id }}"
-              data-product_size="{{ item.size }}"><small>Remove</small></a>
+          <a class="btn btn-outline-dark btn-sm update-link my-2"><small>Update</small></a>
+          <a class=" btn btn-dark btn-sm remove-item float-right my-2" id="remove_{{ item.item_id }}"
+            data-product_size="{{ item.size }}"><small>Remove</small></a>
 
           <p class="my-0">
             Dimensions: {% if item.product.dimensions %}{{ item.product.dimensions }}{% else %}N/A{% endif %}</p>
@@ -108,10 +108,10 @@
           {% if item.product.dimensions %}
           <small class="text-muted"><i class="fas fa-ruler-combined"></i> {{item.product.dimensions}}</small> <br>
           {% endif %}
-          {% if item.product.rating %}
-          <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ item.product.rating }} / 5</small>
+          {% if item.product.sold_out %}
+          <small class="text-muted">Sold Out</small>
           {% else %}
-          <small class="text-muted">No Rating</small>
+          <small class="text-muted">Available</small>
           {% endif %}
         </div>
       </div>

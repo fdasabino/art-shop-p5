@@ -1,6 +1,17 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block extra_title %}Contact{% endblock extra_title %}
+
+{% block page_header %}
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <a href="{% url 'home' %}" class="btn btn-outline-dark"><i class="fa fa-chevron-left"></i> Back to Homepage</a>
+    </div>
+  </div>
+</div>
+{% endblock page_header %}
+
 {% block content %}
 <div class="container-fluid">
   <div class="container content">
