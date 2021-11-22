@@ -199,6 +199,10 @@
 
 ### Validating
 
+- No errors were found on this page, according to the[HTML - Checker](https://validator.w3.org/nu/) validator.
+
+<img src="https://res.cloudinary.com/frank2021/image/upload/v1637589191/Danielas%20art%20shop/Screenshot_2021-11-22_145256_niuias.jpg">
+
 ### Different Browsers
 
 ### Further Testing
