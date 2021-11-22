@@ -80,6 +80,8 @@ a.category-badge>span.badge:hover {
 }
 
 
+
+
 /* about */
 .about-img {
   max-width: 100%;
@@ -104,11 +106,13 @@ nav {
 }
 
 header {
-  border-top: 10px solid lightpink;
+  border-top: 10px solid #FFB6C1;
 }
 
+/* footer */
 .bg-pink {
-  background-color: lightpink;
+  border-top: 5px solid #d7f5e5;
+  background-color: #FFB6C1;
 }
 
 .main-logo-link {

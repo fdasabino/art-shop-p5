@@ -11,8 +11,8 @@
   size ecommerce store that sells original paintings and prints, created by the artist.
 
 - Generally speaking I believe the project to bring the feeling of a small art store, with personal touch, going away
-  from the usual conventions in some cases. there are few implementations that i would like to do in the future, but due
-  to time constraints they will have to be implemented in a near future.
+  from the usual conventions in some cases. There are few implementations that I would like to do in the future, but due
+  to time constraints they will have to be implemented later on.
 
 ## Deployed Application
 
@@ -93,13 +93,14 @@
 
 - Cart functionality has been added, allowing users to create a new cart using the session data, stored in the browsers
   session.
+  The Cart app also provide the user with two views: one for when the cart is empty and another for there are cart items present,
+  allowing users to update and remove items from their cart.
 
 #### CHECKOUT
 
 - The Checkout app is used to process orders, and can be accessed without the need to an user to be logged in. With that
   said users must have items in their cart to be able to move forward to the checkout section. This process captures the
-  user's
-  address (pre-populated if user is logged in) which is modifiable. Prior to processing payment, users can review
+  user's address (pre-populated if user is logged in) which is modifiable. Prior to processing payment, users can review
   and confirm their order, with payment processing handled by Stripe.
 
 ### Test Payments with Stripe
@@ -117,16 +118,43 @@
 
 ### Features Left to Implement
 
+- In a near future before the application becomes available for actual commercial use. I´d like to implement an inventory
+  management that automatically deducts sold items out of the available stock. Considering the goal of the page is to sell
+  unique items in most cases.
+
+- When it comes to user management I would like to implement a custom model that allows users to delete their account if they
+  wish to do so.
+
 ## Design
 
-### Colour Scheme and Imagery
+- The page design was inspired by the Boutique Ado, template provided by the Code Institute. The design is simplistic and minimalist.
+  The focus of the design is to direct the user to the product page, and provide a simple but effective solution for the user all the way through out completing the purchase.
 
-### Typography
+### Colour Scheme, Imagery and Typography
 
-- 'Caveat', cursive, sans-serif; hero text
-- 'Lato', sans-serif; body
+#### Colour Scheme
 
-### Imagery
+- The colour scheme of the entire page was chosen by the artist and seeks to inspire, users in a calming manner.
+  The navbar and footer have a different colour scheme to bring together the contrast with the dark accent colours provided by the bootstrap
+  framework.
+
+  Navbar and Page Headers:
+  [Pale Green: #d7f5e5](https://www.color-name.com/pale-mint-green.color#:~:text=Pale%20Mint%20Green%20color%20hex%20code%20is%20%23C2E5D3)
+
+  Footer:
+  [Light Pink: #FFB6C1](https://www.color-name.com/light-pink.color)
+
+#### Imagery
+
+- The images used in this project are created by the artist and are protected by copyright.
+  They are not free for reproduction or use without the artist´s consent.
+
+#### Typography
+
+- As my logo font I have chosen 'Caveat', cursive. An elegant and easy to read font that brings together the feeling of the page.
+  The fallback font is sans-serif.
+
+- For the body elements I have chosen 'Lato', which is easy to read and flows with the rest of the project, Sans-serif is also the fallback.
 
 ## Technologies Used
 
