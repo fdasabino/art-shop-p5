@@ -21,24 +21,12 @@
 
 [View the live project here](https://danielasartshop.herokuapp.com/)
 
-## Test Payments with Stripe
-
-- As a simple example of the functionality of the application, users can add products to their shopping cart, and make
-  test purchases.
-- The card numbers below are provided by a third party software called Stripe to allow testing while implementing the
-  payment functionality:
-
-|       Event Type:        |   Card Number:   |
-| :----------------------: | :--------------: |
-|   Successful payment:    | 4242424242424242 |
-| Requires authentication: | 4000002500003155 |
-|     Failed payment:      | 4000000000009995 |
-
 ## UX
 
 - Given this application is for an art ecommerce website, the design is very product centered. It has been
   designed to enable a customer to add items to their basket, and checkout and pay as seamlessly as possible. All
-  pertinent product information is highlighted upfront, for example, price, size and product uniqueness to keep customers informed.
+  pertinent product information is highlighted upfront, for example, price, size and product uniqueness to keep customers
+  informed.
 
 ### User Stories
 
@@ -70,9 +58,64 @@
 
 ### Store Owner Goals
 
-## Features
+- As a store owner, I want to quickly modify product availability.
+- As a store owner, I would like to categorize products, and exhibit information about a certain product.
+- As a store owner, I would like to find information about orders and customer information under the same menu context
+  on my admin panel.
+- As a store owner, I expect to store customer information for future communications about events and promotions.
 
-### Existing Features
+## Existing Features
+
+- This application has been designed to be used used as an e-commerce page, allowing users to interact with application
+  in numerous ways:
+
+#### PROFILES
+
+- In this app, all customer information is stored.
+  Django-allauth is used as the default account management tool giving the user the ability to verify email addresses and
+  reset passwords.
+  Within this app I have used a number of default forms provided by allauth to integrate with the UserProfile model.
+  To produce responsive forms I have used the django-crispy-forms that allows me to control the behavior of forms in a
+  elegant and DRY way, without creating custom form templates.
+  This app is also responsible for displaying order history, in combination with the checkout and products app.
+
+#### PRODUCTS
+
+- The Products app provides the majority of the application's functionality. It delivers this through two models,
+  Product and Category.
+  Products are displayed either in list form, for multiple views, or in detail form, for a specific
+  product, both views displaying information about the items for sale (product name, price, category, if product is unique,
+  dimensions and availability).
+  In addition, products can be sorted by price, category or name.
+  The product details view, allows users to add items to basket, if available, as well as display a product description.
+
+#### CART
+
+- Cart functionality has been added, allowing users to create a new cart using the session data, stored in the browsers
+  session.
+
+#### CHECKOUT
+
+- The Checkout app is used to process orders, and can be accessed without the need to an user to be logged in. With that
+  said users must have items in their cart to be able to move forward to the checkout section. This process captures the
+  user's
+  address (pre-populated if user is logged in) which is modifiable. Prior to processing payment, users can review
+  and confirm their order, with payment processing handled by Stripe.
+
+### Test Payments with Stripe
+
+- As a simple example of the functionality of the application, users can add products to their shopping cart, and make
+  test purchases.
+- The card numbers below are provided by a third party software called Stripe to allow testing while implementing the
+  payment functionality:
+
+|       Event Type:        |   Card Number:   |
+| :----------------------: | :--------------: |
+|   Successful payment:    | 4242424242424242 |
+| Requires authentication: | 4000002500003155 |
+|     Failed payment:      | 4000000000009995 |
+
+### Features Left to Implement
 
 ## Design
 
