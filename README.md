@@ -1,6 +1,6 @@
 # Daniela's Art Shop - by Daniela Kronvall
 
-<img src="https://res.cloudinary.com/frank2021/image/upload/v1637611038/Danielas%20art%20shop/Art-shop_srlic1.jpg">
+<img src="https://res.cloudinary.com/frank2021/image/upload/v1637611261/Danielas%20art%20shop/Art-shop_lmlgrl.jpg">
 
 ## Project Goals
 
