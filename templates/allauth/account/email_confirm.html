@@ -4,10 +4,12 @@
 {% load account %}
 
 {% block head_title %}{% trans "Confirm E-mail Address" %}{% endblock %}
+{% block extra_title %}Email Confirm{% endblock extra_title %}
 
-
-{% block content %}
-<h1>{% trans "Confirm E-mail Address" %}</h1>
+{% block inner_content %}
+<hr>
+<h2 class="mb-4 text-uppercase">{% trans "Confirm E-mail Address" %}</h2>
+<hr>
 
 {% if confirmation %}
 

@@ -28,7 +28,9 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = "DEVELOPMENT" in os.environ
+
+DEBUG = False
+# DEBUG = True
 
 ALLOWED_HOSTS = ["danielasartshop.herokuapp.com", "127.0.0.1", "localhost"]
 
@@ -36,6 +38,9 @@ ALLOWED_HOSTS = ["danielasartshop.herokuapp.com", "127.0.0.1", "localhost"]
 # Application definition
 
 INSTALLED_APPS = [
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
     "crispy_forms",
     "django.contrib.admin",
     "django.contrib.auth",
@@ -47,9 +52,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "cloudinary",
     "django.contrib.sites",
-    "allauth",
-    "allauth.account",
-    "allauth.socialaccount",
     "home",
     "products",
     "cart",
@@ -74,7 +76,10 @@ CRISPY_TEMPLATE_PACK = "bootstrap4"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [TEMPLATES_DIR],
+        "DIRS": [
+            TEMPLATES_DIR,
+            os.path.join(BASE_DIR, "templates", "allauth"),
+        ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -105,7 +110,6 @@ AUTHENTICATION_BACKENDS = [
 
 SITE_ID = 1
 
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 ACCOUNT_AUTHENTICATION_METHOD = "username_email"
 ACCOUNT_EMAIL_REQUIRED = True
@@ -113,7 +117,7 @@ ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = "/accounts/login/"
-LOGIN_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = "profile"
 
 
 WSGI_APPLICATION = "artshop.wsgi.application"
@@ -122,17 +126,15 @@ WSGI_APPLICATION = "artshop.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-if "DATABASE_URL" in os.environ:
 
-    DATABASES = {"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))}
+DATABASES = {"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))}
 
-else:
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": BASE_DIR / "db.sqlite3",
-        }
-    }
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
 
 
 # Password validation
@@ -173,10 +175,11 @@ USE_TZ = True
 
 
 STATIC_URL = "/static/"
-MEDIA_URL = "/media/"
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 
 STATICFILES_STORAGE = "cloudinary_storage.storage.StaticHashedCloudinaryStorage"
 DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
@@ -195,14 +198,12 @@ STRIPE_PUBLIC_KEY = os.environ.get("STRIPE_PUBLIC_KEY", "")
 STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY", "")
 STRIPE_WH_SECRET = os.environ.get("STRIPE_WH_SECRET", "")
 
-if "DEVELOPMENT" in os.environ:
-    EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-    DEFAULT_FROM_EMAIL = "danielasartshop@gmail.com"
-else:
-    EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-    EMAIL_USE_TLS = True
-    EMAIL_PORT = 587
-    EMAIL_HOST = "smtp.gmail.com"
-    EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
-    EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASS")
-    DEFAULT_FROM_EMAIL = os.environ.get("EMAIL_HOST_USER")
+# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"  # console
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"  # smtp
+
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASS")
+DEFAULT_FROM_EMAIL = os.environ.get("EMAIL_HOST_USER")

@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_title %}About{% endblock extra_title %}
+{% block page_header %}
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <a href="{% url 'home' %}" class="btn btn-outline-dark"><i class="fa fa-chevron-left"></i> Back to Homepage</a>
+    </div>
+  </div>
+</div>
+{% endblock page_header %}
+
+{% block content %}
+<div class="container-fluid mt-5 content">
+  <div class="container">
+    <hr>
+    <h2 class="mb-4 text-uppercase">About me</h2>
+    <hr>
+    <div class="row no-gutter">
+      <div class="col-md-12">
+        <div class="login d-flex align-items-center mt-2">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-lg-7 mx-auto">
+                <div class="text-center pt-2 pb-3">
+                  <img class="img-fluid about-img"
+                    src="https://res.cloudinary.com/frank2021/image/upload/v1637564130/Danielas%20art%20shop/258786604_3041687532740611_2469282175959159176_n_nbjeio.jpg"
+                    alt="artist picture" />
+                  <a href="#!">
+                  </a>
+
+                  <p class="mt-5 text-justify"><i class="fas fa-quote-left fa-lg"></i> Hi, my name is <b>Daniela
+                      Kronvall</b>. I am an
+                    abstract artist based in
+                    Stockholm. My brush transforms whatever comes to me through meditation and powerful feeling onto a
+                    canvas in
+                    glitzy shades. In my meditation I let go of everything. I am free from my past and my future.
+                    I am only me in the present. There I let myself be no one and nobody I forgive and
+                    heal. In that space there is no judgement. There is only high vibrations of
+                    love, gratitude, acceptance, happiness and serenity like an ocean of emotion which I transform into
+                    vibrant colors and shapes.</p>
+
+                  <P class="text-justify">
+                    I love to inspire and motivate people to reach higher, to raise energy above and beyond and
+                    to grow emotional intelligence. Every day is a new opportunity to learn. My
+                    interests are within the fields of neuropsychology, positive psychology, mindfulness, neuroscience
+                    and quantum field.
+                  </P>
+
+                  <p class="text-justify">
+                    Besides having the passion for psychology and art I also have the passion for teaching. On a
+                    daily basis I teach Psychology and English within Adult Education. I believe that we can become
+                    whatever we want if we have faith in the power of the mind. So, when we set our minds towards growth
+                    and prosperity, there are only possibilities ahead and we can all use our creativity as a tool to
+                    get
+                    in touch with ourselves and others.
+                  </p>
+
+                  <p class="text-justify">
+                    This is why I paint. My desire is strong. I grow every time I paint. I love to be in that creative
+                    flow,
+                    in that magical positive vibration where I get in touch with the essence of me and the only thing I
+                    feel is pure happiness – pure love!! And I take that happiness with me everywhere I go.
+                    <i class="fas fa-quote-right fa-lg"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="btt-button rounded-0 border border-dark hidden d-md-none">
+        <a class="btt-link d-flex h-100">
+          <i class="fas fa-arrow-up text-dark mx-auto my-auto"></i>
+        </a>
+      </div>
+  </div>
+</div>
+{% endblock content %}
+
+{% block post_load_js %} 
+{{ block.super }} 
+<script>
+  $('.btt-link').click(function (e) {
+  window.scrollTo(0, 0)
+  })
+</script>
+
+  {% endblock post_load_js %}

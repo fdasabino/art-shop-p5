@@ -1,22 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Open+Sans:wght@300&display=swap');
+/* global styling */
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Lato&display=swap');
 
 * {
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-html {
-  height: 100%;
+a,
+.btn-link {
+  text-decoration: none;
+}
+
+.card {
+  border-radius: 0;
+}
+
+.hero-img {
+  background: url(https://res.cloudinary.com/frank2021/image/upload/v1637383614/Danielas%20art%20shop/P1000871-copy_ejtbfq.jpg) center top;
+  background-attachment: initial;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+@media(max-width:1000px) {
+  .hero-img {
+    background-attachment: initial;
+  }
 }
 
 body {
-  background: url(https://images.pexels.com/photos/1084406/pexels-photo-1084406.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) center fixed;
-  background-size: cover;
-  height: calc(100vh - 164px);
   color: black;
-  font-family: 'Open Sans', sans-serif;
-  margin-top: 20px;
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.content {
+  min-height: 100vh;
+}
+
+.container-fluid {
+  margin: 0 !important;
+}
+
+.btn-dark,
+.btn-outline-dark {
+  border-radius: 0;
+  text-transform: uppercase;
+  max-height: fit-content;
 }
 
 .icon {
@@ -31,54 +65,85 @@ body {
   font-family: 'Caveat', cursive;
 }
 
-.main-logo-link {
-  width: fit-content;
-}
 
 .shop-now-button {
   min-width: 260px;
 }
 
-.overlay {
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  position: fixed;
-  background: #fff;
-  z-index: -1;
-}
-
 a.category-badge>span.badge:hover {
   background: #000 !important;
   color: #fff !important;
+}
 
+.checkout-img {
+  max-width: 150px;
+}
+
+
+
+
+/* about */
+.about-img {
+  max-width: 100%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.58);
+}
+
+/* bootstrap overrides */
+.dropdown-menu {
+  background-color: rgb(255, 236, 239);
+}
+
+
+/* navigation */
+.bg-light,
+nav {
+  background-color: #d7f5e5 !important;
 }
 
 nav {
-  border-bottom: 5px solid #000;
+  border-bottom: 5px solid rgb(255, 236, 239);
 }
 
-.btt-button {
-  height: 42px;
-  width: 42px;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
+header {
+  border-top: 10px solid #FFB6C1;
 }
 
-.btt-button:hover {
-  background: #000;
-  color: #fff;
-  height: 42px;
-  width: 42px;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
+/* footer */
+.bg-pink {
+  border-top: 5px solid #d7f5e5;
+  background-color: #FFB6C1;
 }
 
-.btt-link {
-  cursor: pointer;
+.main-logo-link {
+  width: fit-content;
+}
+
+.navbar-toggler {
+  color: #000 !important;
+}
+
+@media(max-width:768px) {
+  .btt-button {
+    height: 30px;
+    width: 30px;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 1000;
+  }
+
+  .btt-button:hover {
+    background: #000;
+    color: #fff;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .btt-link {
+    cursor: pointer;
+  }
 }
 
 input::-webkit-outer-spin-button,
@@ -92,21 +157,38 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+/* contact page */
+
+#id_message,
+input[type=text],
+input[type=email] {
+  resize: none;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 0 !important;
+}
+
+label {
+  font-weight: 600;
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
   position: fixed;
   top: 72px;
-  right: 15px;
+  right: 10px;
   z-index: 99999999999;
 }
 
-.custom-toast {
-  overflow: visible;
+.toast {
+  position: fixed;
+  top: 0;
+  right: 0;
 }
 
 .toast-capper {
-  height: 1px;
+  height: 10px;
 }
 
 .toast-btn {
@@ -115,13 +197,6 @@ input[type=number] {
 }
 
 .cart-notification-wrapper {
-  height: 100px;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-
-.bag-notification-wrapper {
   height: 100px;
   overflow-x: hidden;
   overflow-y: auto;
@@ -138,6 +213,14 @@ input[type=number] {
 
 /* Allauth form formatting */
 
+#id_remember {
+  margin-top: 5px;
+}
+
+.allauth-content {
+  height: 100vh;
+}
+
 .allauth-form-inner-content p {
   margin-top: 1.5rem;
   /* mt-4 */
@@ -148,6 +231,8 @@ input[type=number] {
 .allauth-form-inner-content input {
   border-color: #000;
   border-radius: 0;
+  max-width: 100%;
+  margin-top: 10px;
 }
 
 .allauth-form-inner-content label:not([for='id_remember']) {
@@ -156,6 +241,7 @@ input[type=number] {
 
 .allauth-form-inner-content input::placeholder {
   color: #aab7c4;
+
 }
 
 .allauth-form-inner-content button,
@@ -176,6 +262,7 @@ input[type=number] {
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 0;
+  margin-top: 10px;
 
   /* standard bootstrap btn transitions */
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
@@ -193,34 +280,6 @@ input[type=number] {
   /* text-info */
 }
 
-/* Product Form */
-
-.btn-file {
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-file input[type="file"] {
-  position: absolute;
-  top: 0;
-  right: 0;
-  min-width: 100%;
-  min-height: 100%;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.custom-checkbox .custom-control-label::before {
-  border-radius: 0;
-  border-color: #dc3545;
-}
-
-.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-  background-color: #dc3545;
-  border-color: #dc3545;
-  border-radius: 0;
-}
-
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
@@ -231,22 +290,10 @@ input[type=number] {
     left: 0;
     z-index: 1030;
   }
-
-  .header-container {
-    padding-top: 164px;
-  }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
-  .header-container {
-    padding-top: 116px;
-  }
-
-  body {
-    height: calc(100vh - 116px);
-  }
-
   .display-4.logo-font.text-black {
     font-size: 2rem;
   }
@@ -260,7 +307,7 @@ input[type=number] {
   }
 
   .navbar-toggler {
-    padding: .6rem .6rem;
+    padding: .375rem .375rem;
     font-size: 1rem;
   }
 
@@ -277,10 +324,5 @@ input[type=number] {
   .btn.btn-black.rounded-0.btn-lg {
     padding: .375rem .375rem;
     font-size: .75rem;
-  }
-
-  .increment-qty,
-  .decrement-qty {
-    padding: .25rem .5rem !important;
   }
 }

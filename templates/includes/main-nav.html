@@ -1,15 +1,49 @@
-<div class="collapse navbar-collapse" id="main-nav">
-    <ul class="navbar-nav w-auto mx-auto">
+<div class="collapse navbar-collapse justify-content-center" id="main-nav">
+    <ul class="navbar-nav w-auto text-center">
+        <li class="nav-item">
+            <a class="nav-link text-black mx-5 my-2" href="{% url 'home' %}"><b>Home</b></a>
+        </li>
         <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Products
+            <hr class="d-lg-none">
+            <a class="nav-link text-black mx-5 my-2" href="#" id="all-products-link" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <b><i class="fas fa-plus"></i> Shop</b>
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
-                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+                <a href="{% url 'products' %}"
+                    class="dropdown-item text-center text-black">Original Paintings</a>
+            </div>
+        <li class="list-inline-item">
+            <a class="text-black nav-link d-block d-lg-none my-2" href="#" id="mobile-search" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <div class="">
+                    <p class="my-0"><i class="fas fa-search fa-lg"></i> <b>Search</b></p>
+                </div>
+            </a>
+            <div class="dropdown-menu border-0 p-3 rounded-0 my-1" aria-labelledby="mobile-search">
+                <form class="form" method="GET" action="{% url 'products' %}">
+                    <div class="input-group w-100">
+                        <input class="form-control border border-black rounded-0" type="text" name="q"
+                            placeholder="Search: eg. painting, art...">
+                        <div class="input-group-append">
+                            <button class="form-control form-control btn btn-dark border border-black rounded-0"
+                                type="submit">
+                                <span class="icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </li>
+
+        <li>
+            <a class="nav-link text-black mx-5 my-2" href="{% url 'about' %}"><b>About the Artist</b></a>
+        </li>
+        <li>
+            <a class="nav-link text-black mx-5 my-2" href="{% url 'contact' %}"><b>Contact and Inquiries</b></a>
+        </li>
+
     </ul>
 </div>

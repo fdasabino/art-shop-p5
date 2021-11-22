@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_title %}Contact{% endblock extra_title %}
+
+{% block page_header %}
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <a href="{% url 'home' %}" class="btn btn-outline-dark"><i class="fa fa-chevron-left"></i> Back to Homepage</a>
+    </div>
+  </div>
+</div>
+{% endblock page_header %}
+
+{% block content %}
+<div class="container-fluid">
+  <div class="container content">
+    <hr />
+    <h2 class="mb-3 text-uppercase">Contact Me</h2>
+    <hr />
+    <div class="row justify-content-around">
+      <div class="col-lg-3 g-3 mx-3 text-center">
+        <p class="mt-1 mb-4"><i class="fas fa-quote-left fa-lg"></i> If you have checked the "product" section and still
+          have not found what you're looking for. We
+          can
+          help you with that!
+          We will work closely with you to understand your vision, and involve you in the process by sending you
+          progress
+          pictures and getting your input throughout the way.
+          Just drop us a message and we will get back yo tou as soon as possible.
+          <i class="fas fa-quote-right fa-lg"></i>
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <div class="text-center pb-3">
+          <form method="post">
+            {% csrf_token %}
+            {{form|crispy }}
+            <button class="btn btn-dark mt-2" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

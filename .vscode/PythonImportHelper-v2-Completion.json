@@ -90,6 +90,14 @@
         "documentation": {}
     },
     {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
         "label": "static",
         "importPath": "django.conf.urls.static",
         "description": "django.conf.urls.static",
@@ -106,14 +114,6 @@
         "documentation": {}
     },
     {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
         "label": "messages",
         "importPath": "django.contrib",
         "description": "django.contrib",
@@ -138,7 +138,7 @@
         "documentation": {}
     },
     {
-        "label": "admin",
+        "label": "messages",
         "importPath": "django.contrib",
         "description": "django.contrib",
         "isExtraImport": true,
@@ -155,14 +155,6 @@
     },
     {
         "label": "messages",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
         "importPath": "django.contrib",
         "description": "django.contrib",
         "isExtraImport": true,
@@ -282,14 +274,6 @@
         "documentation": {}
     },
     {
-        "label": "Decimal",
-        "importPath": "decimal",
-        "description": "decimal",
-        "isExtraImport": true,
-        "detail": "decimal",
-        "documentation": {}
-    },
-    {
         "label": "get_object_or_404",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
@@ -378,6 +362,14 @@
         "documentation": {}
     },
     {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
         "label": "render",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
@@ -471,134 +463,6 @@
         "description": "products.models",
         "isExtraImport": true,
         "detail": "products.models",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
-        "isExtraImport": true,
-        "detail": "django.test",
-        "documentation": {}
-    },
-    {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
-        "isExtraImport": true,
-        "detail": "django.test",
-        "documentation": {}
-    },
-    {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
-        "isExtraImport": true,
-        "detail": "django.test",
-        "documentation": {}
-    },
-    {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
-        "isExtraImport": true,
-        "detail": "django.test",
-        "documentation": {}
-    },
-    {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
-        "isExtraImport": true,
-        "detail": "django.test",
         "documentation": {}
     },
     {
@@ -633,6 +497,134 @@
         "description": "django_countries.fields",
         "isExtraImport": true,
         "detail": "django_countries.fields",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
         "documentation": {}
     },
     {
@@ -807,6 +799,14 @@
         "documentation": {}
     },
     {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
         "label": "csrf_exempt",
         "importPath": "django.views.decorators.csrf",
         "description": "django.views.decorators.csrf",
@@ -829,6 +829,22 @@
         "importPath": "time",
         "description": "time",
         "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "send_mail",
+        "importPath": "django.core.mail",
+        "description": "django.core.mail",
+        "isExtraImport": true,
+        "detail": "django.core.mail",
+        "documentation": {}
+    },
+    {
+        "label": "BadHeaderError",
+        "importPath": "django.core.mail",
+        "description": "django.core.mail",
+        "isExtraImport": true,
+        "detail": "django.core.mail",
         "documentation": {}
     },
     {
@@ -919,7 +935,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nTEMPLATES_DIR = os.path.join(BASE_DIR, \"templates\")\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.environ.get(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = \"DEVELOPMENT\" in os.environ\nALLOWED_HOSTS = [\"danielasartshop.herokuapp.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nTEMPLATES_DIR = os.path.join(BASE_DIR, \"templates\")\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.environ.get(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False\n# DEBUG = True\nALLOWED_HOSTS = [\"danielasartshop.herokuapp.com\", \"127.0.0.1\", \"localhost\"]",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -928,7 +944,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "TEMPLATES_DIR = os.path.join(BASE_DIR, \"templates\")\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.environ.get(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = \"DEVELOPMENT\" in os.environ\nALLOWED_HOSTS = [\"danielasartshop.herokuapp.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [",
+        "peekOfCode": "TEMPLATES_DIR = os.path.join(BASE_DIR, \"templates\")\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.environ.get(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False\n# DEBUG = True\nALLOWED_HOSTS = [\"danielasartshop.herokuapp.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -937,7 +953,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "SECRET_KEY = os.environ.get(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = \"DEVELOPMENT\" in os.environ\nALLOWED_HOSTS = [\"danielasartshop.herokuapp.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [\n    \"crispy_forms\",\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",",
+        "peekOfCode": "SECRET_KEY = os.environ.get(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False\n# DEBUG = True\nALLOWED_HOSTS = [\"danielasartshop.herokuapp.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [\n    \"allauth\",\n    \"allauth.account\",\n    \"allauth.socialaccount\",",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -946,7 +962,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "DEBUG = \"DEVELOPMENT\" in os.environ\nALLOWED_HOSTS = [\"danielasartshop.herokuapp.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [\n    \"crispy_forms\",\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",",
+        "peekOfCode": "DEBUG = False\n# DEBUG = True\nALLOWED_HOSTS = [\"danielasartshop.herokuapp.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [\n    \"allauth\",\n    \"allauth.account\",\n    \"allauth.socialaccount\",\n    \"crispy_forms\",\n    \"django.contrib.admin\",",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -955,7 +971,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "ALLOWED_HOSTS = [\"danielasartshop.herokuapp.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [\n    \"crispy_forms\",\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.humanize\",",
+        "peekOfCode": "ALLOWED_HOSTS = [\"danielasartshop.herokuapp.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [\n    \"allauth\",\n    \"allauth.account\",\n    \"allauth.socialaccount\",\n    \"crispy_forms\",\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -964,7 +980,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    \"crispy_forms\",\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.humanize\",\n    \"cloudinary_storage\",\n    \"django.contrib.staticfiles\",",
+        "peekOfCode": "INSTALLED_APPS = [\n    \"allauth\",\n    \"allauth.account\",\n    \"allauth.socialaccount\",\n    \"crispy_forms\",\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -982,7 +998,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "ROOT_URLCONF = \"artshop.urls\"\nCRISPY_TEMPLATE_PACK = \"bootstrap4\"\nTEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [TEMPLATES_DIR],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",",
+        "peekOfCode": "ROOT_URLCONF = \"artshop.urls\"\nCRISPY_TEMPLATE_PACK = \"bootstrap4\"\nTEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [\n            TEMPLATES_DIR,\n            os.path.join(BASE_DIR, \"templates\", \"allauth\"),\n        ],\n        \"APP_DIRS\": True,",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -991,7 +1007,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "CRISPY_TEMPLATE_PACK = \"bootstrap4\"\nTEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [TEMPLATES_DIR],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",",
+        "peekOfCode": "CRISPY_TEMPLATE_PACK = \"bootstrap4\"\nTEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [\n            TEMPLATES_DIR,\n            os.path.join(BASE_DIR, \"templates\", \"allauth\"),\n        ],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1000,7 +1016,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "TEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [TEMPLATES_DIR],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",\n                \"django.contrib.auth.context_processors.auth\",",
+        "peekOfCode": "TEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [\n            TEMPLATES_DIR,\n            os.path.join(BASE_DIR, \"templates\", \"allauth\"),\n        ],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1009,7 +1025,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "MESSAGE_STORAGE = \"django.contrib.messages.storage.session.SessionStorage\"\nAUTHENTICATION_BACKENDS = [\n    # Needed to login by username in Django admin, regardless of `allauth`\n    \"django.contrib.auth.backends.ModelBackend\",\n    # `allauth` specific authentication methods, such as login by e-mail\n    \"allauth.account.auth_backends.AuthenticationBackend\",\n]\nSITE_ID = 1\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\nACCOUNT_AUTHENTICATION_METHOD = \"username_email\"",
+        "peekOfCode": "MESSAGE_STORAGE = \"django.contrib.messages.storage.session.SessionStorage\"\nAUTHENTICATION_BACKENDS = [\n    # Needed to login by username in Django admin, regardless of `allauth`\n    \"django.contrib.auth.backends.ModelBackend\",\n    # `allauth` specific authentication methods, such as login by e-mail\n    \"allauth.account.auth_backends.AuthenticationBackend\",\n]\nSITE_ID = 1\nACCOUNT_AUTHENTICATION_METHOD = \"username_email\"\nACCOUNT_EMAIL_REQUIRED = True",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1018,7 +1034,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "AUTHENTICATION_BACKENDS = [\n    # Needed to login by username in Django admin, regardless of `allauth`\n    \"django.contrib.auth.backends.ModelBackend\",\n    # `allauth` specific authentication methods, such as login by e-mail\n    \"allauth.account.auth_backends.AuthenticationBackend\",\n]\nSITE_ID = 1\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\nACCOUNT_AUTHENTICATION_METHOD = \"username_email\"\nACCOUNT_EMAIL_REQUIRED = True",
+        "peekOfCode": "AUTHENTICATION_BACKENDS = [\n    # Needed to login by username in Django admin, regardless of `allauth`\n    \"django.contrib.auth.backends.ModelBackend\",\n    # `allauth` specific authentication methods, such as login by e-mail\n    \"allauth.account.auth_backends.AuthenticationBackend\",\n]\nSITE_ID = 1\nACCOUNT_AUTHENTICATION_METHOD = \"username_email\"\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_EMAIL_VERIFICATION = \"mandatory\"",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1027,16 +1043,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "SITE_ID = 1\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\nACCOUNT_AUTHENTICATION_METHOD = \"username_email\"\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_EMAIL_VERIFICATION = \"mandatory\"\nACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True\nACCOUNT_USERNAME_MIN_LENGTH = 4\nLOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"/\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"",
-        "detail": "artshop.settings",
-        "documentation": {}
-    },
-    {
-        "label": "EMAIL_BACKEND",
-        "kind": 5,
-        "importPath": "artshop.settings",
-        "description": "artshop.settings",
-        "peekOfCode": "EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\nACCOUNT_AUTHENTICATION_METHOD = \"username_email\"\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_EMAIL_VERIFICATION = \"mandatory\"\nACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True\nACCOUNT_USERNAME_MIN_LENGTH = 4\nLOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"/\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database",
+        "peekOfCode": "SITE_ID = 1\nACCOUNT_AUTHENTICATION_METHOD = \"username_email\"\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_EMAIL_VERIFICATION = \"mandatory\"\nACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True\nACCOUNT_USERNAME_MIN_LENGTH = 4\nLOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"profile\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1045,7 +1052,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "ACCOUNT_AUTHENTICATION_METHOD = \"username_email\"\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_EMAIL_VERIFICATION = \"mandatory\"\nACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True\nACCOUNT_USERNAME_MIN_LENGTH = 4\nLOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"/\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases",
+        "peekOfCode": "ACCOUNT_AUTHENTICATION_METHOD = \"username_email\"\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_EMAIL_VERIFICATION = \"mandatory\"\nACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True\nACCOUNT_USERNAME_MIN_LENGTH = 4\nLOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"profile\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1054,7 +1061,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "ACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_EMAIL_VERIFICATION = \"mandatory\"\nACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True\nACCOUNT_USERNAME_MIN_LENGTH = 4\nLOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"/\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nif \"DATABASE_URL\" in os.environ:",
+        "peekOfCode": "ACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_EMAIL_VERIFICATION = \"mandatory\"\nACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True\nACCOUNT_USERNAME_MIN_LENGTH = 4\nLOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"profile\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\"default\": dj_database_url.parse(os.environ.get(\"DATABASE_URL\"))}",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1063,7 +1070,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "ACCOUNT_EMAIL_VERIFICATION = \"mandatory\"\nACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True\nACCOUNT_USERNAME_MIN_LENGTH = 4\nLOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"/\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nif \"DATABASE_URL\" in os.environ:\n    DATABASES = {\"default\": dj_database_url.parse(os.environ.get(\"DATABASE_URL\"))}",
+        "peekOfCode": "ACCOUNT_EMAIL_VERIFICATION = \"mandatory\"\nACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True\nACCOUNT_USERNAME_MIN_LENGTH = 4\nLOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"profile\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\"default\": dj_database_url.parse(os.environ.get(\"DATABASE_URL\"))}\n# DATABASES = {",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1072,7 +1079,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True\nACCOUNT_USERNAME_MIN_LENGTH = 4\nLOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"/\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nif \"DATABASE_URL\" in os.environ:\n    DATABASES = {\"default\": dj_database_url.parse(os.environ.get(\"DATABASE_URL\"))}\nelse:",
+        "peekOfCode": "ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True\nACCOUNT_USERNAME_MIN_LENGTH = 4\nLOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"profile\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\"default\": dj_database_url.parse(os.environ.get(\"DATABASE_URL\"))}\n# DATABASES = {\n#     \"default\": {",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1081,7 +1088,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "ACCOUNT_USERNAME_MIN_LENGTH = 4\nLOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"/\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nif \"DATABASE_URL\" in os.environ:\n    DATABASES = {\"default\": dj_database_url.parse(os.environ.get(\"DATABASE_URL\"))}\nelse:\n    DATABASES = {",
+        "peekOfCode": "ACCOUNT_USERNAME_MIN_LENGTH = 4\nLOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"profile\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\"default\": dj_database_url.parse(os.environ.get(\"DATABASE_URL\"))}\n# DATABASES = {\n#     \"default\": {\n#         \"ENGINE\": \"django.db.backends.sqlite3\",",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1090,7 +1097,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "LOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"/\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nif \"DATABASE_URL\" in os.environ:\n    DATABASES = {\"default\": dj_database_url.parse(os.environ.get(\"DATABASE_URL\"))}\nelse:\n    DATABASES = {\n        \"default\": {",
+        "peekOfCode": "LOGIN_URL = \"/accounts/login/\"\nLOGIN_REDIRECT_URL = \"profile\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\"default\": dj_database_url.parse(os.environ.get(\"DATABASE_URL\"))}\n# DATABASES = {\n#     \"default\": {\n#         \"ENGINE\": \"django.db.backends.sqlite3\",\n#         \"NAME\": BASE_DIR / \"db.sqlite3\",",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1099,7 +1106,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "LOGIN_REDIRECT_URL = \"/\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nif \"DATABASE_URL\" in os.environ:\n    DATABASES = {\"default\": dj_database_url.parse(os.environ.get(\"DATABASE_URL\"))}\nelse:\n    DATABASES = {\n        \"default\": {\n            \"ENGINE\": \"django.db.backends.sqlite3\",",
+        "peekOfCode": "LOGIN_REDIRECT_URL = \"profile\"\nWSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\"default\": dj_database_url.parse(os.environ.get(\"DATABASE_URL\"))}\n# DATABASES = {\n#     \"default\": {\n#         \"ENGINE\": \"django.db.backends.sqlite3\",\n#         \"NAME\": BASE_DIR / \"db.sqlite3\",\n#     }",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1108,7 +1115,16 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "WSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nif \"DATABASE_URL\" in os.environ:\n    DATABASES = {\"default\": dj_database_url.parse(os.environ.get(\"DATABASE_URL\"))}\nelse:\n    DATABASES = {\n        \"default\": {\n            \"ENGINE\": \"django.db.backends.sqlite3\",\n            \"NAME\": BASE_DIR / \"db.sqlite3\",",
+        "peekOfCode": "WSGI_APPLICATION = \"artshop.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\"default\": dj_database_url.parse(os.environ.get(\"DATABASE_URL\"))}\n# DATABASES = {\n#     \"default\": {\n#         \"ENGINE\": \"django.db.backends.sqlite3\",\n#         \"NAME\": BASE_DIR / \"db.sqlite3\",\n#     }\n# }",
+        "detail": "artshop.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "artshop.settings",
+        "description": "artshop.settings",
+        "peekOfCode": "DATABASES = {\"default\": dj_database_url.parse(os.environ.get(\"DATABASE_URL\"))}\n# DATABASES = {\n#     \"default\": {\n#         \"ENGINE\": \"django.db.backends.sqlite3\",\n#         \"NAME\": BASE_DIR / \"db.sqlite3\",\n#     }\n# }\n# Password validation\n# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1126,7 +1142,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "LANGUAGE_CODE = \"en-us\"\nTIME_ZONE = \"Europe/Stockholm\"\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_URL = \"/media/\"\nSTATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")",
+        "peekOfCode": "LANGUAGE_CODE = \"en-us\"\nTIME_ZONE = \"Europe/Stockholm\"\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATICFILES_DIRS = (os.path.join(BASE_DIR, \"static\"),)\nMEDIA_URL = \"/media/\"",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1135,7 +1151,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "TIME_ZONE = \"Europe/Stockholm\"\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_URL = \"/media/\"\nSTATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]",
+        "peekOfCode": "TIME_ZONE = \"Europe/Stockholm\"\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATICFILES_DIRS = (os.path.join(BASE_DIR, \"static\"),)\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1144,7 +1160,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_URL = \"/media/\"\nSTATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nSTATICFILES_STORAGE = \"cloudinary_storage.storage.StaticHashedCloudinaryStorage\"",
+        "peekOfCode": "USE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATICFILES_DIRS = (os.path.join(BASE_DIR, \"static\"),)\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\nSTATICFILES_STORAGE = \"cloudinary_storage.storage.StaticHashedCloudinaryStorage\"",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1153,7 +1169,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "USE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_URL = \"/media/\"\nSTATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nSTATICFILES_STORAGE = \"cloudinary_storage.storage.StaticHashedCloudinaryStorage\"\nDEFAULT_FILE_STORAGE = \"cloudinary_storage.storage.MediaCloudinaryStorage\"",
+        "peekOfCode": "USE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATICFILES_DIRS = (os.path.join(BASE_DIR, \"static\"),)\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\nSTATICFILES_STORAGE = \"cloudinary_storage.storage.StaticHashedCloudinaryStorage\"\nDEFAULT_FILE_STORAGE = \"cloudinary_storage.storage.MediaCloudinaryStorage\"",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1162,7 +1178,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_URL = \"/media/\"\nSTATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nSTATICFILES_STORAGE = \"cloudinary_storage.storage.StaticHashedCloudinaryStorage\"\nDEFAULT_FILE_STORAGE = \"cloudinary_storage.storage.MediaCloudinaryStorage\"\n# Default primary key field type",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATICFILES_DIRS = (os.path.join(BASE_DIR, \"static\"),)\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\nSTATICFILES_STORAGE = \"cloudinary_storage.storage.StaticHashedCloudinaryStorage\"\nDEFAULT_FILE_STORAGE = \"cloudinary_storage.storage.MediaCloudinaryStorage\"\n# Default primary key field type",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1171,25 +1187,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "STATIC_URL = \"/static/\"\nMEDIA_URL = \"/media/\"\nSTATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nSTATICFILES_STORAGE = \"cloudinary_storage.storage.StaticHashedCloudinaryStorage\"\nDEFAULT_FILE_STORAGE = \"cloudinary_storage.storage.MediaCloudinaryStorage\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe",
-        "detail": "artshop.settings",
-        "documentation": {}
-    },
-    {
-        "label": "MEDIA_URL",
-        "kind": 5,
-        "importPath": "artshop.settings",
-        "description": "artshop.settings",
-        "peekOfCode": "MEDIA_URL = \"/media/\"\nSTATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nSTATICFILES_STORAGE = \"cloudinary_storage.storage.StaticHashedCloudinaryStorage\"\nDEFAULT_FILE_STORAGE = \"cloudinary_storage.storage.MediaCloudinaryStorage\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe\nFREE_DELIVERY_THRESHOLD = 0",
-        "detail": "artshop.settings",
-        "documentation": {}
-    },
-    {
-        "label": "STATIC_ROOT",
-        "kind": 5,
-        "importPath": "artshop.settings",
-        "description": "artshop.settings",
-        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nSTATICFILES_STORAGE = \"cloudinary_storage.storage.StaticHashedCloudinaryStorage\"\nDEFAULT_FILE_STORAGE = \"cloudinary_storage.storage.MediaCloudinaryStorage\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe\nFREE_DELIVERY_THRESHOLD = 0\nSTANDARD_DELIVERY_PERCENTAGE = 0",
+        "peekOfCode": "STATIC_URL = \"/static/\"\nSTATICFILES_DIRS = (os.path.join(BASE_DIR, \"static\"),)\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\nSTATICFILES_STORAGE = \"cloudinary_storage.storage.StaticHashedCloudinaryStorage\"\nDEFAULT_FILE_STORAGE = \"cloudinary_storage.storage.MediaCloudinaryStorage\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1198,7 +1196,25 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "STATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nSTATICFILES_STORAGE = \"cloudinary_storage.storage.StaticHashedCloudinaryStorage\"\nDEFAULT_FILE_STORAGE = \"cloudinary_storage.storage.MediaCloudinaryStorage\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe\nFREE_DELIVERY_THRESHOLD = 0\nSTANDARD_DELIVERY_PERCENTAGE = 0\nSTRIPE_CURRENCY = \"sek\"",
+        "peekOfCode": "STATICFILES_DIRS = (os.path.join(BASE_DIR, \"static\"),)\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\nSTATICFILES_STORAGE = \"cloudinary_storage.storage.StaticHashedCloudinaryStorage\"\nDEFAULT_FILE_STORAGE = \"cloudinary_storage.storage.MediaCloudinaryStorage\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe\nFREE_DELIVERY_THRESHOLD = 0",
+        "detail": "artshop.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "artshop.settings",
+        "description": "artshop.settings",
+        "peekOfCode": "MEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\nSTATICFILES_STORAGE = \"cloudinary_storage.storage.StaticHashedCloudinaryStorage\"\nDEFAULT_FILE_STORAGE = \"cloudinary_storage.storage.MediaCloudinaryStorage\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe\nFREE_DELIVERY_THRESHOLD = 0\nSTANDARD_DELIVERY_PERCENTAGE = 0",
+        "detail": "artshop.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "artshop.settings",
+        "description": "artshop.settings",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\nSTATICFILES_STORAGE = \"cloudinary_storage.storage.StaticHashedCloudinaryStorage\"\nDEFAULT_FILE_STORAGE = \"cloudinary_storage.storage.MediaCloudinaryStorage\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe\nFREE_DELIVERY_THRESHOLD = 0\nSTANDARD_DELIVERY_PERCENTAGE = 0\nSTRIPE_CURRENCY = \"sek\"",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1225,7 +1241,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe\nFREE_DELIVERY_THRESHOLD = 0\nSTANDARD_DELIVERY_PERCENTAGE = 0\nSTRIPE_CURRENCY = \"sek\"\nSTRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\nif \"DEVELOPMENT\" in os.environ:\n    EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe\nFREE_DELIVERY_THRESHOLD = 0\nSTANDARD_DELIVERY_PERCENTAGE = 0\nSTRIPE_CURRENCY = \"sek\"\nSTRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\n# EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"  # console\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # smtp",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1234,7 +1250,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "FREE_DELIVERY_THRESHOLD = 0\nSTANDARD_DELIVERY_PERCENTAGE = 0\nSTRIPE_CURRENCY = \"sek\"\nSTRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\nif \"DEVELOPMENT\" in os.environ:\n    EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n    DEFAULT_FROM_EMAIL = \"danielasartshop@gmail.com\"\nelse:",
+        "peekOfCode": "FREE_DELIVERY_THRESHOLD = 0\nSTANDARD_DELIVERY_PERCENTAGE = 0\nSTRIPE_CURRENCY = \"sek\"\nSTRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\n# EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"  # console\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # smtp\nEMAIL_USE_TLS = True\nEMAIL_PORT = 587",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1243,7 +1259,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "STANDARD_DELIVERY_PERCENTAGE = 0\nSTRIPE_CURRENCY = \"sek\"\nSTRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\nif \"DEVELOPMENT\" in os.environ:\n    EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n    DEFAULT_FROM_EMAIL = \"danielasartshop@gmail.com\"\nelse:\n    EMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"",
+        "peekOfCode": "STANDARD_DELIVERY_PERCENTAGE = 0\nSTRIPE_CURRENCY = \"sek\"\nSTRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\n# EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"  # console\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # smtp\nEMAIL_USE_TLS = True\nEMAIL_PORT = 587\nEMAIL_HOST = \"smtp.gmail.com\"",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1252,7 +1268,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "STRIPE_CURRENCY = \"sek\"\nSTRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\nif \"DEVELOPMENT\" in os.environ:\n    EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n    DEFAULT_FROM_EMAIL = \"danielasartshop@gmail.com\"\nelse:\n    EMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"\n    EMAIL_USE_TLS = True",
+        "peekOfCode": "STRIPE_CURRENCY = \"sek\"\nSTRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\n# EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"  # console\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # smtp\nEMAIL_USE_TLS = True\nEMAIL_PORT = 587\nEMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_HOST_USER = os.environ.get(\"EMAIL_HOST_USER\")",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1261,7 +1277,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "STRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\nif \"DEVELOPMENT\" in os.environ:\n    EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n    DEFAULT_FROM_EMAIL = \"danielasartshop@gmail.com\"\nelse:\n    EMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"\n    EMAIL_USE_TLS = True\n    EMAIL_PORT = 587",
+        "peekOfCode": "STRIPE_PUBLIC_KEY = os.environ.get(\"STRIPE_PUBLIC_KEY\", \"\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\n# EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"  # console\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # smtp\nEMAIL_USE_TLS = True\nEMAIL_PORT = 587\nEMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_HOST_USER = os.environ.get(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASSWORD = os.environ.get(\"EMAIL_HOST_PASS\")",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1270,7 +1286,7 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "STRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\nif \"DEVELOPMENT\" in os.environ:\n    EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n    DEFAULT_FROM_EMAIL = \"danielasartshop@gmail.com\"\nelse:\n    EMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"\n    EMAIL_USE_TLS = True\n    EMAIL_PORT = 587\n    EMAIL_HOST = \"smtp.gmail.com\"",
+        "peekOfCode": "STRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\", \"\")\nSTRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\n# EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"  # console\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # smtp\nEMAIL_USE_TLS = True\nEMAIL_PORT = 587\nEMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_HOST_USER = os.environ.get(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASSWORD = os.environ.get(\"EMAIL_HOST_PASS\")\nDEFAULT_FROM_EMAIL = os.environ.get(\"EMAIL_HOST_USER\")",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1279,7 +1295,70 @@
         "kind": 5,
         "importPath": "artshop.settings",
         "description": "artshop.settings",
-        "peekOfCode": "STRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\nif \"DEVELOPMENT\" in os.environ:\n    EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n    DEFAULT_FROM_EMAIL = \"danielasartshop@gmail.com\"\nelse:\n    EMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"\n    EMAIL_USE_TLS = True\n    EMAIL_PORT = 587\n    EMAIL_HOST = \"smtp.gmail.com\"\n    EMAIL_HOST_USER = os.environ.get(\"EMAIL_HOST_USER\")",
+        "peekOfCode": "STRIPE_WH_SECRET = os.environ.get(\"STRIPE_WH_SECRET\", \"\")\n# EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"  # console\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # smtp\nEMAIL_USE_TLS = True\nEMAIL_PORT = 587\nEMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_HOST_USER = os.environ.get(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASSWORD = os.environ.get(\"EMAIL_HOST_PASS\")\nDEFAULT_FROM_EMAIL = os.environ.get(\"EMAIL_HOST_USER\")",
+        "detail": "artshop.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_BACKEND",
+        "kind": 5,
+        "importPath": "artshop.settings",
+        "description": "artshop.settings",
+        "peekOfCode": "EMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # smtp\nEMAIL_USE_TLS = True\nEMAIL_PORT = 587\nEMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_HOST_USER = os.environ.get(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASSWORD = os.environ.get(\"EMAIL_HOST_PASS\")\nDEFAULT_FROM_EMAIL = os.environ.get(\"EMAIL_HOST_USER\")",
+        "detail": "artshop.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_USE_TLS",
+        "kind": 5,
+        "importPath": "artshop.settings",
+        "description": "artshop.settings",
+        "peekOfCode": "EMAIL_USE_TLS = True\nEMAIL_PORT = 587\nEMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_HOST_USER = os.environ.get(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASSWORD = os.environ.get(\"EMAIL_HOST_PASS\")\nDEFAULT_FROM_EMAIL = os.environ.get(\"EMAIL_HOST_USER\")",
+        "detail": "artshop.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_PORT",
+        "kind": 5,
+        "importPath": "artshop.settings",
+        "description": "artshop.settings",
+        "peekOfCode": "EMAIL_PORT = 587\nEMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_HOST_USER = os.environ.get(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASSWORD = os.environ.get(\"EMAIL_HOST_PASS\")\nDEFAULT_FROM_EMAIL = os.environ.get(\"EMAIL_HOST_USER\")",
+        "detail": "artshop.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST",
+        "kind": 5,
+        "importPath": "artshop.settings",
+        "description": "artshop.settings",
+        "peekOfCode": "EMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_HOST_USER = os.environ.get(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASSWORD = os.environ.get(\"EMAIL_HOST_PASS\")\nDEFAULT_FROM_EMAIL = os.environ.get(\"EMAIL_HOST_USER\")",
+        "detail": "artshop.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_USER",
+        "kind": 5,
+        "importPath": "artshop.settings",
+        "description": "artshop.settings",
+        "peekOfCode": "EMAIL_HOST_USER = os.environ.get(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASSWORD = os.environ.get(\"EMAIL_HOST_PASS\")\nDEFAULT_FROM_EMAIL = os.environ.get(\"EMAIL_HOST_USER\")",
+        "detail": "artshop.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_PASSWORD",
+        "kind": 5,
+        "importPath": "artshop.settings",
+        "description": "artshop.settings",
+        "peekOfCode": "EMAIL_HOST_PASSWORD = os.environ.get(\"EMAIL_HOST_PASS\")\nDEFAULT_FROM_EMAIL = os.environ.get(\"EMAIL_HOST_USER\")",
+        "detail": "artshop.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_FROM_EMAIL",
+        "kind": 5,
+        "importPath": "artshop.settings",
+        "description": "artshop.settings",
+        "peekOfCode": "DEFAULT_FROM_EMAIL = os.environ.get(\"EMAIL_HOST_USER\")",
         "detail": "artshop.settings",
         "documentation": {}
     },
@@ -1360,7 +1439,7 @@
         "kind": 2,
         "importPath": "cart.views",
         "description": "cart.views",
-        "peekOfCode": "def view_cart(request):\n    \"\"\"A view that renders the cart contents page\"\"\"\n    return render(request, \"cart/cart.html\")\ndef add_to_cart(request, item_id):\n    \"\"\"Add a quantity of the specified product to the shopping cart\"\"\"\n    product = Product.objects.get(pk=item_id)\n    quantity = int(request.POST.get(\"quantity\"))\n    redirect_url = request.POST.get(\"redirect_url\")\n    size = None\n    if \"product_size\" in request.POST:",
+        "peekOfCode": "def view_cart(request):\n    \"\"\"A view that renders the cart contents page\"\"\"\n    return render(request, \"cart/cart.html\")\ndef add_to_cart(request, item_id):\n    \"\"\"Add a quantity of the specified product to the shopping cart\"\"\"\n    product = Product.objects.get(pk=item_id)\n    quantity = int(request.POST.get(\"quantity\"))\n    redirect_url = request.POST.get(\"redirect_url\")\n    size = request.POST[\"product_size\"] if \"product_size\" in request.POST else None\n    cart = request.session.get(\"cart\", {})",
         "detail": "cart.views",
         "documentation": {}
     },
@@ -1369,7 +1448,7 @@
         "kind": 2,
         "importPath": "cart.views",
         "description": "cart.views",
-        "peekOfCode": "def add_to_cart(request, item_id):\n    \"\"\"Add a quantity of the specified product to the shopping cart\"\"\"\n    product = Product.objects.get(pk=item_id)\n    quantity = int(request.POST.get(\"quantity\"))\n    redirect_url = request.POST.get(\"redirect_url\")\n    size = None\n    if \"product_size\" in request.POST:\n        size = request.POST[\"product_size\"]\n    cart = request.session.get(\"cart\", {})\n    if size:",
+        "peekOfCode": "def add_to_cart(request, item_id):\n    \"\"\"Add a quantity of the specified product to the shopping cart\"\"\"\n    product = Product.objects.get(pk=item_id)\n    quantity = int(request.POST.get(\"quantity\"))\n    redirect_url = request.POST.get(\"redirect_url\")\n    size = request.POST[\"product_size\"] if \"product_size\" in request.POST else None\n    cart = request.session.get(\"cart\", {})\n    if size:\n        if item_id in list(cart.keys()):\n            if size in cart[item_id][\"items_by_size\"].keys():",
         "detail": "cart.views",
         "documentation": {}
     },
@@ -1378,7 +1457,7 @@
         "kind": 2,
         "importPath": "cart.views",
         "description": "cart.views",
-        "peekOfCode": "def update_cart(request, item_id):\n    \"\"\"Adjust the quantity of the specified product to the specified amount\"\"\"\n    product = get_object_or_404(Product, pk=item_id)\n    quantity = int(request.POST.get(\"quantity\"))\n    size = None\n    if \"product_size\" in request.POST:\n        size = request.POST[\"product_size\"]\n    cart = request.session.get(\"cart\", {})\n    if size:\n        if quantity > 0:",
+        "peekOfCode": "def update_cart(request, item_id):\n    \"\"\"Adjust the quantity of the specified product to the specified amount\"\"\"\n    product = get_object_or_404(Product, pk=item_id)\n    quantity = int(request.POST.get(\"quantity\"))\n    size = request.POST[\"product_size\"] if \"product_size\" in request.POST else None\n    cart = request.session.get(\"cart\", {})\n    if size:\n        if quantity > 0:\n            cart[item_id][\"items_by_size\"][size] = quantity\n            messages.success(",
         "detail": "cart.views",
         "documentation": {}
     },
@@ -1387,7 +1466,7 @@
         "kind": 2,
         "importPath": "cart.views",
         "description": "cart.views",
-        "peekOfCode": "def remove_from_cart(request, item_id):\n    \"\"\"Remove the item from the shopping cart\"\"\"\n    try:\n        product = get_object_or_404(Product, pk=item_id)\n        size = None\n        if \"product_size\" in request.POST:\n            size = request.POST[\"product_size\"]\n        cart = request.session.get(\"cart\", {})\n        if size:\n            del cart[item_id][\"items_by_size\"][size]",
+        "peekOfCode": "def remove_from_cart(request, item_id):\n    \"\"\"Remove the item from the shopping cart\"\"\"\n    try:\n        product = get_object_or_404(Product, pk=item_id)\n        size = request.POST[\"product_size\"] if \"product_size\" in request.POST else None\n        cart = request.session.get(\"cart\", {})\n        if size:\n            del cart[item_id][\"items_by_size\"][size]\n            if not cart[item_id][\"items_by_size\"]:\n                cart.pop(item_id)",
         "detail": "cart.views",
         "documentation": {}
     },
@@ -1396,8 +1475,17 @@
         "kind": 6,
         "importPath": "checkout.migrations.0001_initial",
         "description": "checkout.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('products', '0001_initial'),\n        ('profiles', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Order',\n            fields=[",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        (\"products\", \"0001_initial\"),\n        (\"profiles\", \"0001_initial\"),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name=\"Order\",\n            fields=[",
         "detail": "checkout.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "checkout.migrations.0002_auto_20211121_2111",
+        "description": "checkout.migrations.0002_auto_20211121_2111",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('checkout', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterModelOptions(\n            name='order',\n            options={'ordering': ('-date',)},\n        ),\n        migrations.RemoveField(",
+        "detail": "checkout.migrations.0002_auto_20211121_2111",
         "documentation": {}
     },
     {
@@ -1405,7 +1493,7 @@
         "kind": 6,
         "importPath": "checkout.admin",
         "description": "checkout.admin",
-        "peekOfCode": "class OrderLineItemAdminInline(admin.TabularInline):\n    model = OrderLineItem\n    readonly_fields = (\"lineitem_total\",)\nclass OrderAdmin(admin.ModelAdmin):\n    inlines = (OrderLineItemAdminInline,)\n    readonly_fields = (\n        \"date\",\n        \"order_number\",\n        \"delivery_cost\",\n        \"order_total\",",
+        "peekOfCode": "class OrderLineItemAdminInline(admin.TabularInline):\n    model = OrderLineItem\n    readonly_fields = (\"lineitem_total\",)\nclass OrderAdmin(admin.ModelAdmin):\n    inlines = (OrderLineItemAdminInline,)\n    readonly_fields = (\n        \"order_number\",\n        \"date\",\n        \"full_name\",\n        \"email\",",
         "detail": "checkout.admin",
         "documentation": {}
     },
@@ -1414,7 +1502,7 @@
         "kind": 6,
         "importPath": "checkout.admin",
         "description": "checkout.admin",
-        "peekOfCode": "class OrderAdmin(admin.ModelAdmin):\n    inlines = (OrderLineItemAdminInline,)\n    readonly_fields = (\n        \"date\",\n        \"order_number\",\n        \"delivery_cost\",\n        \"order_total\",\n        \"grand_total\",\n        \"original_cart\",\n        \"stripe_pid\",",
+        "peekOfCode": "class OrderAdmin(admin.ModelAdmin):\n    inlines = (OrderLineItemAdminInline,)\n    readonly_fields = (\n        \"order_number\",\n        \"date\",\n        \"full_name\",\n        \"email\",\n        \"phone_number\",\n        \"country\",\n        \"town_or_city\",",
         "detail": "checkout.admin",
         "documentation": {}
     },
@@ -1441,7 +1529,7 @@
         "kind": 6,
         "importPath": "checkout.models",
         "description": "checkout.models",
-        "peekOfCode": "class Order(models.Model):\n    order_number = models.CharField(max_length=32, null=False, editable=False)\n    user_profile = models.ForeignKey(\n        UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name=\"orders\"\n    )\n    full_name = models.CharField(max_length=50, null=False, blank=False)\n    email = models.EmailField(max_length=254, null=False, blank=False)\n    phone_number = models.CharField(max_length=20, null=False, blank=False)\n    country = CountryField(blank_label=\"Country *\", null=False, blank=False)\n    postcode = models.CharField(max_length=20, null=True, blank=True)",
+        "peekOfCode": "class Order(models.Model):\n    order_number = models.CharField(max_length=32, null=False, editable=False)\n    user_profile = models.ForeignKey(\n        UserProfile,\n        on_delete=models.SET_NULL,\n        null=True,\n        blank=True,\n        related_name=\"orders\",\n    )\n    full_name = models.CharField(max_length=50, null=False, blank=False)",
         "detail": "checkout.models",
         "documentation": {}
     },
@@ -1450,7 +1538,7 @@
         "kind": 6,
         "importPath": "checkout.models",
         "description": "checkout.models",
-        "peekOfCode": "class OrderLineItem(models.Model):\n    order = models.ForeignKey(\n        Order,\n        null=False,\n        blank=False,\n        on_delete=models.CASCADE,\n        related_name=\"lineitems\",\n    )\n    product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)\n    product_size = models.CharField(max_length=2, null=True, blank=True)  # XS, S, M, L, XL",
+        "peekOfCode": "class OrderLineItem(models.Model):\n    order = models.ForeignKey(\n        Order,\n        null=False,\n        blank=False,\n        on_delete=models.CASCADE,\n        related_name=\"lineitems\",\n    )\n    product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)\n    product_size = models.CharField(max_length=2, null=True, blank=True)",
         "detail": "checkout.models",
         "documentation": {}
     },
@@ -1500,6 +1588,15 @@
         "documentation": {}
     },
     {
+        "label": "order_form_valid",
+        "kind": 2,
+        "importPath": "checkout.views",
+        "description": "checkout.views",
+        "peekOfCode": "def order_form_valid(order_form, request, cart):\n    order = order_form.save(commit=False)\n    pid = request.POST.get(\"client_secret\").split(\"_secret\")[0]\n    order.stripe_pid = pid\n    order.original_cart = json.dumps(cart)\n    order.save()\n    for item_id, item_data in cart.items():\n        try:\n            product = Product.objects.get(id=item_id)\n            if isinstance(item_data, int):",
+        "detail": "checkout.views",
+        "documentation": {}
+    },
+    {
         "label": "checkout_success",
         "kind": 2,
         "importPath": "checkout.views",
@@ -1522,7 +1619,7 @@
         "kind": 6,
         "importPath": "checkout.webhook_handler",
         "description": "checkout.webhook_handler",
-        "peekOfCode": "class StripeWH_Handler:\n    \"\"\"Handle Stripe webhooks\"\"\"\n    def __init__(self, request):\n        self.request = request\n    def _send_confirmation_email(self, order):\n        \"\"\"Send the user a confirmation email\"\"\"\n        cust_email = order.email\n        subject = render_to_string(\n            \"templates\\confirmation_emails\\confirmation_email_subject.txt\",\n            {\"order\": order},",
+        "peekOfCode": "class StripeWH_Handler:\n    \"\"\"Handle Stripe webhooks\"\"\"\n    def __init__(self, request):\n        self.request = request\n    def send_confirmation_email(self, order):\n        \"\"\"Send the user a confirmation email\"\"\"\n        cust_email = order.email\n        subject = render_to_string(\n            \"templates\\confirmation_emails\\confirmation_email_subject.txt\",\n            {\"order\": order},",
         "detail": "checkout.webhook_handler",
         "documentation": {}
     },
@@ -1536,11 +1633,20 @@
         "documentation": {}
     },
     {
+        "label": "ContactForm",
+        "kind": 6,
+        "importPath": "home.forms",
+        "description": "home.forms",
+        "peekOfCode": "class ContactForm(forms.Form):\n    full_name = forms.CharField(max_length=50)\n    email_address = forms.EmailField(max_length=150)\n    message = forms.CharField(widget=forms.Textarea, max_length=2000)",
+        "detail": "home.forms",
+        "documentation": {}
+    },
+    {
         "label": "urlpatterns",
         "kind": 5,
         "importPath": "home.urls",
         "description": "home.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"\", views.index, name=\"home\"),\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"\", views.index, name=\"home\"),\n    path(\"about/\", views.about, name=\"about\"),\n    path(\"contact/\", views.contact, name=\"contact\"),\n]",
         "detail": "home.urls",
         "documentation": {}
     },
@@ -1549,7 +1655,34 @@
         "kind": 2,
         "importPath": "home.views",
         "description": "home.views",
-        "peekOfCode": "def index(request):\n    \"\"\"\n    Render the homepage view\n    \"\"\"\n    return render(request, \"home/index.html\")",
+        "peekOfCode": "def index(request):\n    \"\"\"\n    Render the homepage view\n    \"\"\"\n    return render(request, \"home/index.html\")\ndef about(request):\n    \"\"\"\n    Render the about view\n    \"\"\"\n    return render(request, \"home/about.html\")",
+        "detail": "home.views",
+        "documentation": {}
+    },
+    {
+        "label": "about",
+        "kind": 2,
+        "importPath": "home.views",
+        "description": "home.views",
+        "peekOfCode": "def about(request):\n    \"\"\"\n    Render the about view\n    \"\"\"\n    return render(request, \"home/about.html\")\ndef contact(request):\n    if request.method == \"POST\":\n        form = ContactForm(request.POST)\n        if form.is_valid():\n            return contact_form(form, request)",
+        "detail": "home.views",
+        "documentation": {}
+    },
+    {
+        "label": "contact",
+        "kind": 2,
+        "importPath": "home.views",
+        "description": "home.views",
+        "peekOfCode": "def contact(request):\n    if request.method == \"POST\":\n        form = ContactForm(request.POST)\n        if form.is_valid():\n            return contact_form(form, request)\n    form = ContactForm()\n    return render(request, \"home/contact.html\", {\"form\": form})\n# TODO Rename this here and in `contact`\ndef contact_form(form, request):\n    subject = \"Daniela's Art Shop - Contact Request\"",
+        "detail": "home.views",
+        "documentation": {}
+    },
+    {
+        "label": "contact_form",
+        "kind": 2,
+        "importPath": "home.views",
+        "description": "home.views",
+        "peekOfCode": "def contact_form(form, request):\n    subject = \"Daniela's Art Shop - Contact Request\"\n    body = {\n        \"full_name\": form.cleaned_data[\"full_name\"],\n        \"email\": form.cleaned_data[\"email_address\"],\n        \"message\": form.cleaned_data[\"message\"],\n    }\n    message = \"\\n\".join(body.values())\n    contact_guest_email = form[\"email_address\"].value()\n    try:",
         "detail": "home.views",
         "documentation": {}
     },
@@ -1558,8 +1691,26 @@
         "kind": 6,
         "importPath": "products.migrations.0001_initial",
         "description": "products.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Category',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('name', models.CharField(max_length=254)),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = []\n    operations = [\n        migrations.CreateModel(\n            name=\"Category\",\n            fields=[\n                (\n                    \"id\",\n                    models.BigAutoField(",
         "detail": "products.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "products.migrations.0002_alter_product_quantity_available",
+        "description": "products.migrations.0002_alter_product_quantity_available",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"products\", \"0001_initial\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"product\",\n            name=\"quantity_available\",\n            field=models.PositiveIntegerField(default=1),\n        ),",
+        "detail": "products.migrations.0002_alter_product_quantity_available",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "products.migrations.0003_auto_20211122_0714",
+        "description": "products.migrations.0003_auto_20211122_0714",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('products', '0002_alter_product_quantity_available'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='product',\n            name='has_sizes',\n        ),\n        migrations.RemoveField(",
+        "detail": "products.migrations.0003_auto_20211122_0714",
         "documentation": {}
     },
     {
@@ -1567,7 +1718,7 @@
         "kind": 6,
         "importPath": "products.admin",
         "description": "products.admin",
-        "peekOfCode": "class ProductAdmin(admin.ModelAdmin):\n    list_display = (\n        \"name\",\n        \"price\",\n        \"category\",\n        \"quantity_available\",\n        \"unique\",\n        \"sku\",\n        \"dimensions\",\n    )",
+        "peekOfCode": "class ProductAdmin(admin.ModelAdmin):\n    list_display = (\n        \"name\",\n        \"price\",\n        \"category\",\n        \"sold_out\",\n        \"quantity_available\",\n        \"unique\",\n        \"sku\",\n        \"dimensions\",",
         "detail": "products.admin",
         "documentation": {}
     },
@@ -1603,7 +1754,7 @@
         "kind": 6,
         "importPath": "products.models",
         "description": "products.models",
-        "peekOfCode": "class Product(models.Model):\n    category = models.ForeignKey(\n        \"Category\", null=True, blank=True, on_delete=models.SET_NULL\n    )\n    sku = models.CharField(max_length=254, null=True, blank=True)\n    name = models.CharField(max_length=254)\n    description = models.TextField()\n    price = models.DecimalField(max_digits=9, decimal_places=2)\n    unique = models.BooleanField(default=True, blank=\"False\")\n    quantity_available = models.PositiveBigIntegerField(default=1, blank=False)",
+        "peekOfCode": "class Product(models.Model):\n    category = models.ForeignKey(\"Category\", null=True, blank=True, on_delete=models.SET_NULL)\n    sku = models.CharField(max_length=254, null=True, blank=True)\n    name = models.CharField(max_length=254)\n    description = models.TextField()\n    quantity_available = models.PositiveIntegerField(default=1, blank=False)\n    unique = models.BooleanField(default=True, blank=\"False\")\n    sold_out = models.BooleanField(default=\"False\")\n    dimensions = models.CharField(max_length=13, null=True, blank=True)\n    price = models.DecimalField(max_digits=9, decimal_places=2)",
         "detail": "products.models",
         "documentation": {}
     },
@@ -1639,8 +1790,17 @@
         "kind": 6,
         "importPath": "profiles.migrations.0001_initial",
         "description": "profiles.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='UserProfile',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name=\"UserProfile\",\n            fields=[\n                (",
         "detail": "profiles.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "profiles.migrations.0002_remove_userprofile_default_county",
+        "description": "profiles.migrations.0002_remove_userprofile_default_county",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('profiles', '0001_initial'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='userprofile',\n            name='default_county',\n        ),\n    ]",
+        "detail": "profiles.migrations.0002_remove_userprofile_default_county",
         "documentation": {}
     },
     {
@@ -1648,7 +1808,7 @@
         "kind": 6,
         "importPath": "profiles.apps",
         "description": "profiles.apps",
-        "peekOfCode": "class ProfilesConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'profiles'",
+        "peekOfCode": "class ProfilesConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"profiles\"",
         "detail": "profiles.apps",
         "documentation": {}
     },
@@ -1711,7 +1871,7 @@
         "kind": 5,
         "importPath": "env",
         "description": "env",
-        "peekOfCode": "os.environ[\"SECRET_KEY\"] = \"django-insecure-=ed#d7^b#$@c3&m#q&n=u*e%ao29eo&2i_=3$yjyg7_5j%%vix\"\n# stripe\nos.environ[\n    \"STRIPE_SECRET_KEY\"\n] = \"sk_test_51Jv34dJP5UsSoT6EXArJtBVQhTRUuleFh4l4hz52ksYa9dfObxoV1OQbcjZ7NrBxrI2Hwk5VwKQrnE3uIt3vwfey00Vhf246gM\"\nos.environ[\n    \"STRIPE_PUBLIC_KEY\"\n] = \"pk_test_51Jv34dJP5UsSoT6EA5IGnqZwSc3VJkOpKhOXBXgerrbIbSJxTHRgWQkkCsXYI3MAk59sgKT7JcQqdxznmadXOFwY00KK4A4zIP\"\nos.environ[\"STRIPE_WH_SECRET\"] = \"whsec_pYrmaEBuNiQkOtZlWpx6bjd6h7t4sTJL\"\n# database",
+        "peekOfCode": "os.environ[\"SECRET_KEY\"] = \"django-insecure-=ed#d7^b#$@c3&m#q&n=u*e%ao29eo&2i_=3$yjyg7_5j%%vix\"\n# stripe\nos.environ[\n    \"STRIPE_SECRET_KEY\"\n] = \"sk_test_51Jv34dJP5UsSoT6EXArJtBVQhTRUuleFh4l4hz52ksYa9dfObxoV1OQbcjZ7NrBxrI2Hwk5VwKQrnE3uIt3vwfey00Vhf246gM\"\nos.environ[\n    \"STRIPE_PUBLIC_KEY\"\n] = \"pk_test_51Jv34dJP5UsSoT6EA5IGnqZwSc3VJkOpKhOXBXgerrbIbSJxTHRgWQkkCsXYI3MAk59sgKT7JcQqdxznmadXOFwY00KK4A4zIP\"\nos.environ[\"STRIPE_WH_SECRET\"] = \"whsec_i3dFKeGVGqt7r65lKeCieocWUduRcrVJ\"\n# database",
         "detail": "env",
         "documentation": {}
     },
@@ -1720,7 +1880,7 @@
         "kind": 5,
         "importPath": "env",
         "description": "env",
-        "peekOfCode": "] = \"sk_test_51Jv34dJP5UsSoT6EXArJtBVQhTRUuleFh4l4hz52ksYa9dfObxoV1OQbcjZ7NrBxrI2Hwk5VwKQrnE3uIt3vwfey00Vhf246gM\"\nos.environ[\n    \"STRIPE_PUBLIC_KEY\"\n] = \"pk_test_51Jv34dJP5UsSoT6EA5IGnqZwSc3VJkOpKhOXBXgerrbIbSJxTHRgWQkkCsXYI3MAk59sgKT7JcQqdxznmadXOFwY00KK4A4zIP\"\nos.environ[\"STRIPE_WH_SECRET\"] = \"whsec_pYrmaEBuNiQkOtZlWpx6bjd6h7t4sTJL\"\n# database\nos.environ[\n    \"DATABASE_URL\"\n] = \"postgres://nnnnanbvdryrwv:77b0ca851b8f48ea691014c665c30dff6b23aa4c4c7cb4a526ceba6e177f5cf8@ec2-54-228-174-49.eu-west-1.compute.amazonaws.com:5432/d27futa7m1e8qd\"\n# static & media files",
+        "peekOfCode": "] = \"sk_test_51Jv34dJP5UsSoT6EXArJtBVQhTRUuleFh4l4hz52ksYa9dfObxoV1OQbcjZ7NrBxrI2Hwk5VwKQrnE3uIt3vwfey00Vhf246gM\"\nos.environ[\n    \"STRIPE_PUBLIC_KEY\"\n] = \"pk_test_51Jv34dJP5UsSoT6EA5IGnqZwSc3VJkOpKhOXBXgerrbIbSJxTHRgWQkkCsXYI3MAk59sgKT7JcQqdxznmadXOFwY00KK4A4zIP\"\nos.environ[\"STRIPE_WH_SECRET\"] = \"whsec_i3dFKeGVGqt7r65lKeCieocWUduRcrVJ\"\n# database\nos.environ[\n    \"DATABASE_URL\"\n] = \"postgres://nnnnanbvdryrwv:77b0ca851b8f48ea691014c665c30dff6b23aa4c4c7cb4a526ceba6e177f5cf8@ec2-54-228-174-49.eu-west-1.compute.amazonaws.com:5432/d27futa7m1e8qd\"\n# static & media files",
         "detail": "env",
         "documentation": {}
     },
@@ -1729,7 +1889,7 @@
         "kind": 5,
         "importPath": "env",
         "description": "env",
-        "peekOfCode": "] = \"pk_test_51Jv34dJP5UsSoT6EA5IGnqZwSc3VJkOpKhOXBXgerrbIbSJxTHRgWQkkCsXYI3MAk59sgKT7JcQqdxznmadXOFwY00KK4A4zIP\"\nos.environ[\"STRIPE_WH_SECRET\"] = \"whsec_pYrmaEBuNiQkOtZlWpx6bjd6h7t4sTJL\"\n# database\nos.environ[\n    \"DATABASE_URL\"\n] = \"postgres://nnnnanbvdryrwv:77b0ca851b8f48ea691014c665c30dff6b23aa4c4c7cb4a526ceba6e177f5cf8@ec2-54-228-174-49.eu-west-1.compute.amazonaws.com:5432/d27futa7m1e8qd\"\n# static & media files\nos.environ[\"CLOUDINARY_URL\"] = \"cloudinary://458241221221697:9gnhcXbuQayWFOJduQi3aGXWivg@frank2021\"\n# email\nos.environ[\"EMAIL_HOST_USER\"] = \"danielasartshop@gmail.com\"",
+        "peekOfCode": "] = \"pk_test_51Jv34dJP5UsSoT6EA5IGnqZwSc3VJkOpKhOXBXgerrbIbSJxTHRgWQkkCsXYI3MAk59sgKT7JcQqdxznmadXOFwY00KK4A4zIP\"\nos.environ[\"STRIPE_WH_SECRET\"] = \"whsec_i3dFKeGVGqt7r65lKeCieocWUduRcrVJ\"\n# database\nos.environ[\n    \"DATABASE_URL\"\n] = \"postgres://nnnnanbvdryrwv:77b0ca851b8f48ea691014c665c30dff6b23aa4c4c7cb4a526ceba6e177f5cf8@ec2-54-228-174-49.eu-west-1.compute.amazonaws.com:5432/d27futa7m1e8qd\"\n# static & media files\nos.environ[\"CLOUDINARY_URL\"] = \"cloudinary://458241221221697:9gnhcXbuQayWFOJduQi3aGXWivg@frank2021\"\n# email\nos.environ[\"EMAIL_HOST_USER\"] = \"fdasabino@gmail.com\"",
         "detail": "env",
         "documentation": {}
     },
@@ -1738,7 +1898,7 @@
         "kind": 5,
         "importPath": "env",
         "description": "env",
-        "peekOfCode": "os.environ[\"STRIPE_WH_SECRET\"] = \"whsec_pYrmaEBuNiQkOtZlWpx6bjd6h7t4sTJL\"\n# database\nos.environ[\n    \"DATABASE_URL\"\n] = \"postgres://nnnnanbvdryrwv:77b0ca851b8f48ea691014c665c30dff6b23aa4c4c7cb4a526ceba6e177f5cf8@ec2-54-228-174-49.eu-west-1.compute.amazonaws.com:5432/d27futa7m1e8qd\"\n# static & media files\nos.environ[\"CLOUDINARY_URL\"] = \"cloudinary://458241221221697:9gnhcXbuQayWFOJduQi3aGXWivg@frank2021\"\n# email\nos.environ[\"EMAIL_HOST_USER\"] = \"danielasartshop@gmail.com\"\nos.environ[\"DEFAULT_FROM_EMAIL\"] = \"danielasartshop@gmail.com\"",
+        "peekOfCode": "os.environ[\"STRIPE_WH_SECRET\"] = \"whsec_i3dFKeGVGqt7r65lKeCieocWUduRcrVJ\"\n# database\nos.environ[\n    \"DATABASE_URL\"\n] = \"postgres://nnnnanbvdryrwv:77b0ca851b8f48ea691014c665c30dff6b23aa4c4c7cb4a526ceba6e177f5cf8@ec2-54-228-174-49.eu-west-1.compute.amazonaws.com:5432/d27futa7m1e8qd\"\n# static & media files\nos.environ[\"CLOUDINARY_URL\"] = \"cloudinary://458241221221697:9gnhcXbuQayWFOJduQi3aGXWivg@frank2021\"\n# email\nos.environ[\"EMAIL_HOST_USER\"] = \"fdasabino@gmail.com\"\nos.environ[\"DEFAULT_FROM_EMAIL\"] = \"fdasabino@gmail.com\"",
         "detail": "env",
         "documentation": {}
     },
@@ -1747,7 +1907,7 @@
         "kind": 5,
         "importPath": "env",
         "description": "env",
-        "peekOfCode": "] = \"postgres://nnnnanbvdryrwv:77b0ca851b8f48ea691014c665c30dff6b23aa4c4c7cb4a526ceba6e177f5cf8@ec2-54-228-174-49.eu-west-1.compute.amazonaws.com:5432/d27futa7m1e8qd\"\n# static & media files\nos.environ[\"CLOUDINARY_URL\"] = \"cloudinary://458241221221697:9gnhcXbuQayWFOJduQi3aGXWivg@frank2021\"\n# email\nos.environ[\"EMAIL_HOST_USER\"] = \"danielasartshop@gmail.com\"\nos.environ[\"DEFAULT_FROM_EMAIL\"] = \"danielasartshop@gmail.com\"\nos.environ[\"EMAIL_HOST_PASSWORD\"] = \"ulocvjmvpoqrkike\"",
+        "peekOfCode": "] = \"postgres://nnnnanbvdryrwv:77b0ca851b8f48ea691014c665c30dff6b23aa4c4c7cb4a526ceba6e177f5cf8@ec2-54-228-174-49.eu-west-1.compute.amazonaws.com:5432/d27futa7m1e8qd\"\n# static & media files\nos.environ[\"CLOUDINARY_URL\"] = \"cloudinary://458241221221697:9gnhcXbuQayWFOJduQi3aGXWivg@frank2021\"\n# email\nos.environ[\"EMAIL_HOST_USER\"] = \"fdasabino@gmail.com\"\nos.environ[\"DEFAULT_FROM_EMAIL\"] = \"fdasabino@gmail.com\"\nos.environ[\"EMAIL_HOST_PASS\"] = \"gzibhjtxmgxuynlp\"",
         "detail": "env",
         "documentation": {}
     },
@@ -1756,7 +1916,7 @@
         "kind": 5,
         "importPath": "env",
         "description": "env",
-        "peekOfCode": "os.environ[\"CLOUDINARY_URL\"] = \"cloudinary://458241221221697:9gnhcXbuQayWFOJduQi3aGXWivg@frank2021\"\n# email\nos.environ[\"EMAIL_HOST_USER\"] = \"danielasartshop@gmail.com\"\nos.environ[\"DEFAULT_FROM_EMAIL\"] = \"danielasartshop@gmail.com\"\nos.environ[\"EMAIL_HOST_PASSWORD\"] = \"ulocvjmvpoqrkike\"",
+        "peekOfCode": "os.environ[\"CLOUDINARY_URL\"] = \"cloudinary://458241221221697:9gnhcXbuQayWFOJduQi3aGXWivg@frank2021\"\n# email\nos.environ[\"EMAIL_HOST_USER\"] = \"fdasabino@gmail.com\"\nos.environ[\"DEFAULT_FROM_EMAIL\"] = \"fdasabino@gmail.com\"\nos.environ[\"EMAIL_HOST_PASS\"] = \"gzibhjtxmgxuynlp\"",
         "detail": "env",
         "documentation": {}
     },
@@ -1765,7 +1925,7 @@
         "kind": 5,
         "importPath": "env",
         "description": "env",
-        "peekOfCode": "os.environ[\"EMAIL_HOST_USER\"] = \"danielasartshop@gmail.com\"\nos.environ[\"DEFAULT_FROM_EMAIL\"] = \"danielasartshop@gmail.com\"\nos.environ[\"EMAIL_HOST_PASSWORD\"] = \"ulocvjmvpoqrkike\"",
+        "peekOfCode": "os.environ[\"EMAIL_HOST_USER\"] = \"fdasabino@gmail.com\"\nos.environ[\"DEFAULT_FROM_EMAIL\"] = \"fdasabino@gmail.com\"\nos.environ[\"EMAIL_HOST_PASS\"] = \"gzibhjtxmgxuynlp\"",
         "detail": "env",
         "documentation": {}
     },
@@ -1774,16 +1934,16 @@
         "kind": 5,
         "importPath": "env",
         "description": "env",
-        "peekOfCode": "os.environ[\"DEFAULT_FROM_EMAIL\"] = \"danielasartshop@gmail.com\"\nos.environ[\"EMAIL_HOST_PASSWORD\"] = \"ulocvjmvpoqrkike\"",
+        "peekOfCode": "os.environ[\"DEFAULT_FROM_EMAIL\"] = \"fdasabino@gmail.com\"\nos.environ[\"EMAIL_HOST_PASS\"] = \"gzibhjtxmgxuynlp\"",
         "detail": "env",
         "documentation": {}
     },
     {
-        "label": "os.environ[\"EMAIL_HOST_PASSWORD\"]",
+        "label": "os.environ[\"EMAIL_HOST_PASS\"]",
         "kind": 5,
         "importPath": "env",
         "description": "env",
-        "peekOfCode": "os.environ[\"EMAIL_HOST_PASSWORD\"] = \"ulocvjmvpoqrkike\"",
+        "peekOfCode": "os.environ[\"EMAIL_HOST_PASS\"] = \"gzibhjtxmgxuynlp\"",
         "detail": "env",
         "documentation": {}
     },

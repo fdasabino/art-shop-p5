@@ -11,6 +11,7 @@ def all_products(request):
     """
     Render the Products view.
     """
+
     products = Product.objects.all()
     query = None
     categories = None
@@ -43,8 +44,8 @@ def all_products(request):
         if "q" in request.GET:
             query = request.GET["q"]
             if not query:
-                messages.error(request, "You must provide a valid search criteria!")
-                return redirect(reverse("products"))
+                messages.info(request, "You must provide a valid search criteria!")
+                return redirect(reverse("home"))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
