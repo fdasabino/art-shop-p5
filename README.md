@@ -339,4 +339,14 @@
 
 ## Credits
 
+- Code Institute: this page was built upon the boutique ado template, with some modifications to models, views and templates.
+
 ### Special Thanks
+
+1. Daniela kronvall
+
+- Big thanks for the time and effort put on this project. Appreciate the all the help.
+
+2. Spencer Barriball
+
+- Thanks for the great mentoring skills and experience shared with me along this journey.
