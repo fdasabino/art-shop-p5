@@ -171,7 +171,7 @@
 
 - Django was used as the main framework for this project
 
-[Bootstrap 5 :](https://getbootstrap.com/)
+[Bootstrap 4 :](https://getbootstrap.com/)
 
 - Bootstrap was used to assist with the responsiveness and styling of the website.
 
@@ -199,11 +199,27 @@
 
 ### Validating
 
+- No errors were found on this page, according to the [HTML - Checker](https://validator.w3.org/nu/) validator.
+
+<img src="https://res.cloudinary.com/frank2021/image/upload/v1637589191/Danielas%20art%20shop/Screenshot_2021-11-22_145256_niuias.jpg">
+
 ### Different Browsers
+
+- The Page does not support Internet Explorer, but has been tested in the browsers listed below using
+  [Broswerstack](https://www.browserstack.com/live) tool:
+
+|    Browser    |      Result       |
+| :-----------: | :---------------: |
+|    Safari     | No Problems Found |
+| Safari-Iphone | No Problems Found |
+|    Chrome     | No Problems Found |
+|    Firefox    | No Problems Found |
+|     Edge      | No Problems Found |
+|     Opera     | No Problems Found |
 
 ### Further Testing
 
-## Future changes to the Website
+- Tests were also performed on samsung mobiles and tablets, no significant issues were found.
 
 ## Deployment
 
