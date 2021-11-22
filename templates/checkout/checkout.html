@@ -43,56 +43,12 @@
         <p class="my-0">Total: <strong>{{ grand_total |intcomma }}kr</strong></p>
       </div>
     </div>
-
-    <div class="accordion my-3" id="accordionCheckout">
-      <div class="card">
-        <div class="card-header text-center" id="checkoutAccordion">
-          <button class="btn btn-link btn-block text-black fw-bold" type="button" data-toggle="collapse"
-            data-target="#collapseCheckout" aria-expanded="true" aria-controls="collapseCheckout">
-            Order Summary<i class="fas fa-chevron-down px-2"></i><span class="text-muted">
-              {{ total |intcomma }}kr</>
-          </button>
-          <div id="collapseCheckout" class="collapse" aria-labelledby="checkoutAccordion"
-            data-parent="#accordionCheckout">
-            <div class="card-body ">
-              {% for item in cart_items %}
-              <div class="row justify-content-center text-center my-2">
-                <div class="col">
-                  <a href="{% url 'product_detail' item.product.id %}">
-                    {% if item.product.image %}
-                    <img class="checkout-img" src="{{ item.product.image.url }}" alt="{{ product.name }}">
-                    {% else %}
-                    <img class="checkout-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                    {% endif %}
-                  </a>
-                  <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                  <p class="my-0">{{ item.product.price|intcomma }}kr</p>
-                  {% if item.product.unique %}
-                  <small class="text-muted"><i class="fas fa-fingerprint"></i> Unique Product</small> <br>
-                  {% endif %}
-                  {% if item.product.dimensions %}
-                  <small class="text-muted"><i class="fas fa-ruler-combined"></i> {{item.product.dimensions}}</small>
-                  <br>
-                  {% endif %}
-                  {% if item.product.rating %}
-                  <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ item.product.rating }} / 5</small>
-                  {% else %}
-                  <small class="text-muted">No Rating</small>
-                  {% endif %}
-                </div>
-                {% endfor %}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <hr>
   </div>
-  <hr>
 
 
   <div class="row justify-content-center text-center">
-    <div class="col-12 col-lg-6">
+    <div class="col-lg-6 col-md-7 col-sm-12">
       <p class="text-muted small my-3">Enter you information to complete your purchase</p>
       <form action="{% url 'checkout' %}" method="POST" id="payment-form">
         {% csrf_token %}
@@ -119,6 +75,52 @@
             {% endif %}
           </div>
         </fieldset>
+        <div class="container-fluid">
+          <div class="accordion my-3" id="accordionCheckout">
+            <div class="card">
+              <div class="card-header" id="checkoutAccordion">
+                <button class="btn btn-link text-black fw-bold" type="button" data-toggle="collapse"
+                  data-target="#collapseCheckout" aria-expanded="true" aria-controls="collapseCheckout">
+                  Order Summary<i class="fas fa-chevron-down px-2"></i><span class="text-muted">
+                    {{ total |intcomma }}kr
+                </button>
+                <div id="collapseCheckout" class="collapse" aria-labelledby="checkoutAccordion"
+                  data-parent="#accordionCheckout">
+                  <div class="card-body">
+                    {% for item in cart_items %}
+                    <div class="row justify-content-center text-center my-2">
+                      <div class="col">
+                        <a href="{% url 'product_detail' item.product.id %}">
+                          {% if item.product.image %}
+                          <img class="checkout-img" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                          {% else %}
+                          <img class="checkout-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                          {% endif %}
+                        </a>
+                        <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                        <p class="my-0">{{ item.product.price|intcomma }}kr</p>
+                        {% if item.product.unique %}
+                        <small class="text-muted"><i class="fas fa-fingerprint"></i> Unique Product</small> <br>
+                        {% endif %}
+                        {% if item.product.dimensions %}
+                        <small class="text-muted"><i class="fas fa-ruler-combined"></i>
+                          {{item.product.dimensions}}</small>
+                        <br>
+                        {% endif %}
+                        {% if item.product.rating %}
+                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ item.product.rating }} / 5</small>
+                        {% else %}
+                        <small class="text-muted">No Rating</small>
+                        {% endif %}
+                      </div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <fieldset class="px-3">
           <legend class="fieldset-label small text-dark px-2">Card Details</legend>
           <p class="small text-info text-center my-0 mb-2">
@@ -157,7 +159,7 @@
 <div id="loading-overlay">
   <div class="text-light logo-font loading-spinner">
     <span class="icon">
-      <i class="fas fa-3x fa-sync-alt fa-spin"></i>
+      <i class="fas fa-3x fa-spinner fa-spin"></i>
     </span>
   </div>
 </div>

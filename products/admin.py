@@ -10,12 +10,13 @@ class ProductAdmin(admin.ModelAdmin):
         "name",
         "price",
         "category",
+        "sold_out",
         "quantity_available",
         "unique",
         "sku",
         "dimensions",
     )
-    list_editable = ["price", "quantity_available"]
+    list_editable = ["price", "quantity_available", "sold_out"]
 
 
 class CategoryAdmin(admin.ModelAdmin):

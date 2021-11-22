@@ -93,10 +93,10 @@
                 {% if product.dimensions %}
                 <small class="text-muted"><i class="fas fa-ruler-combined"></i> {{product.dimensions}}</small>
                 {% endif %}
-                {% if product.rating %}
-                <small class="text-muted"><i class="fas fa-star mr-1"></i> {{product.rating}}</small>
+                {% if product.sold_out %}
+                <small class="text-muted">Sold Out</small>
                 {% else %}
-                <small class="text-muted">No Rating</small>
+                <small class="text-muted">Available</small>
                 {% endif %}
               </div>
             </div>
