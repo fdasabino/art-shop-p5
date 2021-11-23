@@ -198,6 +198,11 @@
 
 - Cloudinary was used to store all media and static files for the project.
 
+[Mailchimp](https://mailchimp.com/)
+
+- Mailchimp was used as the third party newsletter service for this project following the directions os the Code Institute,
+  to collect emails in accordance with GDPR rules.
+
 [Stripe](https://stripe.com/)
 
 - This is used to securely process customer payment details. No payment data is handled or stored by the application, it is all handled by Stripe. This makes for easy and secure integration and verification of payments.
@@ -233,6 +238,36 @@
 - No errors were found on this page, according to the [HTML - Checker](https://validator.w3.org/nu/) validator.
 
 <img src="https://res.cloudinary.com/frank2021/image/upload/v1637589191/Danielas%20art%20shop/Screenshot_2021-11-22_145256_niuias.jpg">
+
+## Forking from GitHub
+
+- When forking this project from GitHub you will need a to set up a few things of your own:
+
+1. Clone the Repository, or download the files manually from the repository;
+2. Open the files in your development environment;
+3. Set a Virtual Environment (On Windows - Using VScode)
+
+| --- | ------------------------------- |
+| 1 | py -m venv venv |
+| 2 | venv\Scripts\activate |
+| 3 | pip install -r requirements.txt |
+
+- Complete the steps below
+
+|           Name           | Environment Variable |
+| :----------------------: | :------------------: |
+|    Django Secret Key     |      SECRET_KEY      |
+|    Stripe Secret Key     |  STRIPE_SECRET_KEY   |
+|  Stripe Publishable Key  |  STRIPE_PUBLIC_KEY   |
+| Heroku Postgres Database |  STRIPE_PUBLIC_KEY   |
+|   Static Files Storage   |    CLOUDINARY_URL    |
+|     Email Host User      |   EMAIL_HOST_USER    |
+|    Default From Email    |  DEFAULT_FROM_EMAIL  |
+|   App Password(Google)   |   EMAIL_HOST_PASS    |
+
+- Create a file called env.py, in your root directory and add the following variables listed above to your file.
+  Once you have downloaded the Code to you machine you can follow the steps below on deployment to heroku which include
+  instructions on how to set up the environment variables
 
 ## Deployment to Heroku
 
@@ -339,7 +374,7 @@
 
 ## Credits
 
-- Code Institute: this page was built upon the boutique ado template, with some modifications to models, views and templates.
+- Code Institute: this page was built upon the boutique ado template, with some modifications to models, views and template structure.
 
 ### Special Thanks
 
