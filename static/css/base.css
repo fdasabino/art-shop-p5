@@ -326,3 +326,10 @@ label {
     font-size: .75rem;
   }
 }
+
+/* mailchimp css */
+#mc_embed_signup {
+  background: #FFB6C1;
+  clear: left;
+  font: 14px 'Lato', sans-serif;
+}

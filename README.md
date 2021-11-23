@@ -350,3 +350,9 @@
 2. Spencer Barriball
 
 - Thanks for the great mentoring skills and experience shared with me along this journey.
+
+## For the accessors
+
+- Following the instructions of the exercises from the modules, below we have a screen shot of the facebook pages for my business.
+
+<img src="https://res.cloudinary.com/frank2021/image/upload/v1637629201/Danielas%20art%20shop/facebook_nuvd0t.jpg">
