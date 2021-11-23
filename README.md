@@ -247,10 +247,12 @@
 2. Open the files in your development environment;
 3. Set a Virtual Environment (On Windows - Using VScode)
 
-| --- | ------------------------------- |
-| 1 | py -m venv venv |
-| 2 | venv\Scripts\activate |
-| 3 | pip install -r requirements.txt |
+|  #  |        In Your Terminal         |
+| :-: | :-----------------------------: |
+|  1  |         py -m venv venv         |
+|  2  |      venv\Scripts\activate      |
+|  3  | pip install -r requirements.txt |
+|  4  |     py manage.py runserver      |
 
 - Complete the steps below
 
