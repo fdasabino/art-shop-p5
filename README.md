@@ -254,7 +254,9 @@
 |  3  | pip install -r requirements.txt |
 |  4  |     py manage.py runserver      |
 
-- Complete the steps below
+- Create a file called env.py, in your root directory and add the following variables listed above to your file.
+  Once you have downloaded the Code to you machine you can follow the steps below on deployment to heroku which include
+  instructions on how to set up the environment variables
 
 |           Name           | Environment Variable |
 | :----------------------: | :------------------: |
@@ -266,10 +268,6 @@
 |     Email Host User      |   EMAIL_HOST_USER    |
 |    Default From Email    |  DEFAULT_FROM_EMAIL  |
 |   App Password(Google)   |   EMAIL_HOST_PASS    |
-
-- Create a file called env.py, in your root directory and add the following variables listed above to your file.
-  Once you have downloaded the Code to you machine you can follow the steps below on deployment to heroku which include
-  instructions on how to set up the environment variables
 
 ## Deployment to Heroku
 
